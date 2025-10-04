@@ -1,6 +1,6 @@
 import './globals.css';
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
+import Header from '@/components/Header/Header';
+import Footer from '@/components/Footer/Footer';
 
 export const metadata = {
   title: '株式会社前野企画',
