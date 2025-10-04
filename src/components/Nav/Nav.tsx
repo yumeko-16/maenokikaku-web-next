@@ -1,18 +1,23 @@
 import Link from 'next/link';
+import styles from './Nav.module.scss';
+
+const navLinks = [
+  { href: '/', label: 'ホーム' },
+  { href: '/expert', label: '寺院エキスパートシステム' },
+  { href: '/contact', label: 'お問い合わせ' },
+];
 
 export default function Nav() {
   return (
     <nav>
-      <ul>
-        <li>
-          <Link href="/">ホーム</Link>
-        </li>
-        <li>
-          <Link href="/expert">寺院エキスパートシステム</Link>
-        </li>
-        <li>
-          <Link href="/contact">お問い合わせ</Link>
-        </li>
+      <ul className={styles.list}>
+        {navLinks.map((link) => (
+          <li key={link.href}>
+            <Link className={styles.link} href={link.href}>
+              {link.label}
+            </Link>
+          </li>
+        ))}
       </ul>
     </nav>
   );

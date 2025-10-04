@@ -1,0 +1,22 @@
+@use '@/utils/mixin';
+
+.list {
+  display: flex;
+  gap: 2em;
+}
+
+.link {
+  @include mixin.hover {
+    color: var(--primary);
+  }
+
+  @include mixin.touch {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  &:active {
+    @include mixin.touch {
+      color: var(--primary);
+    }
+  }
+}
