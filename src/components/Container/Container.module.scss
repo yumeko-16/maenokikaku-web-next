@@ -1,0 +1,11 @@
+.wrapper {
+  margin: 0 auto;
+
+  &[data-size='default'] {
+    width: min(92%, 1152px);
+  }
+
+  &[data-size='large'] {
+    width: 92%;
+  }
+}
