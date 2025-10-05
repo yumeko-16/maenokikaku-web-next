@@ -1,0 +1,52 @@
+@mixin smartphoneScreen {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin tabletScreen {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin hover {
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      @content;
+    }
+  }
+}
+
+@mixin touch {
+  @media (hover: none) {
+    @content;
+  }
+}
+
+@mixin spaceBetween {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin sideBySide {
+  display: flex;
+  flex-direction: column;
+
+  @include tabletScreen {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+@mixin sideBySideCenter {
+  align-items: center;
+  text-align: center;
+
+  @include sideBySide;
+
+  @include tabletScreen {
+    text-align: left;
+  }
+}

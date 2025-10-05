@@ -1,0 +1,19 @@
+.container {
+  display: grid;
+}
+
+.heading {
+  font-size: var(--display);
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: var(--white);
+}
+
+.lead {
+  color: var(--white);
+}
+
+.btn {
+  background-color: var(--white);
+  color: var(--primary);
+}

@@ -1,0 +1,5 @@
+@use '@/utils/styles/mixin';
+
+.flexContainer {
+  @include mixin.spaceBetween;
+}
