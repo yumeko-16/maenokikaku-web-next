@@ -5,7 +5,7 @@ import styles from './Header.module.scss';
 
 export default function Header() {
   return (
-    <header>
+    <header className={styles.wrapper}>
       <Container large>
         <div className={styles.flexContainer}>
           <Logo />
