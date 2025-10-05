@@ -1,0 +1,16 @@
+@use '@/utils/styles/mixin';
+
+.wrapper {
+  padding: var(--space-xl) 0;
+  background-color: #232b33;
+  color: var(--white);
+}
+
+.flexContainer {
+  @include mixin.sideBySideCenter;
+}
+
+.copyright {
+  text-align: center;
+  font-size: clamp(0.875rem, 0.803rem + 0.31vw, 1rem);
+}
