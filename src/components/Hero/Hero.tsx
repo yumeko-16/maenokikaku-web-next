@@ -8,7 +8,7 @@ type Props = {
 
 export default function Hero({ heading, lead, imageOn = false }: Props) {
   return (
-    <div className={styles.container}>
+    <div className={styles.wrapper}>
       <h1 className={styles.heading}>{heading}</h1>
 
       <div className={styles.lead}>

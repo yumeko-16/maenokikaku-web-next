@@ -9,7 +9,7 @@ const navLinks = [
 
 export default function Nav() {
   return (
-    <nav>
+    <nav className={styles.wrapper}>
       <ul className={styles.list}>
         {navLinks.map((link) => (
           <li key={link.href}>

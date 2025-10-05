@@ -1,5 +1,9 @@
 @use '@/utils/styles/mixin';
 
+.wrapper {
+  padding: var(--space-xs) 0;
+}
+
 .flexContainer {
   @include mixin.spaceBetween;
 }
