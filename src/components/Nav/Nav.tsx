@@ -3,8 +3,9 @@ import styles from './Nav.module.scss';
 
 const navLinks = [
   { href: '/', label: 'ホーム' },
-  { href: '/expert', label: '寺院エキスパートシステム' },
-  { href: '/contact', label: 'お問い合わせ' },
+  { href: '/about/', label: '私たちについて' },
+  { href: '/expert/', label: '寺院エキスパートシステム' },
+  { href: '/contact/', label: 'お問い合わせ' },
 ];
 
 export default function Nav() {
