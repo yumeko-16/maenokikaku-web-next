@@ -1,7 +1,7 @@
 import Container from '@/components/Container/Container';
 import Hero from '@/components/Hero/Hero';
 
-export default function About() {
+export default function Expert() {
   return (
     <Container>
       <Hero
