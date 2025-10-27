@@ -1,3 +1,8 @@
+'use client';
+
+import { useState } from 'react';
+import Image from 'next/image';
+import heroImg from '@/images/hero.webp';
 import styles from './Hero.module.scss';
 
 type Props = {
@@ -7,17 +12,30 @@ type Props = {
 };
 
 export default function Hero({ heading, lead, imageOn = false }: Props) {
-  return (
-    <div className={styles.wrapper}>
-      <h1 className={styles.heading}>{heading}</h1>
+  const [isImageLoaded, setIsImageLoaded] = useState(false);
 
-      <div className={styles.lead}>
-        <p>{lead}</p>
+  return (
+    <div className={styles.gridContainer}>
+      <div>
+        <h1 className={styles.heading}>{heading}</h1>
+
+        <div className={styles.lead}>
+          <p>{lead}</p>
+        </div>
       </div>
 
-      {imageOn && <figure> [画像] </figure>}
-
-      <div className={styles.btn}>お問い合わせ</div>
+      {imageOn && (
+        <figure>
+          <Image
+            className={isImageLoaded ? styles.removeBlur : styles.blur}
+            src={heroImg}
+            alt=""
+            sizes="(min-width: 1024px) 700px, (min-width: 768px) 50vw, 100vw"
+            priority
+            onLoad={() => setIsImageLoaded(true)}
+          />
+        </figure>
+      )}
     </div>
   );
 }
