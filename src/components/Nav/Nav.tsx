@@ -3,7 +3,7 @@ import styles from './Nav.module.scss';
 
 const navLinks = [
   { href: '/', label: 'ホーム' },
-  { href: '/about/', label: '私たちについて' },
+  { href: '/about/', label: '会社情報' },
   { href: '/expert/', label: '寺院エキスパートシステム' },
   { href: '/contact/', label: 'お問い合わせ' },
 ];
