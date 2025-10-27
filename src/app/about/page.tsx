@@ -1,10 +1,37 @@
+import type { Metadata } from 'next';
+import { siteMeta } from '@/lib/constants';
 import Hero from '@/components/Hero/Hero';
+
+export async function generateMetadata(): Promise<Metadata> {
+  const pageTitle = '会社情報';
+  const description =
+    '当社は株式会社エクシオテック（旧 大東工業株式会社）の指定販売店として、寺院用ソフト「青藍システム 496」の販売、導入指導、サポートを行っています。';
+  const url = `${siteMeta.siteUrl}about/`;
+
+  return {
+    title: {
+      default: pageTitle,
+      template: `%s - ${siteMeta.siteTitle}`,
+    },
+    description,
+    openGraph: {
+      description,
+      url,
+      siteName: siteMeta.siteTitle,
+      locale: siteMeta.siteLocale,
+      type: 'website',
+    },
+    alternates: {
+      canonical: url,
+    },
+  };
+}
 
 export default function About() {
   return (
     <Hero
       heading="会社情報"
-      lead="当社は株式会社エクシオテック（旧 大東工業株式会社）の指定販売店として、寺院用ソフト「寺院エキスパートシステム」の販売、導入指導、サポートを行っています。"
+      lead="当社は株式会社エクシオテック（旧 大東工業株式会社）の指定販売店として、寺院用ソフト「青藍システム 496」の販売、導入指導、サポートを行っています。"
     />
   );
 }
