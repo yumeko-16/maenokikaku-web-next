@@ -26,12 +26,6 @@ export const metadata: Metadata = {
       },
     ],
   },
-  twitter: {
-    card: 'summary_large_image',
-    title: siteMeta.siteTitle,
-    description: siteMeta.siteDesc,
-    images: [`${siteMeta.siteUrl}ogp.jpg`],
-  },
   icons: {
     icon: '/favicon.ico',
     apple: '/favicon-512.png',
