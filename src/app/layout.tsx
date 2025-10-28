@@ -17,6 +17,20 @@ export const metadata: Metadata = {
     siteName: siteMeta.siteTitle,
     locale: siteMeta.siteLocale,
     type: siteMeta.siteType,
+    images: [
+      {
+        url: `${siteMeta.siteUrl}ogp.jpg`,
+        width: 1200,
+        height: 630,
+        alt: siteMeta.siteTitle,
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: siteMeta.siteTitle,
+    description: siteMeta.siteDesc,
+    images: [`${siteMeta.siteUrl}ogp.jpg`],
   },
   icons: {
     icon: '/favicon.ico',
