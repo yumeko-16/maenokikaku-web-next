@@ -18,6 +18,10 @@ export const metadata: Metadata = {
     locale: siteMeta.siteLocale,
     type: siteMeta.siteType,
   },
+  icons: {
+    icon: '/favicon.ico',
+    apple: '/favicon-512.png',
+  },
   alternates: {
     canonical: siteMeta.siteUrl,
   },
