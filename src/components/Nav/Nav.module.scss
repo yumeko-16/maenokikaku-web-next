@@ -1,22 +1,26 @@
 @use '@/utils/styles/mixin';
 
 .btn {
-  all: unset;
-  position: relative;
-  z-index: 200;
-  display: grid;
-  place-items: center;
-  cursor: pointer;
-  outline: revert;
-  -webkit-tap-highlight-color: transparent;
+  @include mixin.smartphoneScreen {
+    all: unset;
+    position: relative;
+    z-index: 200;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    outline: revert;
+    -webkit-tap-highlight-color: transparent;
+  }
 
   @include mixin.tabletScreen {
     display: none;
   }
+}
 
-  &::before,
-  &::after,
-  .bar {
+.btn::before,
+.btn::after,
+.btn .bar {
+  @include mixin.smartphoneScreen {
     display: block;
     grid-area: 1 / 1;
     width: 32px;
@@ -25,31 +29,45 @@
     background-color: currentcolor;
     transition: transform 0.4s;
   }
+}
 
-  .close & {
+.close .btn {
+  @include mixin.smartphoneScreen {
     color: var(--black);
+  }
 
-    &::before {
+  &::before {
+    @include mixin.smartphoneScreen {
       transform: translateY(-8px);
-    }
-
-    &::after {
-      transform: translateY(8px);
     }
   }
 
-  .open & {
-    color: var(--white);
+  &::after {
+    @include mixin.smartphoneScreen {
+      transform: translateY(8px);
+    }
+  }
+}
 
-    &::before {
+.open .btn {
+  @include mixin.smartphoneScreen {
+    color: var(--white);
+  }
+
+  &::before {
+    @include mixin.smartphoneScreen {
       transform: rotate(45deg);
     }
+  }
 
-    &::after {
+  &::after {
+    @include mixin.smartphoneScreen {
       transform: rotate(-45deg);
     }
+  }
 
-    .bar {
+  .bar {
+    @include mixin.smartphoneScreen {
       transform: scale(0);
     }
   }
@@ -60,24 +78,30 @@
 }
 
 .list {
-  position: fixed;
-  inset: 0 -100% 0 100%;
-  z-index: 100;
-  display: grid;
-  gap: 40px;
-  place-content: center;
   font-weight: 700;
-  color: var(--white);
-  text-align: center;
-  background: rgb(0 0 0 / 80%);
-  transition: transform 0.4s;
+
+  @include mixin.smartphoneScreen {
+    position: fixed;
+    inset: 0 -100% 0 100%;
+    z-index: 100;
+    display: grid;
+    gap: 40px;
+    place-content: center;
+    color: var(--white);
+    text-align: center;
+    background-color: rgb(0 0 0 / 80%);
+    transition: transform 0.4s;
+  }
 
   @include mixin.tabletScreen {
     display: flex;
     gap: 2em;
+    font-size: clamp(0.875rem, 0.5rem + 0.78vw, 1rem);
   }
+}
 
-  .open & {
+.open .list {
+  @include mixin.smartphoneScreen {
     transform: translateX(-100%);
   }
 }
