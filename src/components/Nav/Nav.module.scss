@@ -1,13 +1,85 @@
 @use '@/utils/styles/mixin';
 
-.wrapper {
-  font-size: 1rem;
-  font-weight: 700;
+.btn {
+  all: unset;
+  position: relative;
+  z-index: 200;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  outline: revert;
+  -webkit-tap-highlight-color: transparent;
+
+  @include mixin.tabletScreen {
+    display: none;
+  }
+
+  &::before,
+  &::after,
+  .bar {
+    display: block;
+    grid-area: 1 / 1;
+    width: 32px;
+    height: 2px;
+    content: '';
+    background-color: currentcolor;
+    transition: transform 0.4s;
+  }
+
+  .close & {
+    color: var(--black);
+
+    &::before {
+      transform: translateY(-8px);
+    }
+
+    &::after {
+      transform: translateY(8px);
+    }
+  }
+
+  .open & {
+    color: var(--white);
+
+    &::before {
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+    }
+
+    .bar {
+      transform: scale(0);
+    }
+  }
+}
+
+.srOnly {
+  @include mixin.srOnly;
 }
 
 .list {
-  display: flex;
-  gap: 2em;
+  position: fixed;
+  inset: 0 -100% 0 100%;
+  z-index: 100;
+  display: grid;
+  gap: 40px;
+  place-content: center;
+  font-weight: 700;
+  color: var(--white);
+  text-align: center;
+  background: rgb(0 0 0 / 80%);
+  transition: transform 0.4s;
+
+  @include mixin.tabletScreen {
+    display: flex;
+    gap: 2em;
+  }
+
+  .open & {
+    transform: translateX(-100%);
+  }
 }
 
 .link {
