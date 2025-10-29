@@ -22,13 +22,13 @@
 .heading {
   font-size: var(--display);
   font-weight: 700;
-  letter-spacing: 0.05em;
   color: var(--white);
+  letter-spacing: 0.05em;
 }
 
 .lead {
-  color: var(--white);
   margin-top: calc(var(--display) * 0.5);
+  color: var(--white);
 }
 
 .blur {

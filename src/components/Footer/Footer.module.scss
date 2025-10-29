@@ -2,8 +2,8 @@
 
 .wrapper {
   padding: var(--space-xl) 0;
-  background-color: #232b33;
   color: var(--white);
+  background-color: #232b33;
 }
 
 .flexContainer {
@@ -11,6 +11,6 @@
 }
 
 .copyright {
-  text-align: center;
   font-size: clamp(0.75rem, 0.678rem + 0.31vw, 0.875rem);
+  text-align: center;
 }
