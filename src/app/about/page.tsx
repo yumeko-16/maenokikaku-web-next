@@ -6,7 +6,7 @@ import CompanyProfile from '@/components/CompanyProfile/CompanyProfile';
 export async function generateMetadata(): Promise<Metadata> {
   const pageTitle = '会社情報';
   const description =
-    '当社は株式会社エクシオテック（旧 大東工業株式会社）の指定販売店として、寺院用ソフト「青藍システム 496」の販売、導入指導、サポートを行っています。';
+    '当社は株式会社エクシオテック（旧 大東工業株式会社）の指定販売店として、寺院用ソフト「寺院エキスパートシステム」の販売、導入指導、サポートを行っています。';
   const url = `${siteMeta.siteUrl}about/`;
 
   return {
@@ -33,7 +33,7 @@ export default function About() {
     <>
       <Hero
         heading="会社情報"
-        lead="当社は株式会社エクシオテック（旧 大東工業株式会社）の指定販売店として、寺院用ソフト「青藍システム 496」の販売、導入指導、サポートを行っています。"
+        lead="当社は株式会社エクシオテック（旧 大東工業株式会社）の指定販売店として、寺院用ソフト「寺院エキスパートシステム」の販売、導入指導、サポートを行っています。"
       />
       <CompanyProfile />
     </>
