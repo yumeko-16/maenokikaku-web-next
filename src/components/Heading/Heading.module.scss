@@ -1,0 +1,9 @@
+@use '@/utils/styles/mixin';
+
+.wrapper {
+  display: grid;
+  place-content: center;
+  font-weight: 700;
+  line-height: 1.4;
+  color: var(--primary);
+}

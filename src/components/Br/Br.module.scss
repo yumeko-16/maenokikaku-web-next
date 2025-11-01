@@ -1,0 +1,23 @@
+@use '@/utils/styles/mixin';
+
+.lineBreak {
+  [data-br='sm'] {
+    @include mixin.smartphoneScreen {
+      display: block;
+    }
+
+    @include mixin.tabletScreen {
+      display: none;
+    }
+  }
+
+  [data-br='pc'] {
+    @include mixin.smartphoneScreen {
+      display: none;
+    }
+
+    @include mixin.tabletScreen {
+      display: block;
+    }
+  }
+}
