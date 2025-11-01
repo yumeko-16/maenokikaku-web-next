@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { siteMeta } from '@/lib/constants';
 import Hero from '@/components/Hero/Hero';
+import CompanyProfile from '@/components/CompanyProfile/CompanyProfile';
 
 export async function generateMetadata(): Promise<Metadata> {
   const pageTitle = '会社情報';
@@ -29,9 +30,12 @@ export async function generateMetadata(): Promise<Metadata> {
 
 export default function About() {
   return (
-    <Hero
-      heading="会社情報"
-      lead="当社は株式会社エクシオテック（旧 大東工業株式会社）の指定販売店として、寺院用ソフト「青藍システム 496」の販売、導入指導、サポートを行っています。"
-    />
+    <>
+      <Hero
+        heading="会社情報"
+        lead="当社は株式会社エクシオテック（旧 大東工業株式会社）の指定販売店として、寺院用ソフト「青藍システム 496」の販売、導入指導、サポートを行っています。"
+      />
+      <CompanyProfile />
+    </>
   );
 }
