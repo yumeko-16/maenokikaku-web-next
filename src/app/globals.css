@@ -31,7 +31,6 @@ body {
   font-size: var(--body);
   color: var(--black);
   letter-spacing: 0.05em;
-  background-color: var(--base);
 }
 
 h1 {
