@@ -6,7 +6,7 @@ import MailForm from '@/components/MailForm/MailForm';
 export async function generateMetadata(): Promise<Metadata> {
   const pageTitle = 'お問い合わせ';
   const description =
-    '寺院管理ソフト「青藍システム 496」の導入やサポートに関するお問い合わせはこちら。檀家管理や塔婆印刷など、多彩な機能についてお気軽にご相談ください。';
+    '寺院管理ソフト「寺院エキスパートシステム」の導入やサポートに関するお問い合わせはこちら。檀家管理や塔婆印刷など、多彩な機能についてお気軽にご相談ください。';
   const url = `${siteMeta.siteUrl}contact/`;
 
   return {

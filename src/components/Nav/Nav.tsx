@@ -7,7 +7,7 @@ import styles from './Nav.module.scss';
 const navLinks = [
   { href: '/', label: 'ホーム' },
   { href: '/about/', label: '会社情報' },
-  { href: '/expert/', label: '青藍システム 496' },
+  { href: '/expert/', label: '寺院エキスパートシステム' },
   { href: '/contact/', label: 'お問い合わせ' },
 ];
 
