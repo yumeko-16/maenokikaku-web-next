@@ -13,7 +13,7 @@ export default function Service() {
         <Lead>
           <p>
             当社は寺院エキスパートシステムに加え、
-            <Br />
+            <Br device="pc" />
             ご寺院さまの業務をサポートする幅広いサービスをご用意しています。
           </p>
         </Lead>
