@@ -1,0 +1,7 @@
+.wrapper {
+  font-size: clamp(1.375rem, 1.303rem + 0.31vw, 1.5rem);
+
+  & > * + * {
+    margin-top: 0.5em;
+  }
+}
