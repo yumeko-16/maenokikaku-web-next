@@ -3,3 +3,83 @@
 .wrapper {
   background-color: var(--base);
 }
+
+.cards {
+  display: grid;
+  place-content: center;
+
+  @include mixin.smartphoneScreen {
+    gap: 20px;
+  }
+
+  @include mixin.tabletScreen {
+    gap: 20px;
+  }
+
+  @include mixin.laptopScreen {
+    gap: 45px;
+  }
+}
+
+.card {
+  display: grid;
+  grid-template-columns: 50px 1fr;
+  gap: 20px;
+  font-weight: 700;
+  background: var(--white);
+  border-radius: 8px;
+  box-shadow: 0 7px 16px 0 rgb(0 0 0 / 7%);
+
+  @include mixin.smartphoneScreen {
+    padding: 20px;
+  }
+
+  @include mixin.tabletScreen {
+    padding: 20px 30px;
+  }
+
+  @include mixin.laptopScreen {
+    align-items: center;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.avatar {
+  position: relative;
+  width: 50px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+
+  .card:nth-child(1) & {
+    background-color: #63e6be;
+  }
+
+  .card:nth-child(2) & {
+    background-color: #74c0fc;
+  }
+
+  .card:nth-child(3) & {
+    background-color: #ffd43b;
+  }
+
+  .card:nth-child(4) & {
+    background-color: #b197fc;
+  }
+
+  &::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: inline-block;
+    width: 30px;
+    aspect-ratio: 1;
+    content: '';
+    background-image: url('/images/icon_user-tie-solid-full.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    transform: translate(-50%, -50%);
+  }
+}
