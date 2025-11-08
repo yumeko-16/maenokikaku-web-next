@@ -3,3 +3,69 @@
 .wrapper {
   background-color: var(--white);
 }
+
+.phone {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 0.5em;
+  place-content: center;
+  align-items: center;
+
+  &::before {
+    display: inline-block;
+    aspect-ratio: 1;
+    content: '';
+    background-image: url('/images/icon_phone-solid-full.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    @include mixin.smartphoneScreen {
+      width: 40px;
+    }
+
+    @include mixin.tabletScreen {
+      width: 50px;
+    }
+  }
+}
+
+.num {
+  font-size: clamp(2.125rem, 1.547rem + 2.47vw, 3.125rem);
+}
+
+.btn {
+  display: grid;
+  place-content: center;
+
+  @include mixin.smartphoneScreen {
+    margin-top: 20px;
+  }
+
+  @include mixin.tabletScreen {
+    margin-top: 40px;
+  }
+}
+
+.link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  min-width: 180px;
+  padding: 0.667em 30px 0.556em;
+  font-size: clamp(1.125rem, 1.053rem + 0.31vw, 1.25rem); /* 18-20px */
+  font-weight: 600;
+  color: var(--white);
+  letter-spacing: unset;
+  text-decoration: none;
+  cursor: pointer;
+  background-color: var(--primary);
+  border: none;
+  border-radius: 30px;
+  box-shadow: 0 2px 8px rgb(20 19 19 / 50%);
+  transition: all 0.3s;
+
+  @include mixin.hover {
+    transform: scale(1.1);
+  }
+}
