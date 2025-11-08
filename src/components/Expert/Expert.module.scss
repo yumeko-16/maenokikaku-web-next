@@ -1,9 +1,5 @@
 @use '@/utils/styles/mixin';
 
-.wrapper {
-  background-color: var(--white);
-}
-
 .expert {
   display: grid;
   place-content: center;

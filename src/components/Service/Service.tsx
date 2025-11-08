@@ -64,40 +64,38 @@ const services = [
 
 export default function Service() {
   return (
-    <section className={styles.wrapper}>
-      <Container>
-        <Heading>当社サービスのご案内</Heading>
+    <Container>
+      <Heading>当社サービスのご案内</Heading>
 
-        <PostBody>
-          <p>
-            当社は寺院エキスパートシステムに加え、
-            <Br device="pc" />
-            ご寺院さまの業務をサポートする幅広いサービスをご用意しています。
-          </p>
-        </PostBody>
+      <PostBody>
+        <p>
+          当社は寺院エキスパートシステムに加え、
+          <Br device="pc" />
+          ご寺院さまの業務をサポートする幅広いサービスをご用意しています。
+        </p>
+      </PostBody>
 
-        <ul className={styles.services}>
-          {services.map(({ name, src, desc }) => {
-            return (
-              <li className={styles.service} key={name}>
-                <figure className={styles.image}>
-                  <Image
-                    src={src}
-                    alt={name}
-                    width="160"
-                    height="160"
-                    loading="lazy"
-                  />
-                </figure>
+      <ul className={styles.services}>
+        {services.map(({ name, src, desc }) => {
+          return (
+            <li className={styles.service} key={name}>
+              <figure className={styles.image}>
+                <Image
+                  src={src}
+                  alt={name}
+                  width="160"
+                  height="160"
+                  loading="lazy"
+                />
+              </figure>
 
-                <h3 className={styles.term}>{name}</h3>
+              <h3 className={styles.term}>{name}</h3>
 
-                <p>{desc}</p>
-              </li>
-            );
-          })}
-        </ul>
-      </Container>
-    </section>
+              <p>{desc}</p>
+            </li>
+          );
+        })}
+      </ul>
+    </Container>
   );
 }

@@ -1,0 +1,19 @@
+@use '@/utils/styles/mixin';
+
+.wrapper {
+  @include mixin.smartphoneScreen {
+    padding: 50px 0;
+  }
+
+  @include mixin.tabletScreen {
+    padding: 80px 0;
+  }
+
+  &[data-bgc='hero'] {
+    background: linear-gradient(135deg, var(--primary), #5067c5);
+  }
+
+  &[data-bgc='base'] {
+    background-color: var(--base);
+  }
+}

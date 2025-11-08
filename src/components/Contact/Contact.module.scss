@@ -1,9 +1,5 @@
 @use '@/utils/styles/mixin';
 
-.wrapper {
-  background-color: var(--white);
-}
-
 .phone {
   display: grid;
   grid-template-columns: auto auto;

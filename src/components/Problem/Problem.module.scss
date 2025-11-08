@@ -1,9 +1,5 @@
 @use '@/utils/styles/mixin';
 
-.wrapper {
-  background-color: var(--base);
-}
-
 .cards {
   display: grid;
   place-content: center;

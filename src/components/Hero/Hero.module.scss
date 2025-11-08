@@ -1,9 +1,5 @@
 @use '@/utils/styles/mixin';
 
-.container {
-  background: linear-gradient(135deg, var(--primary), #5067c5);
-}
-
 .gridContainer {
   display: grid;
   place-items: center;
@@ -12,11 +8,6 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 40px;
   }
-}
-
-.textContainer {
-  padding-top: calc(var(--display) * 1.5);
-  padding-bottom: calc(var(--display) * 2);
 }
 
 .heading {
