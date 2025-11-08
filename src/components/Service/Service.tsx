@@ -2,7 +2,7 @@ import Image from 'next/image';
 import Container from '@/components/Container/Container';
 import Br from '@/components/Br/Br';
 import Heading from '@/components/Heading/Heading';
-import PostBody from '@/components/PostBody/PostBody';
+import Lead from '@/components/Lead/Lead';
 import bookImg from '@/images/service_book.png';
 import cameraImg from '@/images/service_camera.png';
 import gokuImg from '@/images/service_map.png';
@@ -67,13 +67,13 @@ export default function Service() {
     <Container>
       <Heading>当社サービスのご案内</Heading>
 
-      <PostBody>
+      <Lead>
         <p>
           当社は寺院エキスパートシステムに加え、
           <Br device="pc" />
           ご寺院さまの業務をサポートする幅広いサービスをご用意しています。
         </p>
-      </PostBody>
+      </Lead>
 
       <ul className={styles.services}>
         {services.map(({ name, src, desc }) => {

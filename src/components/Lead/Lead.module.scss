@@ -1,0 +1,15 @@
+@use '@/utils/styles/mixin';
+
+.wrapper {
+  display: grid;
+  gap: 1em;
+  place-content: center;
+
+  @include mixin.smartphoneScreen {
+    margin-bottom: 30px;
+  }
+
+  @include mixin.tabletScreen {
+    margin-bottom: 40px;
+  }
+}

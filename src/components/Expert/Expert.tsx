@@ -2,7 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import Container from '@/components/Container/Container';
 import Heading from '@/components/Heading/Heading';
-import PostBody from '@/components/PostBody/PostBody';
+import Lead from '@/components/Lead/Lead';
 import expertImg from '@/images/expert.webp';
 import styles from './Expert.module.scss';
 
@@ -11,9 +11,9 @@ export default function Expert() {
     <Container>
       <Heading>寺院エキスパートシステム</Heading>
 
-      <PostBody>
-        <p>お悩みは、すべて「寺院エキスパートシステム」で解決できます</p>
-      </PostBody>
+      <Lead>
+        <p>お悩みは、すべて「寺院エキスパートシステム」で解決できます。</p>
+      </Lead>
 
       <div className={styles.expert}>
         <div className={styles.gridContainer}>
