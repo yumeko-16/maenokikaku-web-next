@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import Container from '@/components/Container/Container';
 import Br from '@/components/Br/Br';
 import Heading from '@/components/Heading/Heading';
@@ -17,6 +18,20 @@ export default function Flow() {
             お悩みやご相談は、いつでもお気軽にお問い合わせください。
           </p>
         </PostBody>
+
+        <div className={styles.contact}>
+          <div className={styles.phone}>
+            <Link className={styles.num} href="tel:+90.2679.3570">
+              090-2679-3570
+            </Link>
+          </div>
+
+          <div className={styles.btn}>
+            <Link className={styles.link} href="/contact/">
+              メールフォームでお問い合わせ
+            </Link>
+          </div>
+        </div>
       </Container>
     </section>
   );
