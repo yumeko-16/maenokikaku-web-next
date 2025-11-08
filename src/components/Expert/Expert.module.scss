@@ -66,6 +66,19 @@
   }
 }
 
+.btn {
+  display: grid;
+  place-content: center;
+
+  @include mixin.smartphoneScreen {
+    margin-top: 20px;
+  }
+
+  @include mixin.tabletScreen {
+    margin-top: 40px;
+  }
+}
+
 .link {
   display: inline-flex;
   align-items: center;
