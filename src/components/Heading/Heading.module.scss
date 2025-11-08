@@ -6,4 +6,12 @@
   font-weight: 700;
   line-height: 1.4;
   color: var(--primary);
+
+  @include mixin.smartphoneScreen {
+    margin-bottom: 30px;
+  }
+
+  @include mixin.tabletScreen {
+    margin-bottom: 40px;
+  }
 }
