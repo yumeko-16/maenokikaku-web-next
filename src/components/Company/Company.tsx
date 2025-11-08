@@ -1,6 +1,7 @@
 import Container from '@/components/Container/Container';
 import Br from '@/components/Br/Br';
 import Heading from '@/components/Heading/Heading';
+import Lead from '@/components/Lead/Lead';
 import PostBody from '@/components/PostBody/PostBody';
 import styles from './Company.module.scss';
 
@@ -9,7 +10,7 @@ export default function Company() {
     <Container>
       <Heading>会社情報</Heading>
 
-      <PostBody>
+      <Lead>
         <p>
           当社は株式会社エクシオテック（旧
           大東工業株式会社）の指定販売店として、
@@ -26,7 +27,7 @@ export default function Company() {
         <p>
           今後も、ユーザーさまの信頼に応えられるサービス提供に努めてまいります。
         </p>
-      </PostBody>
+      </Lead>
 
       <div className={styles.company}>
         <div className={styles.summary}>
