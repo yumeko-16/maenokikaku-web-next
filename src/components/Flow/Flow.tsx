@@ -27,24 +27,22 @@ const steps = [
 
 export default function Flow() {
   return (
-    <section className={styles.wrapper}>
-      <Container>
-        <Heading>お取引のステップ</Heading>
+    <Container>
+      <Heading>お取引のステップ</Heading>
 
-        <ol className={styles.steps}>
-          {steps.map(({ num, heading, desc }) => {
-            return (
-              <li className={styles.step} key={num}>
-                <span className={styles.num}>STEP.{num}</span>
-                <dl className={styles.definitionlist}>
-                  <dt className={styles.heading}>{heading}</dt>
-                  <dd>{desc}</dd>
-                </dl>
-              </li>
-            );
-          })}
-        </ol>
-      </Container>
-    </section>
+      <ol className={styles.steps}>
+        {steps.map(({ num, heading, desc }) => {
+          return (
+            <li className={styles.step} key={num}>
+              <span className={styles.num}>STEP.{num}</span>
+              <dl className={styles.definitionlist}>
+                <dt className={styles.heading}>{heading}</dt>
+                <dd>{desc}</dd>
+              </dl>
+            </li>
+          );
+        })}
+      </ol>
+    </Container>
   );
 }

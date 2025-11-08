@@ -1,9 +1,5 @@
 @use '@/utils/styles/mixin';
 
-.wrapper {
-  background-color: var(--base);
-}
-
 .services {
   display: grid;
   gap: 20px;

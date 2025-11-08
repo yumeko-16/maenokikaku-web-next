@@ -4,10 +4,8 @@ import styles from './CompanyProfile.module.scss';
 
 export default function CompanyProfile() {
   return (
-    <section className={styles.wrapper}>
-      <Container>
-        <Heading>会社概要</Heading>
-      </Container>
-    </section>
+    <Container>
+      <Heading>会社概要</Heading>
+    </Container>
   );
 }

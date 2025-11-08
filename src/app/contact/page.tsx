@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { siteMeta } from '@/lib/constants';
+import Section from '@/components/Section/Section';
 import Hero from '@/components/Hero/Hero';
 import MailForm from '@/components/MailForm/MailForm';
 
@@ -31,11 +32,16 @@ export async function generateMetadata(): Promise<Metadata> {
 export default function Contact() {
   return (
     <>
-      <Hero
-        heading="お問い合わせ"
-        lead="サービスに関するお問い合わせは、お電話またはメールフォームで承っております。お悩みやご相談は、いつでもお気軽にお問い合わせください。"
-      />
-      <MailForm />
+      <Section bgc="hero">
+        <Hero
+          heading="お問い合わせ"
+          lead="サービスに関するお問い合わせは、お電話またはメールフォームで承っております。お悩みやご相談は、いつでもお気軽にお問い合わせください。"
+        />
+      </Section>
+
+      <Section bgc="base">
+        <MailForm />
+      </Section>
     </>
   );
 }
