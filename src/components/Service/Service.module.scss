@@ -3,3 +3,51 @@
 .wrapper {
   background-color: var(--base);
 }
+
+.services {
+  display: grid;
+  gap: 20px;
+
+  @include mixin.smartphoneScreen {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  @include mixin.tabletScreen {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include mixin.laptopScreen {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.service {
+  display: grid;
+  grid-template-rows: subgrid;
+  grid-row: span 3;
+  justify-items: center;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgb(33 35 37 / 12%);
+
+  @include mixin.smartphoneScreen {
+    gap: 20px;
+    padding: 30px;
+  }
+
+  @include mixin.tabletScreen {
+    gap: 30px;
+    padding: 40px 30px;
+  }
+}
+
+.image {
+  width: min(160px, 35%);
+  overflow: hidden;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px -1px rgb(0 0 0 / 20%);
+}
+
+.term {
+  font-weight: 700;
+}
