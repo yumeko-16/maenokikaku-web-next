@@ -40,7 +40,7 @@ export default function About() {
         />
       </Section>
 
-      <Section bgc="base">
+      <Section>
         <CompanyProfile />
       </Section>
 
