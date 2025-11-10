@@ -1,1 +1,14 @@
 @use '@/utils/styles/mixin';
+
+.map {
+  width: 100%;
+  border: none;
+
+  @include mixin.smartphoneScreen {
+    height: 300px;
+  }
+
+  @include mixin.tabletScreen {
+    height: 500px;
+  }
+}
