@@ -1,1 +1,45 @@
 @use '@/utils/styles/mixin';
+
+.unit {
+  display: grid;
+
+  @include mixin.tabletScreen {
+    grid-template-columns: 20% 1fr;
+  }
+}
+
+.term,
+.description {
+  border-right: 1px solid var(--black);
+  border-bottom: 1px solid var(--black);
+
+  @include mixin.smartphoneScreen {
+    padding: 10px 15px;
+    border-left: 1px solid var(--black);
+  }
+
+  @include mixin.tabletScreen {
+    padding: 25px;
+  }
+}
+
+.term {
+  font-weight: 700;
+  background-color: var(--base);
+
+  @include mixin.tabletScreen {
+    border-left: 1px solid var(--black);
+  }
+
+  .unit:first-child & {
+    border-top: 1px solid var(--black);
+  }
+}
+
+.description {
+  .unit:first-child & {
+    @include mixin.tabletScreen {
+      border-top: 1px solid var(--black);
+    }
+  }
+}
