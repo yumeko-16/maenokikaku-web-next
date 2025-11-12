@@ -1,0 +1,92 @@
+@use '@/utils/styles/mixin';
+
+.wrapper {
+  display: grid;
+
+  @include mixin.smartphoneScreen {
+    gap: 60px;
+  }
+
+  @include mixin.tabletScreen {
+    gap: 80px;
+  }
+}
+
+.tabs {
+  display: grid;
+  gap: 1px;
+  box-shadow: 0 7px 16px 0 rgb(0 0 0 / 7%);
+
+  @include mixin.smartphoneScreen {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include mixin.tabletScreen {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+.tab {
+  display: grid;
+  color: #666;
+  text-align: center;
+  cursor: pointer;
+  background-color: var(--white);
+
+  @include mixin.smartphoneScreen {
+    padding: 10px 1em;
+  }
+
+  @include mixin.tabletScreen {
+    padding: 12px 1em;
+  }
+
+  &[data-active='true'] {
+    color: #fff;
+    background-color: var(--primary);
+  }
+}
+
+.panel {
+  display: none;
+
+  &[data-active='true'] {
+    display: block;
+    animation: fade 0.5s ease;
+  }
+}
+
+.contents {
+  display: grid;
+
+  @include mixin.smartphoneScreen {
+    gap: 60px;
+  }
+
+  @include mixin.tabletScreen {
+    gap: 80px;
+  }
+}
+
+.image {
+  display: grid;
+
+  @include mixin.smartphoneScreen {
+    gap: 15px;
+  }
+
+  @include mixin.tabletScreen {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
