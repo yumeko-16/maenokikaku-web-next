@@ -1,1 +1,85 @@
 @use '@/utils/styles/mixin';
+
+.wrapper {
+  display: grid;
+  gap: 40px;
+}
+
+.item {
+  display: grid;
+  gap: 10px;
+  align-items: center;
+}
+
+.label {
+  display: flex;
+  gap: 10px;
+  place-items: center;
+  font-weight: 700;
+}
+
+.input,
+.textarea {
+  all: unset;
+  background-color: var(--white);
+  border-radius: 8px;
+  box-shadow: 0 7px 16px 0 rgb(0 0 0 / 7%);
+
+  @include mixin.smartphoneScreen {
+    padding: 10px 15px;
+  }
+
+  @include mixin.tabletScreen {
+    padding: 15px;
+  }
+
+  &::placeholder {
+    color: #ccc;
+    letter-spacing: 0.08em;
+  }
+}
+
+.textarea {
+  min-height: 260px;
+}
+
+.btns {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+}
+
+.button {
+  all: unset;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  min-width: 180px;
+  padding: 0.667em 30px 0.556em;
+  font-size: clamp(1.125rem, 1.053rem + 0.31vw, 1.25rem); /* 18-20px */
+  font-weight: 600;
+  color: var(--white);
+  cursor: pointer;
+  background-color: var(--primary);
+  border: none;
+  border-radius: 30px;
+  box-shadow: 0 2px 8px rgb(20 19 19 / 50%);
+  transition: all 0.3s;
+
+  @include mixin.hover {
+    transform: scale(1.1);
+  }
+
+  &:disabled {
+    pointer-events: none;
+    background-color: #dfe2e7;
+    box-shadow: none;
+  }
+}
+
+.required {
+  font-size: clamp(0.75rem, 0.678rem + 0.31vw, 0.875rem);
+  color: #f63a52;
+  border-radius: 30px;
+}
