@@ -100,50 +100,59 @@ export default function MailForm() {
 
       <form className={styles.wrapper} onSubmit={handleSubmit}>
         <div className={styles.item}>
-          <label className={styles.label}>
+          <label className={styles.label} htmlFor="name">
             会社名／寺院名<span className={styles.required}>必須</span>
           </label>
           <input
+            id="name"
             className={styles.input}
             type="text"
             name="name"
             value={name}
             placeholder="例）普蔵院"
+            autoComplete="organization"
             onChange={handleChange}
           />
         </div>
 
         <div className={styles.item}>
-          <label className={styles.label}>
+          <label className={styles.label} htmlFor="email">
             メールアドレス<span className={styles.required}>必須</span>
           </label>
           <input
+            id="email"
             className={styles.input}
             type="text"
             name="email"
             value={email}
             placeholder="例）abc@mail.co.jp"
+            autoComplete="email"
             onChange={handleChange}
           />
         </div>
 
         <div className={styles.item}>
-          <label className={styles.label}>電話番号</label>
+          <label className={styles.label} htmlFor="tel">
+            電話番号
+          </label>
           <input
+            id="tel"
             className={styles.input}
             type="tel"
             name="tel"
             value={tel}
             placeholder="例）012-345-6789"
+            autoComplete="tel"
             onChange={handleChange}
           />
         </div>
 
         <div className={styles.item}>
-          <label className={styles.label}>
+          <label className={styles.label} htmlFor="message">
             お問い合わせ内容<span className={styles.required}>必須</span>
           </label>
           <textarea
+            id="message"
             className={styles.textarea}
             name="message"
             value={message}
