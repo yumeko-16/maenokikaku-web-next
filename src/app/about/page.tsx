@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { siteMeta } from '@/lib/constants';
 import Section from '@/components/Section/Section';
 import Hero from '@/components/Hero/Hero';
+import CEOMessage from '@/components/CEOMessage/CEOMessage';
 import CompanyProfile from '@/components/CompanyProfile/CompanyProfile';
 import Access from '@/components/Access/Access';
 
@@ -38,6 +39,10 @@ export default function About() {
           heading="会社情報"
           lead="当社は株式会社エクシオテック（旧 大東工業株式会社）の指定販売店として、寺院用ソフト「寺院エキスパートシステム」の販売、導入指導、サポートを行っています。"
         />
+      </Section>
+
+      <Section>
+        <CEOMessage />
       </Section>
 
       <Section>
