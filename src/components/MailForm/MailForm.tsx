@@ -12,33 +12,47 @@ export default function MailForm() {
     'idle' | 'sending' | 'success' | 'error'
   >('idle');
 
-  // 入力状態の管理
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [message, setMessage] = useState('');
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    tel: '',
+    message: '',
+  });
 
-  // ボタンの有効/無効判定
-  const isDisabled = !name.trim() || !email.trim() || !message.trim();
+  const { name, email, tel, message } = formData;
 
-  // 送信完了後にメッセージを自動で非表示
+  // 入力処理の共通化
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+  ) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
+
+  // ボタンの有効判定
+  const isDisabled =
+    !name.trim() ||
+    !email.trim() ||
+    !message.trim() ||
+    sendStatus === 'sending';
+
+  // メールチェック（関数化して再利用しやすく）
+  const isValidEmail = (value: string) =>
+    /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
+
+  // 成功後5秒でトースト非表示
   useEffect(() => {
-    if (sendStatus === 'success') {
-      const timer = setTimeout(() => setSendStatus('idle'), 5000); // 5秒後に非表示
-      return () => clearTimeout(timer); // クリーンアップ
-    }
+    if (sendStatus !== 'success') return;
+    const timer = setTimeout(() => setSendStatus('idle'), 5000);
+    return () => clearTimeout(timer);
   }, [sendStatus]);
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setSendStatus('sending');
 
-    const form = e.currentTarget;
-    const tel = (
-      form.elements.namedItem('tel') as HTMLInputElement
-    ).value.trim();
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-    if (!name || !email || !message || !emailRegex.test(email)) {
+    // バリデーション
+    if (!name || !email || !message || !isValidEmail(email)) {
       setSendStatus('error');
       return;
     }
@@ -47,18 +61,17 @@ export default function MailForm() {
       const res = await fetch('/api/send', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ name, email, tel, message }),
+        body: JSON.stringify(formData),
       });
 
-      if (res.ok) {
-        setSendStatus('success');
-        form.reset();
-        setName('');
-        setEmail('');
-        setMessage('');
-      } else {
+      if (!res.ok) {
         setSendStatus('error');
+        return;
       }
+
+      // 成功
+      setSendStatus('success');
+      setFormData({ name: '', email: '', tel: '', message: '' });
     } catch {
       setSendStatus('error');
     }
@@ -76,6 +89,15 @@ export default function MailForm() {
         </p>
       </Lead>
 
+      {/* トースト（成功 or エラー共通） */}
+      {sendStatus !== 'idle' && sendStatus !== 'sending' && (
+        <div className={styles.toast} data-status={sendStatus}>
+          {sendStatus === 'success'
+            ? '送信が完了しました！'
+            : '送信に失敗しました。入力内容をご確認ください。'}
+        </div>
+      )}
+
       <form className={styles.wrapper} onSubmit={handleSubmit}>
         <div className={styles.item}>
           <label className={styles.label}>
@@ -87,8 +109,7 @@ export default function MailForm() {
             name="name"
             value={name}
             placeholder="例）普蔵院"
-            onChange={(e) => setName(e.target.value)}
-            required
+            onChange={handleChange}
           />
         </div>
 
@@ -102,8 +123,7 @@ export default function MailForm() {
             name="email"
             value={email}
             placeholder="例）abc@mail.co.jp"
-            onChange={(e) => setEmail(e.target.value)}
-            required
+            onChange={handleChange}
           />
         </div>
 
@@ -113,7 +133,9 @@ export default function MailForm() {
             className={styles.input}
             type="tel"
             name="tel"
+            value={tel}
             placeholder="例）012-345-6789"
+            onChange={handleChange}
           />
         </div>
 
@@ -126,27 +148,15 @@ export default function MailForm() {
             name="message"
             value={message}
             placeholder="お問合わせ内容をご入力ください。"
-            onChange={(e) => setMessage(e.target.value)}
-            required
+            onChange={handleChange}
           ></textarea>
         </div>
 
         <div className={styles.btns}>
-          <button
-            className={styles.button}
-            type="submit"
-            disabled={isDisabled || sendStatus === 'sending'}
-          >
+          <button className={styles.button} type="submit" disabled={isDisabled}>
             {sendStatus === 'sending' ? '送信中…' : '送信'}
           </button>
         </div>
-
-        {sendStatus === 'success' && <p>送信完了しました！</p>}
-        {sendStatus === 'error' && (
-          <p>
-            入力内容を確認してください。必須項目が未入力の可能性があります。
-          </p>
-        )}
       </form>
     </Container>
   );
