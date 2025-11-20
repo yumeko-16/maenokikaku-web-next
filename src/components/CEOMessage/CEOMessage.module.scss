@@ -1,0 +1,10 @@
+@use '@/utils/styles/mixin';
+
+.message {
+  font-size: clamp(1.125rem, 1.053rem + 0.31vw, 1.25rem); /* 18-20px */
+  font-weight: 700;
+
+  p + p {
+    margin-top: 1em;
+  }
+}
