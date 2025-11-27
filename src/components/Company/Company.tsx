@@ -2,7 +2,6 @@ import Container from '@/components/Container/Container';
 import Br from '@/components/Br/Br';
 import Heading from '@/components/Heading/Heading';
 import Lead from '@/components/Lead/Lead';
-import PostBody from '@/components/PostBody/PostBody';
 import styles from './Company.module.scss';
 
 export default function Company() {
