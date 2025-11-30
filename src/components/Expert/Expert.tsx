@@ -6,6 +6,14 @@ import Lead from '@/components/Lead/Lead';
 import expertImg from '@/images/expert.webp';
 import styles from './Expert.module.scss';
 
+const points = [
+  '寺院管理ソフトの決定版',
+  '檀家・会計管理を連動',
+  '豊富な帳票で業務効率化',
+  '安心の保守機能',
+  '寺院内LANで信徒検索',
+];
+
 export default function Expert() {
   return (
     <Container>
@@ -28,11 +36,11 @@ export default function Expert() {
           </figure>
 
           <ul className={styles.points}>
-            <li className={styles.point}>寺院管理ソフトの決定版</li>
-            <li className={styles.point}>檀家・会計管理を連動</li>
-            <li className={styles.point}>豊富な帳票で業務効率化</li>
-            <li className={styles.point}>安心の保守機能</li>
-            <li className={styles.point}>寺院内LANで信徒検索</li>
+            {points.map((point, index) => (
+              <li className={styles.point} key={index}>
+                {point}
+              </li>
+            ))}
           </ul>
         </div>
       </div>
