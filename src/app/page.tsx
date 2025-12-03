@@ -3,7 +3,6 @@ import Hero from '@/components/Hero';
 import Problem from '@/components/Problem';
 import Expert from '@/components/Expert';
 import Service from '@/components/Service';
-import Company from '@/components/Company';
 import Flow from '@/components/Flow';
 import Contact from '@/components/Contact';
 
@@ -28,10 +27,6 @@ export default function Home() {
 
       <Section bgc="base">
         <Service />
-      </Section>
-
-      <Section>
-        <Company />
       </Section>
 
       <Section bgc="base">
