@@ -1,7 +1,7 @@
-import Container from '@/components/Container/Container';
-import Logo from '@/components/Logo/Logo';
-import Nav from '@/components/Nav/Nav';
-import styles from './Header.module.scss';
+import Container from '@/components/Container';
+import Logo from '@/components/Logo';
+import Nav from '@/components/Nav';
+import styles from './index.module.scss';
 
 export default function Header() {
   return (

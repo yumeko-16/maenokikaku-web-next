@@ -1,6 +1,6 @@
-import Container from '@/components/Container/Container';
-import Heading from '@/components/Heading/Heading';
-import styles from './Access.module.scss';
+import Container from '@/components/Container';
+import Heading from '@/components/Heading';
+import styles from './index.module.scss';
 
 export default function Access() {
   return (

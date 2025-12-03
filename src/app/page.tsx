@@ -1,11 +1,11 @@
-import Section from '@/components/Section/Section';
-import Hero from '@/components/Hero/Hero';
-import Problem from '@/components/Problem/Problem';
-import Expert from '@/components/Expert/Expert';
-import Service from '@/components/Service/Service';
-import Company from '@/components/Company/Company';
-import Flow from '@/components/Flow/Flow';
-import Contact from '@/components/Contact/Contact';
+import Section from '@/components/Section';
+import Hero from '@/components/Hero';
+import Problem from '@/components/Problem';
+import Expert from '@/components/Expert';
+import Service from '@/components/Service';
+import Company from '@/components/Company';
+import Flow from '@/components/Flow';
+import Contact from '@/components/Contact';
 
 export default function Home() {
   return (

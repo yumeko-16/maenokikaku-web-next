@@ -2,8 +2,8 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
-import Container from '@/components/Container/Container';
-import Heading from '@/components/Heading/Heading';
+import Container from '@/components/Container';
+import Heading from '@/components/Heading';
 import supporter001Img from '@/images/expert_supporter001.png';
 import supporter002Img from '@/images/expert_supporter002.png';
 import payment001Img from '@/images/expert_payment001.png';
@@ -21,7 +21,7 @@ import buddhistName001Img from '@/images/expert_buddhistName001.png';
 import buddhistName002Img from '@/images/expert_buddhistName002.png';
 import tanagyo001Img from '@/images/expert_tanagyo001.png';
 import tanagyo002Img from '@/images/expert_tanagyo002.png';
-import styles from './Tab.module.scss';
+import styles from './index.module.scss';
 
 export const expertTabs = [
   {

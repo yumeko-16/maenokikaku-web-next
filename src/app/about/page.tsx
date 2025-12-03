@@ -1,10 +1,10 @@
 import type { Metadata } from 'next';
 import { siteMeta } from '@/lib/constants';
-import Section from '@/components/Section/Section';
-import Hero from '@/components/Hero/Hero';
-import CEOMessage from '@/components/CEOMessage/CEOMessage';
-import CompanyProfile from '@/components/CompanyProfile/CompanyProfile';
-import Access from '@/components/Access/Access';
+import Section from '@/components/Section';
+import Hero from '@/components/Hero';
+import CEOMessage from '@/components/CEOMessage';
+import CompanyProfile from '@/components/CompanyProfile';
+import Access from '@/components/Access';
 
 export async function generateMetadata(): Promise<Metadata> {
   const pageTitle = '会社情報';

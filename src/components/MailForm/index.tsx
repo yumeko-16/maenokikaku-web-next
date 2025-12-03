@@ -1,11 +1,11 @@
 'use client';
 
 import { FormEvent, useState, useEffect } from 'react';
-import Container from '@/components/Container/Container';
-import Br from '@/components/Br/Br';
-import Heading from '@/components/Heading/Heading';
-import Lead from '@/components/Lead/Lead';
-import styles from './MailForm.module.scss';
+import Container from '@/components/Container';
+import Br from '@/components/Br';
+import Heading from '@/components/Heading';
+import Lead from '@/components/Lead';
+import styles from './index.module.scss';
 
 export default function MailForm() {
   const [sendStatus, setSendStatus] = useState<

@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import styles from './Nav.module.scss';
+import styles from './index.module.scss';
 
 const navLinks = [
   { href: '/', label: 'ホーム' },

@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 import { siteMeta } from '@/lib/constants';
-import Section from '@/components/Section/Section';
-import Hero from '@/components/Hero/Hero';
-import MailForm from '@/components/MailForm/MailForm';
+import Section from '@/components/Section';
+import Hero from '@/components/Hero';
+import MailForm from '@/components/MailForm';
 
 export async function generateMetadata(): Promise<Metadata> {
   const pageTitle = 'お問い合わせ';

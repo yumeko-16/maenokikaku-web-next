@@ -1,10 +1,10 @@
 'use client';
 
 import { useState } from 'react';
-import Container from '@/components/Container/Container';
+import Container from '@/components/Container';
 import Image from 'next/image';
 import heroImg from '@/images/hero.webp';
-import styles from './Hero.module.scss';
+import styles from './index.module.scss';
 
 type Props = {
   heading: string;

@@ -1,4 +1,4 @@
-import styles from './Br.module.scss';
+import styles from './index.module.scss';
 
 type Props = {
   device?: string;

@@ -1,6 +1,6 @@
-import Container from '@/components/Container/Container';
-import Logo from '@/components/Logo/Logo';
-import styles from './Footer.module.scss';
+import Container from '@/components/Container';
+import Logo from '@/components/Logo';
+import styles from './index.module.scss';
 
 export default function Footer() {
   return (

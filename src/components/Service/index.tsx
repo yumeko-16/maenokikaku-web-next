@@ -1,8 +1,8 @@
 import Image from 'next/image';
-import Container from '@/components/Container/Container';
-import Br from '@/components/Br/Br';
-import Heading from '@/components/Heading/Heading';
-import Lead from '@/components/Lead/Lead';
+import Container from '@/components/Container';
+import Br from '@/components/Br';
+import Heading from '@/components/Heading';
+import Lead from '@/components/Lead';
 import bookImg from '@/images/service_book.png';
 import cameraImg from '@/images/service_camera.png';
 import gokuImg from '@/images/service_map.png';
@@ -12,7 +12,7 @@ import scannerImg from '@/images/service_scanner.png';
 import templeImg from '@/images/service_temple.png';
 import tobaImg from '@/images/service_toba.png';
 import websiteImg from '@/images/service_website.png';
-import styles from './Service.module.scss';
+import styles from './index.module.scss';
 
 const services = [
   {
