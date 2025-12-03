@@ -1,10 +1,10 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import Container from '@/components/Container/Container';
-import Heading from '@/components/Heading/Heading';
-import Lead from '@/components/Lead/Lead';
+import Container from '@/components/Container';
+import Heading from '@/components/Heading';
+import Lead from '@/components/Lead';
 import expertImg from '@/images/expert.webp';
-import styles from './Expert.module.scss';
+import styles from './index.module.scss';
 
 const points = [
   '寺院管理ソフトの決定版',

@@ -1,6 +1,6 @@
-import Container from '@/components/Container/Container';
-import Heading from '@/components/Heading/Heading';
-import styles from './Problem.module.scss';
+import Container from '@/components/Container';
+import Heading from '@/components/Heading';
+import styles from './index.module.scss';
 
 const problems = [
   '万一の災害で寺務に必要な書類が消失する恐れがある。',

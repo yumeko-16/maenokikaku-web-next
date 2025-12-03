@@ -1,7 +1,7 @@
-import Container from '@/components/Container/Container';
-import Br from '@/components/Br/Br';
-import Heading from '@/components/Heading/Heading';
-import styles from './CEOMessage.module.scss';
+import Container from '@/components/Container';
+import Br from '@/components/Br';
+import Heading from '@/components/Heading';
+import styles from './index.module.scss';
 
 export default function CEOMessage() {
   return (
