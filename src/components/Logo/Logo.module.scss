@@ -1,0 +1,12 @@
+.basic,
+.box {
+  font-size: var(--heading2);
+  font-weight: 700;
+  letter-spacing: 0.15em;
+}
+
+.box {
+  display: inline-block;
+  padding: 1em 0;
+  font-size: clamp(1.125rem, 0.981rem + 0.62vw, 1.375rem);
+}
