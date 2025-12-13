@@ -4,12 +4,26 @@ import { useState } from 'react';
 import Link from 'next/link';
 import styles from './Nav.module.scss';
 
-const navLinks = [
-  { href: '/', label: 'ホーム' },
-  { href: '/about/', label: '会社情報' },
-  { href: '/expert/', label: '寺院エキスパートシステム' },
-  { href: '/contact/', label: 'お問い合わせ' },
-];
+const data = {
+  contents: [
+    {
+      href: '/',
+      label: 'ホーム',
+    },
+    {
+      href: '/about/',
+      label: '会社情報',
+    },
+    {
+      href: '/expert/',
+      label: '寺院エキスパートシステム',
+    },
+    {
+      href: '/contact/',
+      label: 'お問い合わせ',
+    },
+  ],
+};
 
 export default function Nav() {
   const [navIsOpen, setNavIsOpen] = useState(false);
@@ -42,7 +56,7 @@ export default function Nav() {
       </button>
 
       <ul className={styles.list}>
-        {navLinks.map((link) => (
+        {data.contents.map((link) => (
           <li key={link.href}>
             <Link className={styles.link} href={link.href} onClick={closeNav}>
               {link.label}
