@@ -1,6 +1,28 @@
+import Link from 'next/link';
 import Container from '@/components/Container';
 import Logo from '@/components/Logo';
 import styles from './Footer.module.scss';
+
+const data = {
+  contents: [
+    {
+      href: '/',
+      label: 'ホーム',
+    },
+    {
+      href: '/about/',
+      label: '会社情報',
+    },
+    {
+      href: '/expert/',
+      label: '寺院エキスパートシステム',
+    },
+    {
+      href: '/contact/',
+      label: 'お問い合わせ',
+    },
+  ],
+};
 
 export default function Footer() {
   return (
@@ -10,10 +32,13 @@ export default function Footer() {
           <Logo />
 
           <ul className={styles.nav}>
-            <li>ホーム</li>
-            <li>会社情報</li>
-            <li>寺院エキスパート</li>
-            <li>お問い合わせ</li>
+            {data.contents.map((link) => (
+              <li key={link.href}>
+                <Link className={styles.link} href={link.href}>
+                  {link.label}
+                </Link>
+              </li>
+            ))}
           </ul>
         </div>
 
