@@ -1,10 +1,30 @@
 import type { Metadata } from 'next';
 import { siteMeta } from '@/lib/constants';
 import Section from '@/components/Section';
+import Container from '@/components/Container';
 import Hero from '@/components/Hero';
+import Heading from '@/components/Heading';
 import CEOMessage from '@/components/CEOMessage';
 import CompanyProfile from '@/components/CompanyProfile';
 import Access from '@/components/Access';
+
+const data = {
+  contents: {
+    hero: {
+      heading: '会社情報',
+      lead: 'ご寺院さまの運営を幅広く支えるため、業務に寄り添ったサービスとサポートを提供しています。',
+    },
+    ceoMessage: {
+      heading: '代表メッセージ',
+    },
+    companyProfile: {
+      heading: '会社概要',
+    },
+    access: {
+      heading: 'アクセス',
+    },
+  },
+};
 
 export async function generateMetadata(): Promise<Metadata> {
   const pageTitle = '会社情報';
@@ -32,25 +52,33 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 export default function About() {
+  const { hero, ceoMessage, companyProfile, access } = data.contents;
+
   return (
     <>
       <Section bgc="hero">
-        <Hero
-          heading="会社情報"
-          lead="ご寺院さまの運営を幅広く支えるため、業務に寄り添ったサービスとサポートを提供しています。"
-        />
+        <Hero heading={hero.heading} lead={hero.lead} />
       </Section>
 
       <Section>
-        <CEOMessage />
+        <Container>
+          <Heading>{ceoMessage.heading}</Heading>
+          <CEOMessage />
+        </Container>
       </Section>
 
       <Section>
-        <CompanyProfile />
+        <Container>
+          <Heading>{companyProfile.heading}</Heading>
+          <CompanyProfile />
+        </Container>
       </Section>
 
       <Section bgc="base">
-        <Access />
+        <Container>
+          <Heading>{access.heading}</Heading>
+          <Access />
+        </Container>
       </Section>
     </>
   );
