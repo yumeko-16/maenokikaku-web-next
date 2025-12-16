@@ -1,10 +1,6 @@
 'use client';
 
 import { FormEvent, useState, useEffect } from 'react';
-import Container from '@/components/Container';
-import Br from '@/components/Br';
-import Heading from '@/components/Heading';
-import Lead from '@/components/Lead';
 import styles from './MailForm.module.scss';
 
 export default function MailForm() {
@@ -78,17 +74,7 @@ export default function MailForm() {
   };
 
   return (
-    <Container>
-      <Heading>メールフォーム</Heading>
-
-      <Lead>
-        <p>
-          サービスに関するお問い合わせは、お電話またはメールフォームで承っております。
-          <Br />
-          お悩みやご相談は、いつでもお気軽にお問い合わせください。
-        </p>
-      </Lead>
-
+    <>
       {/* トースト（成功 or エラー共通） */}
       {sendStatus !== 'idle' && sendStatus !== 'sending' && (
         <div className={styles.toast} data-status={sendStatus}>
@@ -167,6 +153,6 @@ export default function MailForm() {
           </button>
         </div>
       </form>
-    </Container>
+    </>
   );
 }

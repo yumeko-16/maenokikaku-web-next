@@ -1,8 +1,22 @@
 import type { Metadata } from 'next';
 import { siteMeta } from '@/lib/constants';
 import Section from '@/components/Section';
+import Container from '@/components/Container';
 import Hero from '@/components/Hero';
+import Heading from '@/components/Heading';
 import MailForm from '@/components/MailForm';
+
+const data = {
+  contents: {
+    hero: {
+      heading: 'お問い合わせ',
+      lead: 'サービスに関するお問い合わせは、お電話またはメールフォームで承っております。お悩みやご相談は、いつでもお気軽にお問い合わせください。',
+    },
+    mailForm: {
+      heading: 'メールフォーム',
+    },
+  },
+};
 
 export async function generateMetadata(): Promise<Metadata> {
   const pageTitle = 'お問い合わせ';
@@ -30,17 +44,19 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 export default function Contact() {
+  const { hero, mailForm } = data.contents;
+
   return (
     <>
       <Section bgc="hero">
-        <Hero
-          heading="お問い合わせ"
-          lead="サービスに関するお問い合わせは、お電話またはメールフォームで承っております。お悩みやご相談は、いつでもお気軽にお問い合わせください。"
-        />
+        <Hero heading={hero.heading} lead={hero.lead} />
       </Section>
 
       <Section bgc="base">
-        <MailForm />
+        <Container>
+          <Heading>{mailForm.heading}</Heading>
+          <MailForm />
+        </Container>
       </Section>
     </>
   );
