@@ -2,8 +2,6 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
-import Container from '@/components/Container';
-import Heading from '@/components/Heading';
 import supporter001Img from '@/images/expert_supporter001.png';
 import supporter002Img from '@/images/expert_supporter002.png';
 import payment001Img from '@/images/expert_payment001.png';
@@ -248,56 +246,52 @@ export default function Tab() {
   const [tabIsActive, setTabIsActive] = useState(data.contents[0].id);
 
   return (
-    <Container>
-      <Heading>機能</Heading>
-
-      <div className={styles.wrapper}>
-        <ul className={styles.tabs} data-tabs>
-          {data.contents.map(({ id, name }) => (
-            <li
-              key={id}
-              className={styles.tab}
-              data-tab={id}
-              data-active={tabIsActive === id ? 'true' : 'false'}
-              onClick={() => setTabIsActive(id)}
-              role="button"
-              tabIndex={0}
-            >
-              {name}
-            </li>
-          ))}
-        </ul>
-
-        {data.contents.map(({ id, panels }) => (
-          <div
+    <div className={styles.wrapper}>
+      <ul className={styles.tabs} data-tabs>
+        {data.contents.map(({ id, name }) => (
+          <li
             key={id}
-            className={styles.panel}
-            data-panel={id}
+            className={styles.tab}
+            data-tab={id}
             data-active={tabIsActive === id ? 'true' : 'false'}
+            onClick={() => setTabIsActive(id)}
+            role="button"
+            tabIndex={0}
           >
-            <div className={styles.contents}>
-              {panels.map(({ image, captions }, index) => (
-                <figure key={index} className={styles.image}>
-                  <Image
-                    src={image.url}
-                    alt={image.alt}
-                    width={image.width}
-                    height={image.height}
-                  />
-                  <figcaption>
-                    {captions.map((text, i) => (
-                      <span key={i}>
-                        {text}
-                        {i < captions.length - 1 && <br />}
-                      </span>
-                    ))}
-                  </figcaption>
-                </figure>
-              ))}
-            </div>
-          </div>
+            {name}
+          </li>
         ))}
-      </div>
-    </Container>
+      </ul>
+
+      {data.contents.map(({ id, panels }) => (
+        <div
+          key={id}
+          className={styles.panel}
+          data-panel={id}
+          data-active={tabIsActive === id ? 'true' : 'false'}
+        >
+          <div className={styles.contents}>
+            {panels.map(({ image, captions }, index) => (
+              <figure key={index} className={styles.image}>
+                <Image
+                  src={image.url}
+                  alt={image.alt}
+                  width={image.width}
+                  height={image.height}
+                />
+                <figcaption>
+                  {captions.map((text, i) => (
+                    <span key={i}>
+                      {text}
+                      {i < captions.length - 1 && <br />}
+                    </span>
+                  ))}
+                </figcaption>
+              </figure>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
   );
 }
