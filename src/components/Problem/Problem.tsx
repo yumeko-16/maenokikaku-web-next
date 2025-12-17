@@ -1,5 +1,3 @@
-import Container from '@/components/Container';
-import Heading from '@/components/Heading';
 import styles from './Problem.module.scss';
 
 const data = {
@@ -13,17 +11,13 @@ const data = {
 
 export default function Problem() {
   return (
-    <Container>
-      <Heading>寺院管理で、こんな課題に直面していませんか？</Heading>
-
-      <ul className={styles.cards}>
-        {data.contents.map((problem) => (
-          <li key={problem} className={styles.card}>
-            <span className={styles.avatar}></span>
-            {problem}
-          </li>
-        ))}
-      </ul>
-    </Container>
+    <ul className={styles.cards}>
+      {data.contents.map((problem) => (
+        <li key={problem} className={styles.card}>
+          <span className={styles.avatar} aria-hidden></span>
+          {problem}
+        </li>
+      ))}
+    </ul>
   );
 }
