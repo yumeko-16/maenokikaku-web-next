@@ -2,7 +2,7 @@ import { Fragment } from 'react';
 import Section from '@/components/Section';
 import Container from '@/components/Container';
 import Hero from '@/components/Hero';
-import Heading from '@/components/Heading';
+import ContentHeading from '@/components/ContentHeading';
 import Lead from '@/components/Lead';
 import Br from '@/components/Br';
 import Problem from '@/components/Problem';
@@ -55,14 +55,14 @@ export default function Home() {
 
       <Section bgc="base">
         <Container>
-          <Heading>{problem.heading}</Heading>
+          <ContentHeading>{problem.heading}</ContentHeading>
           <Problem />
         </Container>
       </Section>
 
       <Section>
         <Container>
-          <Heading>{expert.heading}</Heading>
+          <ContentHeading>{expert.heading}</ContentHeading>
 
           <Lead>
             <p>{expert.lead}</p>
@@ -74,7 +74,7 @@ export default function Home() {
 
       <Section bgc="base">
         <Container>
-          <Heading>{service.heading}</Heading>
+          <ContentHeading>{service.heading}</ContentHeading>
 
           <Lead>
             <p>
@@ -93,14 +93,14 @@ export default function Home() {
 
       <Section bgc="base">
         <Container>
-          <Heading>{flow.heading}</Heading>
+          <ContentHeading>{flow.heading}</ContentHeading>
           <Flow />
         </Container>
       </Section>
 
       <Section>
         <Container>
-          <Heading>{contact.heading}</Heading>
+          <ContentHeading>{contact.heading}</ContentHeading>
 
           <Lead>
             <p>
