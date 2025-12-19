@@ -3,7 +3,7 @@ import { siteMeta } from '@/lib/constants';
 import Section from '@/components/Section';
 import Container from '@/components/Container';
 import Hero from '@/components/Hero';
-import Heading from '@/components/Heading';
+import ContentHeading from '@/components/ContentHeading';
 import MailForm from '@/components/MailForm';
 
 const data = {
@@ -54,7 +54,7 @@ export default function Contact() {
 
       <Section bgc="base">
         <Container>
-          <Heading>{mailForm.heading}</Heading>
+          <ContentHeading>{mailForm.heading}</ContentHeading>
           <MailForm />
         </Container>
       </Section>
