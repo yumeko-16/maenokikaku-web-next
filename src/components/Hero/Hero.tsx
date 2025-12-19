@@ -21,8 +21,8 @@ export default function Hero({ heading, lead, imageOn = false }: Props) {
 
   return (
     <Container>
-      <div className={styles.gridContainer}>
-        <div>
+      <div className={styles.flexContainer}>
+        <div className={styles.text}>
           <h1 className={styles.heading}>
             {headingSegments.map((text, i) => (
               <Fragment key={i}>
@@ -38,7 +38,7 @@ export default function Hero({ heading, lead, imageOn = false }: Props) {
         </div>
 
         {imageOn && (
-          <figure>
+          <figure className={styles.image}>
             <Image
               className={isImageLoaded ? styles.removeBlur : styles.blur}
               src={heroImg}

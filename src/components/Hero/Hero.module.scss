@@ -1,13 +1,14 @@
 @use '@/utils/styles/mixin';
 
-.gridContainer {
-  display: grid;
-  place-items: center;
+.flexContainer {
+  @include mixin.sideBySide;
 
-  @include mixin.tabletScreen {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 40px;
-  }
+  gap: 40px;
+  place-items: center;
+}
+
+.text {
+  flex: 1;
 }
 
 .heading {
@@ -22,6 +23,10 @@
 .lead {
   margin-top: calc(var(--display) * 0.5);
   color: var(--white);
+}
+
+.image {
+  flex: 1;
 }
 
 .blur {
