@@ -1,7 +1,7 @@
 @use '@/utils/styles/mixin';
 
 .wrapper {
-  display: grid;
-  gap: 1em;
-  place-content: center;
+  * + * {
+    margin-top: 1em;
+  }
 }
