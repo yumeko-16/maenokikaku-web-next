@@ -1,0 +1,11 @@
+@use '@/utils/styles/mixin';
+
+.lead {
+  @include mixin.smartphoneScreen {
+    margin-bottom: 30px;
+  }
+
+  @include mixin.tabletScreen {
+    margin-bottom: 40px;
+  }
+}
