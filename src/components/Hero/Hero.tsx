@@ -3,6 +3,7 @@
 import { Fragment, useState } from 'react';
 import Image from 'next/image';
 import Container from '@/components/Container';
+import Heading from '@/components/Heading';
 import heroImg from '@/images/hero.webp';
 import styles from './Hero.module.scss';
 
@@ -15,22 +16,11 @@ type Props = {
 export default function Hero({ heading, lead, imageOn = false }: Props) {
   const [isImageLoaded, setIsImageLoaded] = useState(false);
 
-  const headingSegments: string[] = Array.isArray(heading)
-    ? heading
-    : [heading];
-
   return (
     <Container>
       <div className={styles.flexContainer}>
         <div className={styles.text}>
-          <h1 className={styles.heading}>
-            {headingSegments.map((text, i) => (
-              <Fragment key={i}>
-                {text}
-                {i < headingSegments.length - 1 && <wbr />}
-              </Fragment>
-            ))}
-          </h1>
+          <Heading text={heading} />
 
           <div className={styles.lead}>
             <p>{lead}</p>

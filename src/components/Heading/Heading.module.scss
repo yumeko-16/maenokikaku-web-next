@@ -1,0 +1,10 @@
+@use '@/utils/styles/mixin';
+
+.wrapper {
+  font-size: var(--display);
+  font-weight: 700;
+  color: var(--white);
+  letter-spacing: 0.05em;
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+}
