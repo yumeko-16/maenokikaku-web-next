@@ -1,9 +1,10 @@
 'use client';
 
-import { Fragment, useState } from 'react';
+import { useState } from 'react';
 import Image from 'next/image';
 import Container from '@/components/Container';
 import Heading from '@/components/Heading';
+import Lead from '@/components/Lead';
 import heroImg from '@/images/hero.webp';
 import styles from './Hero.module.scss';
 
@@ -23,7 +24,9 @@ export default function Hero({ heading, lead, imageOn = false }: Props) {
           <Heading text={heading} />
 
           <div className={styles.lead}>
-            <p>{lead}</p>
+            <Lead>
+              <p>{lead}</p>
+            </Lead>
           </div>
         </div>
 

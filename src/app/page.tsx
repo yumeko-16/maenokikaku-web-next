@@ -10,6 +10,7 @@ import Expert from '@/components/Expert';
 import Service from '@/components/Service';
 import Flow from '@/components/Flow';
 import Contact from '@/components/Contact';
+import styles from './page.module.scss';
 
 const data = {
   contents: {
@@ -64,9 +65,11 @@ export default function Home() {
         <Container>
           <ContentHeading>{expert.heading}</ContentHeading>
 
-          <Lead>
-            <p>{expert.lead}</p>
-          </Lead>
+          <div className={styles.lead}>
+            <Lead>
+              <p>{expert.lead}</p>
+            </Lead>
+          </div>
 
           <Expert />
         </Container>
@@ -76,16 +79,18 @@ export default function Home() {
         <Container>
           <ContentHeading>{service.heading}</ContentHeading>
 
-          <Lead>
-            <p>
-              {service.lead.map((text, index) => (
-                <Fragment key={index}>
-                  {text}
-                  {index < service.lead.length - 1 && <Br device="pc" />}
-                </Fragment>
-              ))}
-            </p>
-          </Lead>
+          <div className={styles.lead}>
+            <Lead>
+              <p>
+                {service.lead.map((text, index) => (
+                  <Fragment key={index}>
+                    {text}
+                    {index < service.lead.length - 1 && <Br device="pc" />}
+                  </Fragment>
+                ))}
+              </p>
+            </Lead>
+          </div>
 
           <Service />
         </Container>
@@ -102,16 +107,18 @@ export default function Home() {
         <Container>
           <ContentHeading>{contact.heading}</ContentHeading>
 
-          <Lead>
-            <p>
-              {contact.lead.map((text, index) => (
-                <Fragment key={index}>
-                  {text}
-                  {index < contact.lead.length - 1 && <Br />}
-                </Fragment>
-              ))}
-            </p>
-          </Lead>
+          <div className={styles.lead}>
+            <Lead>
+              <p>
+                {contact.lead.map((text, index) => (
+                  <Fragment key={index}>
+                    {text}
+                    {index < contact.lead.length - 1 && <Br />}
+                  </Fragment>
+                ))}
+              </p>
+            </Lead>
+          </div>
 
           <Contact />
         </Container>

@@ -9,20 +9,11 @@
 
 .text {
   flex: 1;
-}
-
-.heading {
-  font-size: var(--display);
-  font-weight: 700;
   color: var(--white);
-  letter-spacing: 0.05em;
-  word-break: keep-all;
-  overflow-wrap: anywhere;
 }
 
 .lead {
   margin-top: calc(var(--display) * 0.5);
-  color: var(--white);
 }
 
 .image {
