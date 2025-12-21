@@ -13,7 +13,7 @@ export default function Heading({ text }: Props) {
       {textSegments.map((segment, i) => (
         <Fragment key={i}>
           {segment}
-          {i < textSegments.length - 1 && <br />}
+          {i < textSegments.length - 1 && <wbr />}
         </Fragment>
       ))}
     </h1>
