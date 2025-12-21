@@ -1,7 +1,5 @@
 @use '@/utils/styles/mixin';
 
-.wrapper {
-  * + * {
-    margin-top: 1em;
-  }
+.wrapper > * + * {
+  margin-top: 1em;
 }
