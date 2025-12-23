@@ -84,7 +84,7 @@ export async function POST(req: Request) {
 
     const fromEmail = 'info@maenokikaku.co.jp';
     const mainAdminEmail = 'maenokikaku@email.plala.or.jp';
-    const bccAdminEmail = 'entm.neru@gmail.com';
+    const bccAdminEmail = 'tomohiro.maeno.dev@gmail.com';
 
     // --- 管理者へ ---
     await sgMail.send({
