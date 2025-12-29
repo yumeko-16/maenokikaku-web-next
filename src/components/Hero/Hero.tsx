@@ -9,7 +9,7 @@ import heroImg from '@/images/hero.webp';
 import styles from './Hero.module.scss';
 
 type Props = {
-  heading: string | string[];
+  heading: string;
   lead: string;
   imageOn?: boolean;
 };
@@ -22,12 +22,7 @@ export default function Hero({ heading, lead, imageOn = false }: Props) {
       <div className={styles.flexContainer}>
         <div className={styles.text}>
           <Heading text={heading} />
-
-          <div className={styles.lead}>
-            <Lead>
-              <p>{lead}</p>
-            </Lead>
-          </div>
+          <Lead text={lead} />
         </div>
 
         {imageOn && (
