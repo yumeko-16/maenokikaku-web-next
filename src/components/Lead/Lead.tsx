@@ -1,10 +1,14 @@
-import { ReactNode } from 'react';
+import InlineHtmlText from '@/components/InlineHtmlText';
 import styles from './Lead.module.scss';
 
 type Props = {
-  children: ReactNode;
+  text: string;
 };
 
-export default function Lead({ children }: Props) {
-  return <div className={styles.wrapper}>{children}</div>;
+export default function Lead({ text }: Props) {
+  return (
+    <div className={styles.wrapper}>
+      <InlineHtmlText text={text} />
+    </div>
+  );
 }

@@ -1,10 +1,8 @@
-import { Fragment } from 'react';
 import Section from '@/components/Section';
 import Container from '@/components/Container';
 import Hero from '@/components/Hero';
 import ContentHeading from '@/components/ContentHeading';
 import Lead from '@/components/Lead';
-import Br from '@/components/Br';
 import Problem from '@/components/Problem';
 import Expert from '@/components/Expert';
 import Service from '@/components/Service';
@@ -15,32 +13,26 @@ import styles from './page.module.scss';
 const data = {
   contents: {
     hero: {
-      heading: ['寺院管理ソフトの課題を', '前野企画が解決します'],
-      lead: '当社は、ご寺院さまの運営を支援する寺院管理ソフトを提供しています。檀家管理から法要・棚経管理まで、日常業務の効率化を幅広くサポートいたします。',
+      heading: '寺院管理ソフトの課題を<wbr>前野企画が解決します',
+      lead: '<p>当社は、ご寺院さまの運営を支援する寺院管理ソフトを提供しています。<br>檀家管理から法要・棚経管理まで、日常業務の効率化を幅広くサポートいたします。</p>',
     },
     problem: {
       heading: '寺院管理で、こんな課題に直面していませんか？',
     },
     expert: {
       heading: '寺院エキスパートシステム',
-      lead: 'お悩みは、すべて「寺院エキスパートシステム」で解決できます。',
+      lead: '<p>お悩みは、すべて「寺院エキスパートシステム」で解決できます。</p>',
     },
     service: {
       heading: '当社サービスのご案内',
-      lead: [
-        '当社は寺院エキスパートシステムに加え、',
-        'ご寺院さまの業務をサポートする幅広いサービスをご用意しています。',
-      ],
+      lead: '<p>当社は寺院エキスパートシステムに加え、<br>ご寺院さまの業務をサポートする幅広いサービスをご用意しています。</p>',
     },
     flow: {
       heading: 'お取引のステップ',
     },
     contact: {
       heading: 'お問い合わせ',
-      lead: [
-        'サービスに関するお問い合わせは、お電話またはメールフォームで承っております。',
-        'お悩みやご相談は、いつでもお気軽にお問い合わせください。',
-      ],
+      lead: '<p>サービスに関するお問い合わせは、お電話またはメールフォームで承っております。<br>お悩みやご相談は、いつでもお気軽にお問い合わせください。</p>',
     },
   },
 };
@@ -66,9 +58,7 @@ export default function Home() {
           <ContentHeading>{expert.heading}</ContentHeading>
 
           <div className={styles.lead}>
-            <Lead>
-              <p>{expert.lead}</p>
-            </Lead>
+            <Lead text={expert.lead} />
           </div>
 
           <Expert />
@@ -80,16 +70,7 @@ export default function Home() {
           <ContentHeading>{service.heading}</ContentHeading>
 
           <div className={styles.lead}>
-            <Lead>
-              <p>
-                {service.lead.map((text, index) => (
-                  <Fragment key={index}>
-                    {text}
-                    {index < service.lead.length - 1 && <Br device="pc" />}
-                  </Fragment>
-                ))}
-              </p>
-            </Lead>
+            <Lead text={service.lead} />
           </div>
 
           <Service />
@@ -108,16 +89,7 @@ export default function Home() {
           <ContentHeading>{contact.heading}</ContentHeading>
 
           <div className={styles.lead}>
-            <Lead>
-              <p>
-                {contact.lead.map((text, index) => (
-                  <Fragment key={index}>
-                    {text}
-                    {index < contact.lead.length - 1 && <Br />}
-                  </Fragment>
-                ))}
-              </p>
-            </Lead>
+            <Lead text={contact.lead} />
           </div>
 
           <Contact />
