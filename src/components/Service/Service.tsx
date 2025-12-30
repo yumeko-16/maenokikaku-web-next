@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import InlineHtmlText from '../InlineHtmlText';
 import styles from './Service.module.scss';
 
 const data = {
@@ -11,7 +12,7 @@ const data = {
         width: 128,
         height: 128,
       },
-      desc: '寺院用パソコンソフトの運用指導・メンテナンスのほか、檀信徒管理や経理事務、行事案内などの事務処理をサポートします。',
+      desc: '<p>寺院用パソコンソフトの運用指導・メンテナンスのほか、檀信徒管理や経理事務、行事案内などの事務処理をサポートします。</p>',
     },
     {
       id: 'cemeteryMap',
@@ -21,7 +22,7 @@ const data = {
         width: 128,
         height: 128,
       },
-      desc: '墓地図面の有無に関わらず、電子図面を作成いたします。',
+      desc: '<p>墓地図面の有無に関わらず、電子図面を作成いたします。</p>',
     },
     {
       id: 'kakochoBookbinding',
@@ -31,7 +32,7 @@ const data = {
         width: 128,
         height: 128,
       },
-      desc: '寺院に所属する檀家の戒名（法号・法名）、俗名、死亡年月日、享年などを記録した帳簿を作成します。',
+      desc: '<p>寺院に所属する檀家の戒名（法号・法名）、俗名、死亡年月日、享年などを記録した帳簿を作成します。</p>',
     },
     {
       id: 'tobaSystemSupport',
@@ -41,7 +42,7 @@ const data = {
         width: 128,
         height: 128,
       },
-      desc: '誰でも簡単に塔婆に印刷できるユーティリティソフトのサポートを行います。塔婆だけでなく、白木位牌や木札のレイアウトにも対応しています。',
+      desc: '<p>誰でも簡単に塔婆に印刷できるユーティリティソフトのサポートを行います。塔婆だけでなく、白木位牌や木札のレイアウトにも対応しています。</p>',
     },
     {
       id: 'officeItSupport',
@@ -51,7 +52,7 @@ const data = {
         width: 128,
         height: 128,
       },
-      desc: 'コピー（複合機）・パソコン・LANシステムの導入から運用までサポートいたします。',
+      desc: '<p>コピー（複合機）・パソコン・LANシステムの導入から運用までサポートいたします。</p>',
     },
     {
       id: 'securityCamera',
@@ -61,7 +62,7 @@ const data = {
         width: 128,
         height: 128,
       },
-      desc: '防犯用監視カメラの導入から運用までサポートいたします。',
+      desc: '<p>防犯用監視カメラの導入から運用までサポートいたします。</p>',
     },
     {
       id: 'businessPhone',
@@ -71,7 +72,7 @@ const data = {
         width: 128,
         height: 128,
       },
-      desc: 'ビジネスフォンの導入から運用までサポートいたします。',
+      desc: '<p>ビジネスフォンの導入から運用までサポートいたします。</p>',
     },
     {
       id: 'websiteDevelopment',
@@ -81,7 +82,7 @@ const data = {
         width: 128,
         height: 128,
       },
-      desc: 'Webサイトの制作をおこないます。',
+      desc: '<p>Webサイトの制作をおこないます。</p>',
     },
   ],
 };
@@ -95,7 +96,7 @@ export default function Service() {
             <div className={styles.head}>
               <h3 className={styles.heading}>{service.name}</h3>
 
-              <figure className={styles.feature}>
+              <figure className={styles.image}>
                 <Image
                   src={service.image.url}
                   alt={`${service.name}のアイコン`}
@@ -106,8 +107,8 @@ export default function Service() {
               </figure>
             </div>
 
-            <div className={styles.body}>
-              <p>{service.desc}</p>
+            <div>
+              <InlineHtmlText text={service.desc} />
             </div>
           </article>
         );
