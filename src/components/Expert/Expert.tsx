@@ -1,15 +1,31 @@
 import Link from 'next/link';
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 import expertImg from '@/images/expert.webp';
 import styles from './Expert.module.scss';
 
-const data = {
+type ExpertContent = {
+  image: {
+    url: StaticImageData;
+    alt: string;
+    width: number;
+    height: number;
+    loading: 'lazy' | 'eager';
+  };
+  points: string[];
+  button: {
+    href: string;
+    text: string;
+  };
+};
+
+const data: { contents: ExpertContent } = {
   contents: {
     image: {
       url: expertImg,
       alt: '寺院エキスパートシステムのメイン画面',
       width: 434,
       height: 446,
+      loading: 'lazy',
     },
     points: [
       '寺院管理ソフトの決定版',
@@ -38,7 +54,7 @@ export default function Expert() {
               alt={image.alt}
               width={image.width}
               height={image.height}
-              loading="lazy"
+              loading={image.loading}
             />
           </figure>
 
