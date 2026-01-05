@@ -1,24 +1,30 @@
 import styles from './Flow.module.scss';
 
-const data = {
+type StepContent = {
+  id: number;
+  heading: string;
+  desc: string;
+};
+
+const data: { contents: StepContent[] } = {
   contents: [
     {
-      num: 'STEP.01',
+      id: 1,
       heading: 'お問い合わせ',
       desc: 'お問い合わせフォームまたはお電話で、お悩みをご相談ください。',
     },
     {
-      num: 'STEP.02',
+      id: 2,
       heading: '調査',
       desc: 'ご相談内容を当社で確認いたします。',
     },
     {
-      num: 'STEP.03',
+      id: 3,
       heading: 'ご提案',
       desc: 'お客様のご相談内容に沿った最適なご提案をいたします。',
     },
     {
-      num: 'STEP.04',
+      id: 4,
       heading: 'お申し込み／ご契約',
       desc: '仕様やお見積りにご納得いただいた上で、お申し込み・ご契約いただきます。',
     },
@@ -28,17 +34,15 @@ const data = {
 export default function Flow() {
   return (
     <ol className={styles.steps}>
-      {data.contents.map((step) => {
-        return (
-          <li key={step.num} className={styles.step}>
-            <span className={styles.num}>{step.num}</span>
-            <dl className={styles.definitionlist}>
-              <dt className={styles.heading}>{step.heading}</dt>
-              <dd>{step.desc}</dd>
-            </dl>
-          </li>
-        );
-      })}
+      {data.contents.map(({ id, heading, desc }) => (
+        <li key={id} className={styles.step}>
+          <span className={styles.num}>STEP.{String(id)}</span>
+          <dl className={styles.definitionlist}>
+            <dt className={styles.heading}>{heading}</dt>
+            <dd>{desc}</dd>
+          </dl>
+        </li>
+      ))}
     </ol>
   );
 }
