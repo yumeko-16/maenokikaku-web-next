@@ -1,9 +1,15 @@
 import Link from 'next/link';
 import Container from '@/components/Container';
 import Logo from '@/components/Logo';
+import { NAV_ITEMS } from '@/constants/navigation';
 import styles from './Footer.module.scss';
 
-const data = {
+type NavContent = {
+  href: `/${string}`;
+  label: string;
+};
+
+const data: { contents: NavContent[] } = {
   contents: [
     {
       href: '/',
@@ -32,10 +38,10 @@ export default function Footer() {
           <Logo />
 
           <ul className={styles.nav}>
-            {data.contents.map((link) => (
-              <li key={link.href}>
-                <Link className={styles.link} href={link.href}>
-                  {link.label}
+            {NAV_ITEMS.map((item) => (
+              <li key={item.href}>
+                <Link className={styles.link} href={item.href}>
+                  {item.label}
                 </Link>
               </li>
             ))}
