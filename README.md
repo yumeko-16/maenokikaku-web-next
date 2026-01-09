@@ -1,6 +1,7 @@
 # Maeno Kikaku Co., Ltd.
 
-This repository is a new frontend project that has been redesigned using Next.js for the existing corporate official website, "Maeno Planning Co., Ltd. Official Website."
+This repository is the renewed version of the official corporate website for Maeno Kikaku Co., Ltd.  
+It is a site built using Next.js + microCMS.
 
 ## Technologies Used
 
