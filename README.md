@@ -1,4 +1,4 @@
-# Maeno Planning Co., Ltd. Official Website (Next.js Renewal)
+# Maeno Kikaku Co., Ltd.
 
 This repository is a new frontend project that has been redesigned using Next.js for the existing corporate official website, "Maeno Planning Co., Ltd. Official Website."
 
