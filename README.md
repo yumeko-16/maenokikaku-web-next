@@ -8,7 +8,7 @@ It is a site built using Next.js + microCMS.
 | Category        | Technology                                     |
 | --------------- | ---------------------------------------------- |
 | Framework       | Next.js                                        |
-| Language        | JavaScript                                     |
+| Language        | TypeScript                                     |
 | Styling         | SCSS                             |
 | Build / Hosting | Vercel                                         |
 | Other           | Node.js / npm                                  |
