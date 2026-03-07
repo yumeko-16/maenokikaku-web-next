@@ -9,8 +9,8 @@ import Tab from '@/components/Tab';
 const data = {
   contents: {
     hero: {
-      heading: '寺院エキスパートシステム',
-      lead: '<p>寺院管理ソフト「寺院エキスパートシステム」は檀家管理、<wbr>入金管理、法名・戒名作成、棚経管理など寺務を効率化する多機能システムです。</p>',
+      heading: '青藍システム496',
+      lead: '<p>寺院管理ソフト「青藍システム496」は檀家管理、<wbr>入金管理、法名・戒名作成、棚経管理など寺務を効率化する多機能システムです。</p>',
     },
     tab: {
       heading: '機能',
@@ -19,10 +19,10 @@ const data = {
 };
 
 export async function generateMetadata(): Promise<Metadata> {
-  const pageTitle = '寺院エキスパートシステム';
+  const pageTitle = '青藍システム496';
   const description =
-    '寺院管理ソフト「寺院エキスパートシステム」は檀家管理、入金管理、法名・戒名作成、棚経管理など寺務を効率化する多機能システムです。';
-  const url = `${siteMeta.siteUrl}about/`;
+    '寺院管理ソフト「青藍システム496」は檀家管理、入金管理、法名・戒名作成、棚経管理など寺務を効率化する多機能システムです。';
+  const url = `${siteMeta.siteUrl}expert/`;
 
   return {
     title: {

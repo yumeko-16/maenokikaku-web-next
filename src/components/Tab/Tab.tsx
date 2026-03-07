@@ -2,23 +2,23 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
-import supporter001Img from '@/images/expert_supporter001.png';
-import supporter002Img from '@/images/expert_supporter002.png';
-import payment001Img from '@/images/expert_payment001.png';
-import payment002Img from '@/images/expert_payment002.png';
-import payment003Img from '@/images/expert_payment003.png';
-import deposit001Img from '@/images/expert_deposit001.png';
-import deposit002Img from '@/images/expert_deposit002.png';
-import deposit003Img from '@/images/expert_deposit003.png';
-import deposit004Img from '@/images/expert_deposit004.png';
-import deposit005Img from '@/images/expert_deposit005.png';
-import postalTransfer001Img from '@/images/expert_postalTransfer001.png';
-import postalTransfer002Img from '@/images/expert_postalTransfer002.png';
-import postalTransfer003Img from '@/images/expert_postalTransfer003.png';
-import buddhistName001Img from '@/images/expert_buddhistName001.png';
-import buddhistName002Img from '@/images/expert_buddhistName002.png';
-import tanagyo001Img from '@/images/expert_tanagyo001.png';
-import tanagyo002Img from '@/images/expert_tanagyo002.png';
+import templeMemberRegistryImg from '@/images/seiran496/temple_member_registry.webp';
+import displayMagnificationSettingImg from '@/images/seiran496/display_magnification_setting.webp';
+import incomeExpenseMenuImg from '@/images/seiran496/income_expense_menu.webp';
+import incomeExpensePreviewImg from '@/images/seiran496/income_expense_preview.webp';
+import incomeExpenseCalculationImg from '@/images/seiran496/income_expense_calculation.webp';
+import paymentManagementMenuImg from '@/images/seiran496/payment_management_menu.webp';
+import paymentRegistration from '@/images/seiran496/payment_registration.webp';
+import paymentNoticeList from '@/images/seiran496/payment_notice_list.webp';
+import multiyearSearch from '@/images/seiran496/multiyear_search.webp';
+import receiptIssued from '@/images/seiran496/receipt_issued.webp';
+import postalTransferMenu from '@/images/seiran496/postal_transfer_menu.webp';
+import postalTransferPrinting from '@/images/seiran496/postal_transfer_printing.webp';
+import printTargetList from '@/images/seiran496/print_target_list.webp';
+import dharmaNameMenuImg from '@/images/seiran496/dharma_name_menu.webp';
+import dharmaNameCreateImg from '@/images/seiran496/dharma_name_create.webp';
+import shelfSutraImg from '@/images/seiran496/shelf_sutra.webp';
+import shelfSutraOutputImg from '@/images/seiran496/shelf_sutra_output.webp';
 import styles from './Tab.module.scss';
 
 const data = {
@@ -29,10 +29,10 @@ const data = {
       panels: [
         {
           image: {
-            url: supporter001Img,
+            url: templeMemberRegistryImg,
             alt: '檀家台帳画面',
-            width: 852,
-            height: 612,
+            width: 840,
+            height: 544,
           },
           captions: [
             '檀家台帳で「戸主情報」「準戸主」「家族」「過去帳」「日記」「行事」「回忌」「入金」「墓地」を一元管理。',
@@ -41,10 +41,10 @@ const data = {
         },
         {
           image: {
-            url: supporter002Img,
+            url: displayMagnificationSettingImg,
             alt: '表示倍率の設定画面',
-            width: 553,
-            height: 316,
+            width: 840,
+            height: 544,
           },
           captions: ['画面文字を拡大・縮小して見やすく調整可能。'],
         },
@@ -56,10 +56,10 @@ const data = {
       panels: [
         {
           image: {
-            url: payment001Img,
+            url: incomeExpenseMenuImg,
             alt: '収支計算メニュー画面',
-            width: 810,
-            height: 534,
+            width: 655,
+            height: 443,
           },
           captions: [
             '家計簿方式で簡単に入力。',
@@ -69,8 +69,8 @@ const data = {
         },
         {
           image: {
-            url: payment002Img,
-            alt: '帳票出力画面',
+            url: incomeExpensePreviewImg,
+            alt: '収支計算書 印刷プレビュー画面',
             width: 1024,
             height: 460,
           },
@@ -78,7 +78,7 @@ const data = {
         },
         {
           image: {
-            url: payment003Img,
+            url: incomeExpenseCalculationImg,
             alt: '収支計算書画面',
             width: 759,
             height: 649,
@@ -93,10 +93,10 @@ const data = {
       panels: [
         {
           image: {
-            url: deposit001Img,
+            url: paymentManagementMenuImg,
             alt: '入金管理メニュー画面',
-            width: 810,
-            height: 534,
+            width: 762,
+            height: 517,
           },
           captions: [
             '家計簿方式で簡単に入力。',
@@ -106,26 +106,26 @@ const data = {
         },
         {
           image: {
-            url: deposit002Img,
-            alt: '入金データ入力画面',
-            width: 923,
-            height: 1300,
+            url: paymentRegistration,
+            alt: '入金データ登録画面',
+            width: 525,
+            height: 475,
           },
           captions: ['導入年度以前のデータも入力可能。'],
         },
         {
           image: {
-            url: deposit003Img,
+            url: paymentNoticeList,
             alt: '案内発行（控え）画面',
-            width: 1156,
-            height: 758,
+            width: 879,
+            height: 669,
           },
           captions: ['各種案内を発行可能。'],
         },
         {
           image: {
-            url: deposit004Img,
-            alt: '他年度検索個別集計画面',
+            url: multiyearSearch,
+            alt: '多年度検索個別集計画面',
             width: 915,
             height: 696,
           },
@@ -133,7 +133,7 @@ const data = {
         },
         {
           image: {
-            url: deposit005Img,
+            url: receiptIssued,
             alt: '領収書発行画面',
             width: 724,
             height: 1804,
@@ -148,10 +148,10 @@ const data = {
       panels: [
         {
           image: {
-            url: postalTransfer001Img,
+            url: postalTransferMenu,
             alt: '郵便振替メニュー画面',
-            width: 676,
-            height: 450,
+            width: 651,
+            height: 445,
           },
           captions: [
             '自由に編集できる書式作成機能。',
@@ -161,7 +161,7 @@ const data = {
         },
         {
           image: {
-            url: postalTransfer002Img,
+            url: postalTransferPrinting,
             alt: '書式選択画面',
             width: 1024,
             height: 1300,
@@ -173,7 +173,7 @@ const data = {
         },
         {
           image: {
-            url: postalTransfer003Img,
+            url: printTargetList,
             alt: '対象者一覧画面',
             width: 675,
             height: 456,
@@ -188,16 +188,16 @@ const data = {
       panels: [
         {
           image: {
-            url: buddhistName001Img,
+            url: dharmaNameMenuImg,
             alt: '戒名作成メニュー画面',
-            width: 676,
-            height: 450,
+            width: 655,
+            height: 443,
           },
           captions: ['50,000語の二字熟字辞書機能で全宗派に対応。'],
         },
         {
           image: {
-            url: buddhistName002Img,
+            url: dharmaNameCreateImg,
             alt: '戒名入力画面',
             width: 762,
             height: 1340,
@@ -216,16 +216,16 @@ const data = {
       panels: [
         {
           image: {
-            url: tanagyo001Img,
+            url: shelfSutraImg,
             alt: '棚経管理メニュー画面',
-            width: 676,
-            height: 450,
+            width: 655,
+            height: 443,
           },
           captions: ['お盆棚経・お彼岸廻りの行動予定表を作成。'],
         },
         {
           image: {
-            url: tanagyo002Img,
+            url: shelfSutraOutputImg,
             alt: '入力状況の確認画面',
             width: 1024,
             height: 1335,

@@ -14,7 +14,7 @@ export const NAV_ITEMS: NavItem[] = [
   },
   {
     href: '/expert/',
-    label: '寺院エキスパートシステム',
+    label: '青藍システム496',
   },
   {
     href: '/contact/',
