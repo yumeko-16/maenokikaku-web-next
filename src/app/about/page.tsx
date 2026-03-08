@@ -29,7 +29,7 @@ const data = {
 export async function generateMetadata(): Promise<Metadata> {
   const pageTitle = '会社情報';
   const description =
-    '当社は株式会社エクシオテック（旧 大東工業株式会社）の指定販売店として、寺院用ソフト「寺院エキスパートシステム」の販売、導入指導、サポートを行っています。';
+    '当社は株式会社エクシオテック（旧 大東工業株式会社）の指定販売店として、寺院用ソフト「青藍システム496」の販売、導入指導、サポートを行っています。';
   const url = `${siteMeta.siteUrl}about/`;
 
   return {

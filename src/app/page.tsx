@@ -4,7 +4,7 @@ import Hero from '@/components/Hero';
 import ContentHeading from '@/components/ContentHeading';
 import Lead from '@/components/Lead';
 import Problem from '@/components/Problem';
-import Expert from '@/components/Expert';
+import Seiran496 from '@/components/Seiran496';
 import Service from '@/components/Service';
 import Flow from '@/components/Flow';
 import Contact from '@/components/Contact';
@@ -19,13 +19,13 @@ const data = {
     problem: {
       heading: '寺院管理で、こんな課題に直面していませんか？',
     },
-    expert: {
-      heading: '寺院エキスパートシステム',
-      lead: '<p>お悩みは、すべて「寺院エキスパートシステム」で解決できます。</p>',
+    seiran496: {
+      heading: '青藍システム496',
+      lead: '<p>お悩みは、すべて「青藍システム496」で解決できます。</p>',
     },
     service: {
       heading: '当社サービスのご案内',
-      lead: '<p>当社は寺院エキスパートシステムに加え、<br>ご寺院さまの業務をサポートする幅広いサービスをご用意しています。</p>',
+      lead: '<p>当社は青藍システム496に加え、<br>ご寺院さまの業務をサポートする幅広いサービスをご用意しています。</p>',
     },
     flow: {
       heading: 'お取引のステップ',
@@ -38,7 +38,7 @@ const data = {
 };
 
 export default function Home() {
-  const { hero, problem, expert, service, flow, contact } = data.contents;
+  const { hero, problem, seiran496, service, flow, contact } = data.contents;
 
   return (
     <>
@@ -55,13 +55,13 @@ export default function Home() {
 
       <Section>
         <Container>
-          <ContentHeading>{expert.heading}</ContentHeading>
+          <ContentHeading>{seiran496.heading}</ContentHeading>
 
           <div className={styles.lead}>
-            <Lead text={expert.lead} />
+            <Lead text={seiran496.lead} />
           </div>
 
-          <Expert />
+          <Seiran496 />
         </Container>
       </Section>
 
