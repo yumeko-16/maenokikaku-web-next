@@ -1,11 +1,7 @@
 import { NextResponse } from 'next/server';
-import sgMail from '@sendgrid/mail';
+import { Resend } from 'resend';
 
-// --- SendGrid API キー確認 ---
-if (!process.env.SENDGRID_API_KEY) {
-  throw new Error('SENDGRID_API_KEY が設定されていません');
-}
-sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 // --- バリデーション ---
 const isValidEmail = (email: string) =>
@@ -87,18 +83,18 @@ export async function POST(req: Request) {
     const bccAdminEmail = 'tomohiro.maeno.dev@gmail.com';
 
     // --- 管理者へ ---
-    await sgMail.send({
+    await resend.emails.send({
+      from: fromEmail,
       to: mainAdminEmail,
       bcc: bccAdminEmail,
-      from: fromEmail,
       subject: '【株式会社前野企画】お問い合わせがありました',
       text: adminMailText(name, email, tel, message),
     });
 
     // --- お客様へ自動返信 ---
-    await sgMail.send({
-      to: email,
+    await resend.emails.send({
       from: fromEmail,
+      to: email,
       subject: '【株式会社前野企画】お問い合わせありがとうございます',
       text: userMailText(name, message),
     });
