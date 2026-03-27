@@ -13,7 +13,7 @@ import styles from './page.module.scss';
 const data = {
   contents: {
     hero: {
-      heading: '寺院管理ソフトの課題を<wbr>前野企画が解決します',
+      heading: '寺院管理の課題を<wbr>前野企画が解決します',
       lead: '<p>当社は、ご寺院さまの運営を支援する寺院管理ソフトを提供しています。<br>檀家管理から法要・棚経管理まで、日常業務の効率化を幅広くサポートいたします。</p>',
     },
     problem: {

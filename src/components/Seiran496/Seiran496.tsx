@@ -35,7 +35,7 @@ const data: { contents: Seiran496Content } = {
       '寺院内LANで信徒検索',
     ],
     button: {
-      href: '/seiran496/',
+      href: '/expert/',
       text: 'もっと詳しく',
     },
   },
