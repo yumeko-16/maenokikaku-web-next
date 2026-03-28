@@ -1,7 +1,9 @@
 @use '@/utils/styles/mixin';
 
 .wrapper {
-  background-color: var(--white);
+  position: absolute;
+  width: 100%;
+  color: var(--white);
 }
 
 .flexContainer {
