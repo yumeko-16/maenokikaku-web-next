@@ -147,6 +147,8 @@ export default function MailForm() {
           ></textarea>
         </div>
 
+        <p className={styles.footnote}>営業メールはお断りしております。</p>
+
         <div className={styles.btns}>
           <button className={styles.button} type="submit" disabled={isDisabled}>
             {sendStatus === 'sending' ? '送信中…' : '送信'}
