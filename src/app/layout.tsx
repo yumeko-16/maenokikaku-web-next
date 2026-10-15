@@ -1,5 +1,6 @@
 import './globals.css';
 import type { Metadata } from 'next';
+import { cormorantGaramond, notoSansJp, zenOldMincho } from '@/app/fonts';
 import { siteMeta } from '@/lib/constants';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -41,7 +42,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="ja">
+    <html
+      lang="ja"
+      className={`${cormorantGaramond.variable} ${notoSansJp.variable} ${zenOldMincho.variable}`}
+    >
       <body>
         <Header />
 

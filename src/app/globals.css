@@ -15,6 +15,14 @@
   --small-heading2: clamp(0.875rem, 4vw - 1rem, 1.6875rem); /* 14-27px */
   --small-heading3: calc(var(--small-heading2) * 0.86); /* 12-23px */
 
+  /* Font family */
+  --font-gothic:
+    var(--font-noto-sans-jp), 'Hiragino Kaku Gothic ProN', 'Yu Gothic',
+    'Meiryo', sans-serif;
+  --font-mincho:
+    var(--font-zen-old-mincho), 'Hiragino Mincho ProN', 'Yu Mincho', serif;
+  --font-en: var(--font-cormorant-garamond), 'Times New Roman', serif;
+
   /* Space */
   --space-xs: clamp(1.25rem, 1rem + 0.98vw, 1.875rem); /* 20-30px */
   --space-sm: calc(var(--space-xs) * 1.5); /* 30-45px */
