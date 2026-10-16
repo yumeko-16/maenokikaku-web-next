@@ -1,4 +1,4 @@
-@use '@/utils/styles/mixin';
+@use '@/styles/mixin';
 
 .flexContainer {
   @include mixin.sideBySide;
