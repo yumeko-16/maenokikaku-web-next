@@ -1,4 +1,4 @@
-@use '@/utils/styles/mixin';
+@use '@/styles/mixin';
 
 .wrapper > * + * {
   margin-top: 1em;

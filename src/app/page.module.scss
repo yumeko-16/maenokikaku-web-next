@@ -1,4 +1,4 @@
-@use '@/utils/styles/mixin';
+@use '@/styles/mixin';
 
 .lead {
   @include mixin.smartphoneScreen {
