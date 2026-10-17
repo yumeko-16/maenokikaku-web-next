@@ -3,18 +3,20 @@ import styles from './Logo.module.scss';
 
 const data = {
   contents: {
-    heading: '株式会社前野企画',
+    headingJa: '株式会社前野企画',
+    headingEn: 'MAENO KIKAKU',
     href: '/',
   },
 };
 
-export default function Logo({ boxOn = false }) {
+export default function Logo({ invertTextColor = false }) {
   return (
     <Link
-      className={boxOn ? styles.box : styles.basic}
+      className={invertTextColor ? styles.inverted : styles.basic}
       href={data.contents.href}
     >
-      {data.contents.heading}
+      <span className={styles.ja}>{data.contents.headingJa}</span>
+      <span className={styles.en}>{data.contents.headingEn}</span>
     </Link>
   );
 }
