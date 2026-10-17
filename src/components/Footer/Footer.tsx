@@ -4,32 +4,6 @@ import Logo from '@/components/Logo';
 import { NAV_ITEMS } from '@/constants/navigation';
 import styles from './Footer.module.scss';
 
-type NavContent = {
-  href: `/${string}`;
-  label: string;
-};
-
-const data: { contents: NavContent[] } = {
-  contents: [
-    {
-      href: '/',
-      label: 'ホーム',
-    },
-    {
-      href: '/about/',
-      label: '会社情報',
-    },
-    {
-      href: '/expert/',
-      label: '寺院エキスパートシステム',
-    },
-    {
-      href: '/contact/',
-      label: 'お問い合わせ',
-    },
-  ],
-};
-
 export default function Footer() {
   return (
     <footer className={styles.wrapper}>
