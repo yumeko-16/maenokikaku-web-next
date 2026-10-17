@@ -35,7 +35,7 @@ export default function Footer() {
     <footer className={styles.wrapper}>
       <Container>
         <div className={styles.flexContainer}>
-          <Logo />
+          <Logo invertTextColor />
 
           <ul className={styles.nav}>
             {NAV_ITEMS.map((item) => (

@@ -2,8 +2,14 @@
 
 .wrapper {
   position: absolute;
+  display: grid;
+  align-items: center;
   width: 100%;
-  color: var(--white);
+  height: 68px;
+
+  @include mixin.tabletScreen {
+    height: 80px;
+  }
 }
 
 .flexContainer {
