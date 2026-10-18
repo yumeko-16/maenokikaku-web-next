@@ -2,6 +2,8 @@
   /* Color */
   --white: #fff;
   --black: #1b1d2a;
+  --gray: #6c6f7b;
+  --navy-deep: #15182a;
   --base: #edf2f7;
   --primary: #0079bf;
   --gradation: linear-gradient(to right, #6b90db 0%, #66d5e9 100%);

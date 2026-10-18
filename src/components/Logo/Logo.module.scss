@@ -19,7 +19,8 @@
 
 .en {
   font-family: var(--font-en);
-  font-size: calc(var(--body) * 0.75);
+  font-size: calc(var(--body) * 0.7);
   font-weight: 500;
+  color: var(--gray);
   letter-spacing: 0.288em;
 }
