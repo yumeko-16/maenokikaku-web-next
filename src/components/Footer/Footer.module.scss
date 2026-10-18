@@ -1,30 +1,29 @@
 @use '@/styles/mixin';
 
 .wrapper {
+  background-color: var(--navy-deep);
+}
+
+.content {
   padding: var(--space-xl) 0;
   color: var(--white);
-  background-color: #232b33;
 }
 
 .flexContainer {
-  @include mixin.sideBySideCenter;
+  @include mixin.sideBySide;
 
   gap: 2em;
 }
 
 .nav {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   gap: 2em;
-  font-size: clamp(0.875rem, 0.5rem + 0.78vw, 1rem);
+  font-family: var(--font-gothic);
+  font-size: calc(var(--body) * 0.75);
 
   @include mixin.tabletScreen {
     flex-direction: row;
+    align-items: center;
   }
-}
-
-.copyright {
-  margin-top: var(--space-sm);
-  font-size: clamp(0.75rem, 0.678rem + 0.31vw, 0.875rem);
-  text-align: center;
 }
