@@ -14,7 +14,7 @@ const INLINE_RENDERERS: Record<string, Renderer> = {
 };
 
 const TAG_PATTERN =
-  /(<p>.*?<\/p>|<br>|<wbr>|<em>.*?<\/em>|<strong>.*?<\/strong>)/;
+  /(<p>.*?<\/p>|<br \/>|<wbr \/>|<em>.*?<\/em>|<strong>.*?<\/strong>)/;
 
 export default function InlineHtmlText({ text }: Props) {
   const parts = text.split(TAG_PATTERN);
