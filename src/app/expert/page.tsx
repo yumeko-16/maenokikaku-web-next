@@ -9,8 +9,9 @@ import Tab from '@/components/Tab';
 const data = {
   contents: {
     hero: {
-      heading: '青藍システム496',
-      lead: '<p>寺院エキスパートと高い互換性を持つ寺院管理ソフト「青藍システム496」は、檀家管理、入金管理、法名・戒名作成、棚経管理など寺務を効率化する多機能システムです。</p>',
+      title: '青藍システム496',
+      subtitle:
+        '<p>寺院エキスパートと高い互換性を持つ寺院管理ソフト「青藍システム496」は、檀家管理、入金管理、法名・戒名作成、棚経管理など寺務を効率化する多機能システムです。</p>',
     },
     tab: {
       heading: '機能',
@@ -49,7 +50,7 @@ export default function Expert() {
   return (
     <>
       <Section bgc="hero">
-        <Hero heading={hero.heading} lead={hero.lead} />
+        <Hero heading={hero.title} lead={hero.subtitle} />
       </Section>
 
       <Section bgc="base">
