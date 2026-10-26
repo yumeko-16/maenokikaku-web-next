@@ -11,7 +11,7 @@ const data = {
     hero: {
       title: '青藍システム496',
       subtitle:
-        '<p>寺院エキスパートと高い互換性を持つ寺院管理ソフト「青藍システム496」は、檀家管理、入金管理、法名・戒名作成、棚経管理など寺務を効率化する多機能システムです。</p>',
+        '寺院エキスパートと高い互換性を持つ寺院管理ソフト「青藍システム496」は、檀家管理、入金管理、法名・戒名作成、棚経管理など寺務を効率化する多機能システムです。',
     },
     tab: {
       heading: '機能',
@@ -45,17 +45,18 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 export default function Expert() {
-  const { hero, tab } = data.contents;
-
   return (
     <>
       <Section bgc="hero">
-        <Hero title={hero.title} subtitle={hero.subtitle} />
+        <Hero
+          title={data.contents.hero.title}
+          subtitle={data.contents.hero.subtitle}
+        />
       </Section>
 
       <Section bgc="base">
         <Container>
-          <ContentHeading>{tab.heading}</ContentHeading>
+          <ContentHeading>{data.contents.tab.heading}</ContentHeading>
           <Tab />
         </Container>
       </Section>
