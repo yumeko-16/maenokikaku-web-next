@@ -9,8 +9,9 @@ import MailForm from '@/components/MailForm';
 const data = {
   contents: {
     hero: {
-      heading: 'お問い合わせ',
-      lead: '<p>サービスに関するお問い合わせは、お電話またはメールフォームで承っております。<br />お悩みやご相談は、いつでもお気軽にお問い合わせください。</p>',
+      title: 'お問い合わせ',
+      subtitle:
+        '<p>サービスに関するお問い合わせは、お電話またはメールフォームで承っております。<br />お悩みやご相談は、いつでもお気軽にお問い合わせください。</p>',
     },
     mailForm: {
       heading: 'メールフォーム',
@@ -49,7 +50,7 @@ export default function Contact() {
   return (
     <>
       <Section bgc="hero">
-        <Hero heading={hero.heading} lead={hero.lead} />
+        <Hero heading={hero.title} lead={hero.subtitle} />
       </Section>
 
       <Section bgc="base">
