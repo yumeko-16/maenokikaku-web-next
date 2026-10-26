@@ -14,8 +14,7 @@ const data = {
   contents: {
     hero: {
       title: '寺院管理の課題を、<br />前野企画が解決します。',
-      subtitle:
-        '当社は、ご寺院さまの運営を支援する寺院管理ソフトを提供しています。<br />檀家管理から法要・棚経管理まで、日常業務の効率化を幅広くサポートいたします。',
+      subtitle: 'Solving temple management<br />with sincere support.',
     },
     problem: {
       heading: '寺院管理で、こんな課題に直面していませんか？',
@@ -41,15 +40,18 @@ const data = {
 export default function Home() {
   return (
     <>
-      <Section bgc="hero">
-        <Hero
-          title={data.contents.hero.title}
-          subtitle={data.contents.hero.subtitle}
-          imageOn
-        />
+      <Section isHero>
+        <Container large>
+          <Hero
+            title={data.contents.hero.title}
+            subtitle={data.contents.hero.subtitle}
+            page="home"
+            hasEnglish
+          />
+        </Container>
       </Section>
 
-      <Section bgc="base">
+      <Section>
         <Container>
           <ContentHeading>{data.contents.problem.heading}</ContentHeading>
           <Problem />
@@ -68,7 +70,7 @@ export default function Home() {
         </Container>
       </Section>
 
-      <Section bgc="base">
+      <Section>
         <Container>
           <ContentHeading>{data.contents.service.heading}</ContentHeading>
 
@@ -80,7 +82,7 @@ export default function Home() {
         </Container>
       </Section>
 
-      <Section bgc="base">
+      <Section>
         <Container>
           <ContentHeading>{data.contents.flow.heading}</ContentHeading>
           <Flow />

@@ -1,6 +1,7 @@
 :root {
   /* Color */
   --white: #fff;
+  --white-85: rgb(255 255 255 / 85%);
   --black: #1b1d2a;
   --gray: #6c6f7b;
   --navy-deep: #15182a;
@@ -32,6 +33,13 @@
   --space-lg: calc(var(--space-xs) * 3); /* 60-90px */
   --space-xl: calc(var(--space-xs) * 4); /* 80-120px */
   --space-jump: clamp(1.25rem, 0.35rem + 3.8vw, 3.75rem) /* 20-60px */;
+  --space-header: 68px;
+}
+
+@media (min-width: 768px) {
+  :root {
+    --space-header: 80px;
+  }
 }
 
 /* base */
@@ -42,7 +50,7 @@ body {
     -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
   font-size: var(--body);
   color: var(--black);
-  letter-spacing: 0.05em;
+  letter-spacing: 0.06em;
 }
 
 main {
