@@ -13,8 +13,9 @@ import styles from './page.module.scss';
 const data = {
   contents: {
     hero: {
-      heading: '寺院管理の課題を<wbr />前野企画が解決します',
-      lead: '<p>当社は、ご寺院さまの運営を支援する寺院管理ソフトを提供しています。<br />檀家管理から法要・棚経管理まで、日常業務の効率化を幅広くサポートいたします。</p>',
+      title: '寺院管理の課題を<wbr />前野企画が解決します',
+      subtitle:
+        '<p>当社は、ご寺院さまの運営を支援する寺院管理ソフトを提供しています。<br />檀家管理から法要・棚経管理まで、日常業務の効率化を幅広くサポートいたします。</p>',
     },
     problem: {
       heading: '寺院管理で、こんな課題に直面していませんか？',
@@ -43,7 +44,7 @@ export default function Home() {
   return (
     <>
       <Section bgc="hero">
-        <Hero heading={hero.heading} lead={hero.lead} imageOn />
+        <Hero heading={hero.title} lead={hero.subtitle} imageOn />
       </Section>
 
       <Section bgc="base">

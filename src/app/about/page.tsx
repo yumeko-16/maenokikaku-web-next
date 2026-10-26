@@ -11,8 +11,9 @@ import Access from '@/components/Access';
 const data = {
   contents: {
     hero: {
-      heading: '会社情報',
-      lead: '<p>ご寺院さまの運営を幅広く支えるため、業務に寄り添ったサービスとサポートを提供しています。</p>',
+      title: '会社情報',
+      subtitle:
+        '<p>ご寺院さまの運営を幅広く支えるため、業務に寄り添ったサービスとサポートを提供しています。</p>',
     },
     ceoMessage: {
       heading: '代表メッセージ',
@@ -57,7 +58,7 @@ export default function About() {
   return (
     <>
       <Section bgc="hero">
-        <Hero heading={hero.heading} lead={hero.lead} />
+        <Hero heading={hero.title} lead={hero.subtitle} />
       </Section>
 
       <Section>
