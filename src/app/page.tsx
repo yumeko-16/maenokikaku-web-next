@@ -1,7 +1,7 @@
 import Section from '@/components/Section';
 import Container from '@/components/Container';
 import Hero from '@/components/Hero';
-import ContentHeading from '@/components/ContentHeading';
+import Heading from '@/components/Heading';
 import Lead from '@/components/Lead';
 import Problem from '@/components/Problem';
 import Seiran496 from '@/components/Seiran496';
@@ -51,14 +51,14 @@ export default function Home() {
 
       <Section bgc="base">
         <Container>
-          <ContentHeading>{data.contents.problem.heading}</ContentHeading>
+          <Heading>{data.contents.problem.heading}</Heading>
           <Problem />
         </Container>
       </Section>
 
       <Section>
         <Container>
-          <ContentHeading>{data.contents.seiran496.heading}</ContentHeading>
+          <Heading>{data.contents.seiran496.heading}</Heading>
 
           <div className={styles.lead}>
             <Lead text={data.contents.seiran496.lead} />
@@ -70,7 +70,7 @@ export default function Home() {
 
       <Section bgc="base">
         <Container>
-          <ContentHeading>{data.contents.service.heading}</ContentHeading>
+          <Heading>{data.contents.service.heading}</Heading>
 
           <div className={styles.lead}>
             <Lead text={data.contents.service.lead} />
@@ -82,14 +82,14 @@ export default function Home() {
 
       <Section bgc="base">
         <Container>
-          <ContentHeading>{data.contents.flow.heading}</ContentHeading>
+          <Heading>{data.contents.flow.heading}</Heading>
           <Flow />
         </Container>
       </Section>
 
       <Section>
         <Container>
-          <ContentHeading>{data.contents.contact.heading}</ContentHeading>
+          <Heading>{data.contents.contact.heading}</Heading>
 
           <div className={styles.lead}>
             <Lead text={data.contents.contact.lead} />
