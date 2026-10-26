@@ -3,7 +3,7 @@ import { siteMeta } from '@/lib/constants';
 import Section from '@/components/Section';
 import Container from '@/components/Container';
 import Hero from '@/components/Hero';
-import ContentHeading from '@/components/ContentHeading';
+import Heading from '@/components/Heading';
 import Tab from '@/components/Tab';
 
 const data = {
@@ -58,7 +58,7 @@ export default function Expert() {
 
       <Section>
         <Container>
-          <ContentHeading>{data.contents.tab.heading}</ContentHeading>
+          <Heading>{data.contents.tab.heading}</Heading>
           <Tab />
         </Container>
       </Section>

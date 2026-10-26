@@ -3,7 +3,7 @@ import { siteMeta } from '@/lib/constants';
 import Section from '@/components/Section';
 import Container from '@/components/Container';
 import Hero from '@/components/Hero';
-import ContentHeading from '@/components/ContentHeading';
+import Heading from '@/components/Heading';
 import CEOMessage from '@/components/CEOMessage';
 import CompanyProfile from '@/components/CompanyProfile';
 import Access from '@/components/Access';
@@ -67,23 +67,21 @@ export default function About() {
 
       <Section>
         <Container>
-          <ContentHeading>{data.contents.ceoMessage.heading}</ContentHeading>
+          <Heading>{data.contents.ceoMessage.heading}</Heading>
           <CEOMessage />
         </Container>
       </Section>
 
       <Section>
         <Container>
-          <ContentHeading>
-            {data.contents.companyProfile.heading}
-          </ContentHeading>
+          <Heading>{data.contents.companyProfile.heading}</Heading>
           <CompanyProfile />
         </Container>
       </Section>
 
       <Section>
         <Container>
-          <ContentHeading>{data.contents.access.heading}</ContentHeading>
+          <Heading>{data.contents.access.heading}</Heading>
           <Access />
         </Container>
       </Section>
