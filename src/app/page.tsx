@@ -15,7 +15,7 @@ const data = {
     hero: {
       title: '寺院管理の課題を<wbr />前野企画が解決します',
       subtitle:
-        '<p>当社は、ご寺院さまの運営を支援する寺院管理ソフトを提供しています。<br />檀家管理から法要・棚経管理まで、日常業務の効率化を幅広くサポートいたします。</p>',
+        '当社は、ご寺院さまの運営を支援する寺院管理ソフトを提供しています。<br />檀家管理から法要・棚経管理まで、日常業務の効率化を幅広くサポートいたします。',
     },
     problem: {
       heading: '寺院管理で、こんな課題に直面していませんか？',
@@ -39,27 +39,29 @@ const data = {
 };
 
 export default function Home() {
-  const { hero, problem, seiran496, service, flow, contact } = data.contents;
-
   return (
     <>
       <Section bgc="hero">
-        <Hero title={hero.title} subtitle={hero.subtitle} imageOn />
+        <Hero
+          title={data.contents.hero.title}
+          subtitle={data.contents.hero.subtitle}
+          imageOn
+        />
       </Section>
 
       <Section bgc="base">
         <Container>
-          <ContentHeading>{problem.heading}</ContentHeading>
+          <ContentHeading>{data.contents.problem.heading}</ContentHeading>
           <Problem />
         </Container>
       </Section>
 
       <Section>
         <Container>
-          <ContentHeading>{seiran496.heading}</ContentHeading>
+          <ContentHeading>{data.contents.seiran496.heading}</ContentHeading>
 
           <div className={styles.lead}>
-            <Lead text={seiran496.lead} />
+            <Lead text={data.contents.seiran496.lead} />
           </div>
 
           <Seiran496 />
@@ -68,10 +70,10 @@ export default function Home() {
 
       <Section bgc="base">
         <Container>
-          <ContentHeading>{service.heading}</ContentHeading>
+          <ContentHeading>{data.contents.service.heading}</ContentHeading>
 
           <div className={styles.lead}>
-            <Lead text={service.lead} />
+            <Lead text={data.contents.service.lead} />
           </div>
 
           <Service />
@@ -80,17 +82,17 @@ export default function Home() {
 
       <Section bgc="base">
         <Container>
-          <ContentHeading>{flow.heading}</ContentHeading>
+          <ContentHeading>{data.contents.flow.heading}</ContentHeading>
           <Flow />
         </Container>
       </Section>
 
       <Section>
         <Container>
-          <ContentHeading>{contact.heading}</ContentHeading>
+          <ContentHeading>{data.contents.contact.heading}</ContentHeading>
 
           <div className={styles.lead}>
-            <Lead text={contact.lead} />
+            <Lead text={data.contents.contact.lead} />
           </div>
 
           <Contact />

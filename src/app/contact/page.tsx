@@ -11,7 +11,7 @@ const data = {
     hero: {
       title: 'お問い合わせ',
       subtitle:
-        '<p>サービスに関するお問い合わせは、お電話またはメールフォームで承っております。<br />お悩みやご相談は、いつでもお気軽にお問い合わせください。</p>',
+        'サービスに関するお問い合わせは、お電話またはメールフォームで承っております。<br />お悩みやご相談は、いつでもお気軽にお問い合わせください。',
     },
     mailForm: {
       heading: 'メールフォーム',
@@ -45,17 +45,18 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 export default function Contact() {
-  const { hero, mailForm } = data.contents;
-
   return (
     <>
       <Section bgc="hero">
-        <Hero title={hero.title} subtitle={hero.subtitle} />
+        <Hero
+          title={data.contents.hero.title}
+          subtitle={data.contents.hero.subtitle}
+        />
       </Section>
 
       <Section bgc="base">
         <Container>
-          <ContentHeading>{mailForm.heading}</ContentHeading>
+          <ContentHeading>{data.contents.mailForm.heading}</ContentHeading>
           <MailForm />
         </Container>
       </Section>
