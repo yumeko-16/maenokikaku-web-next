@@ -13,7 +13,7 @@ const data = {
     hero: {
       title: '会社情報',
       subtitle:
-        'ご寺院さまの運営を幅広く支えるため、業務に寄り添ったサービスとサポートを提供しています。',
+        'ご寺院さまの運営を幅広く支えるため、<wbr />業務に寄り添ったサービスとサポートを提供しています。',
     },
     ceoMessage: {
       heading: '代表メッセージ',
@@ -55,11 +55,14 @@ export async function generateMetadata(): Promise<Metadata> {
 export default function About() {
   return (
     <>
-      <Section bgc="hero">
-        <Hero
-          title={data.contents.hero.title}
-          subtitle={data.contents.hero.subtitle}
-        />
+      <Section isHero>
+        <Container large>
+          <Hero
+            title={data.contents.hero.title}
+            subtitle={data.contents.hero.subtitle}
+            page="about"
+          />
+        </Container>
       </Section>
 
       <Section>
@@ -78,7 +81,7 @@ export default function About() {
         </Container>
       </Section>
 
-      <Section bgc="base">
+      <Section>
         <Container>
           <ContentHeading>{data.contents.access.heading}</ContentHeading>
           <Access />
