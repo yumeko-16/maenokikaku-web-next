@@ -50,7 +50,7 @@ export default function Contact() {
   return (
     <>
       <Section bgc="hero">
-        <Hero heading={hero.title} lead={hero.subtitle} />
+        <Hero title={hero.title} subtitle={hero.subtitle} />
       </Section>
 
       <Section bgc="base">
