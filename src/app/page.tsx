@@ -44,7 +44,7 @@ export default function Home() {
   return (
     <>
       <Section bgc="hero">
-        <Hero heading={hero.title} lead={hero.subtitle} imageOn />
+        <Hero title={hero.title} subtitle={hero.subtitle} imageOn />
       </Section>
 
       <Section bgc="base">

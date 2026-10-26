@@ -3,26 +3,30 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import Container from '@/components/Container';
-import Heading from '@/components/Heading';
-import Lead from '@/components/Lead';
+import InlineHtmlText from '@/components/InlineHtmlText';
 import heroImg from '@/images/hero.webp';
 import styles from './Hero.module.scss';
 
 type Props = {
-  heading: string;
-  lead: string;
+  title: string;
+  subtitle: string;
   imageOn?: boolean;
 };
 
-export default function Hero({ heading, lead, imageOn = false }: Props) {
+export default function Hero({ title, subtitle, imageOn = false }: Props) {
   const [isImageLoaded, setIsImageLoaded] = useState(false);
 
   return (
     <Container>
       <div className={styles.flexContainer}>
         <div className={styles.text}>
-          <Heading text={heading} />
-          <Lead text={lead} />
+          <h1 className={styles.title}>
+            <InlineHtmlText text={title} />
+          </h1>
+
+          <div className={styles.wrapper}>
+            <InlineHtmlText text={subtitle} />
+          </div>
         </div>
 
         {imageOn && (

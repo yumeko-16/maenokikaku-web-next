@@ -58,7 +58,7 @@ export default function About() {
   return (
     <>
       <Section bgc="hero">
-        <Hero heading={hero.title} lead={hero.subtitle} />
+        <Hero title={hero.title} subtitle={hero.subtitle} />
       </Section>
 
       <Section>
