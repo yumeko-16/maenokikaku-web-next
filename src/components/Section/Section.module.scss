@@ -1,17 +1,5 @@
 @use '@/styles/mixin';
 
 .wrapper {
-  padding: 50px 0;
-
-  @include mixin.tabletScreen {
-    padding: 80px 0;
-  }
-
-  &[data-hero] {
-    padding: 68px 0 0;
-
-    @include mixin.tabletScreen {
-      padding: 80px 0 0;
-    }
-  }
+  padding-block: clamp(96px, 11vw, 168px);
 }

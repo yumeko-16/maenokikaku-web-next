@@ -40,16 +40,12 @@ const data = {
 export default function Home() {
   return (
     <>
-      <Section isHero>
-        <Container large>
-          <Hero
-            title={data.contents.hero.title}
-            subtitle={data.contents.hero.subtitle}
-            page="home"
-            hasEnglish
-          />
-        </Container>
-      </Section>
+      <Hero
+        title={data.contents.hero.title}
+        subtitle={data.contents.hero.subtitle}
+        page="home"
+        hasEnglish
+      />
 
       <Section>
         <Container>

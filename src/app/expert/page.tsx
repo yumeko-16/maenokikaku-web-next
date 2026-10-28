@@ -46,15 +46,11 @@ export async function generateMetadata(): Promise<Metadata> {
 export default function Expert() {
   return (
     <>
-      <Section isHero>
-        <Container large>
-          <Hero
-            title={data.contents.hero.title}
-            subtitle={data.contents.hero.subtitle}
-            page="expert"
-          />
-        </Container>
-      </Section>
+      <Hero
+        title={data.contents.hero.title}
+        subtitle={data.contents.hero.subtitle}
+        page="expert"
+      />
 
       <Section>
         <Container>

@@ -1,3 +1,4 @@
+import Container from '@/components/Container';
 import InlineHtmlText from '@/components/InlineHtmlText';
 import styles from './Hero.module.scss';
 
@@ -15,18 +16,25 @@ export default function Hero({
   hasEnglish = false,
 }: Props) {
   return (
-    <div className={styles.wrapper} data-page={page}>
-      <div className={styles.container}>
-        <div className={styles.text} data-page={page}>
-          <h1 className={styles.title}>
-            <InlineHtmlText text={title} />
-          </h1>
+    <section className={styles.wrapper}>
+      <Container large>
+        <div className={styles.frame} data-page={page}>
+          <div className={styles.frameContainer}>
+            <div className={styles.text} data-page={page}>
+              <h1 className={styles.title}>
+                <InlineHtmlText text={title} />
+              </h1>
 
-          <p className={styles.subtitle} data-lang-en={hasEnglish || undefined}>
-            <InlineHtmlText text={subtitle} />
-          </p>
+              <p
+                className={styles.subtitle}
+                data-lang-en={hasEnglish || undefined}
+              >
+                <InlineHtmlText text={subtitle} />
+              </p>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
+      </Container>
+    </section>
   );
 }

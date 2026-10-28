@@ -47,15 +47,11 @@ export async function generateMetadata(): Promise<Metadata> {
 export default function Contact() {
   return (
     <>
-      <Section isHero>
-        <Container large>
-          <Hero
-            title={data.contents.hero.title}
-            subtitle={data.contents.hero.subtitle}
-            page="contact"
-          />
-        </Container>
-      </Section>
+      <Hero
+        title={data.contents.hero.title}
+        subtitle={data.contents.hero.subtitle}
+        page="contact"
+      />
 
       <Section>
         <Container>
