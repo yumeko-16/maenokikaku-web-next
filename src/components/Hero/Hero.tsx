@@ -17,31 +17,33 @@ export default function Hero({ heading, subHeading, imageOn = false }: Props) {
   const [isImageLoaded, setIsImageLoaded] = useState(false);
 
   return (
-    <Container>
-      <div className={styles.flexContainer}>
-        <div className={styles.text}>
-          <h1 className={styles.title}>
-            <InlineHtmlText text={heading} />
-          </h1>
+    <section className={styles.wrapper}>
+      <Container>
+        <div className={styles.flexContainer}>
+          <div className={styles.text}>
+            <h1 className={styles.title}>
+              <InlineHtmlText text={heading} />
+            </h1>
 
-          <div className={styles.wrapper}>
-            <InlineHtmlText text={subHeading} />
+            <div className={styles.wrapper}>
+              <InlineHtmlText text={subHeading} />
+            </div>
           </div>
-        </div>
 
-        {imageOn && (
-          <figure className={styles.image}>
-            <Image
-              className={isImageLoaded ? styles.removeBlur : styles.blur}
-              src={heroImg}
-              alt=""
-              sizes="(min-width: 1024px) 700px, (min-width: 768px) 50vw, 100vw"
-              priority
-              onLoad={() => setIsImageLoaded(true)}
-            />
-          </figure>
-        )}
-      </div>
-    </Container>
+          {imageOn && (
+            <figure className={styles.image}>
+              <Image
+                className={isImageLoaded ? styles.removeBlur : styles.blur}
+                src={heroImg}
+                alt=""
+                sizes="(min-width: 1024px) 700px, (min-width: 768px) 50vw, 100vw"
+                priority
+                onLoad={() => setIsImageLoaded(true)}
+              />
+            </figure>
+          )}
+        </div>
+      </Container>
+    </section>
   );
 }

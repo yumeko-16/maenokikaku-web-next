@@ -41,13 +41,11 @@ const data = {
 export default function Home() {
   return (
     <>
-      <Section bgc="hero">
-        <Hero
-          heading={data.contents.hero.heading}
-          subHeading={data.contents.hero.subHeading}
-          imageOn
-        />
-      </Section>
+      <Hero
+        heading={data.contents.hero.heading}
+        subHeading={data.contents.hero.subHeading}
+        imageOn
+      />
 
       <Section bgc="base">
         <Container>
