@@ -13,8 +13,8 @@ import styles from './page.module.scss';
 const data = {
   contents: {
     hero: {
-      title: '寺院管理の課題を、<br />前野企画が解決します。',
-      subtitle:
+      heading: '寺院管理の課題を、<br />前野企画が解決します。',
+      subHeading:
         '当社は、ご寺院さまの運営を支援する寺院管理ソフトを提供しています。<br />檀家管理から法要・棚経管理まで、日常業務の効率化を幅広くサポートいたします。',
     },
     problem: {
@@ -43,8 +43,8 @@ export default function Home() {
     <>
       <Section bgc="hero">
         <Hero
-          title={data.contents.hero.title}
-          subtitle={data.contents.hero.subtitle}
+          heading={data.contents.hero.heading}
+          subHeading={data.contents.hero.subHeading}
           imageOn
         />
       </Section>

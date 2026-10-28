@@ -8,12 +8,12 @@ import heroImg from '@/images/hero.webp';
 import styles from './Hero.module.scss';
 
 type Props = {
-  title: string;
-  subtitle: string;
+  heading: string;
+  subHeading: string;
   imageOn?: boolean;
 };
 
-export default function Hero({ title, subtitle, imageOn = false }: Props) {
+export default function Hero({ heading, subHeading, imageOn = false }: Props) {
   const [isImageLoaded, setIsImageLoaded] = useState(false);
 
   return (
@@ -21,11 +21,11 @@ export default function Hero({ title, subtitle, imageOn = false }: Props) {
       <div className={styles.flexContainer}>
         <div className={styles.text}>
           <h1 className={styles.title}>
-            <InlineHtmlText text={title} />
+            <InlineHtmlText text={heading} />
           </h1>
 
           <div className={styles.wrapper}>
-            <InlineHtmlText text={subtitle} />
+            <InlineHtmlText text={subHeading} />
           </div>
         </div>
 
