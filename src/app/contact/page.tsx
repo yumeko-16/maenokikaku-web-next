@@ -9,8 +9,8 @@ import MailForm from '@/components/MailForm';
 const data = {
   contents: {
     hero: {
-      title: 'お問い合わせ',
-      subtitle:
+      heading: 'お問い合わせ',
+      subHeading:
         'サービスに関するお問い合わせは、お電話またはメールフォームで承っております。<br />お悩みやご相談は、いつでもお気軽にお問い合わせください。',
     },
     mailForm: {
@@ -49,8 +49,8 @@ export default function Contact() {
     <>
       <Section bgc="hero">
         <Hero
-          title={data.contents.hero.title}
-          subtitle={data.contents.hero.subtitle}
+          heading={data.contents.hero.heading}
+          subHeading={data.contents.hero.subHeading}
         />
       </Section>
 
