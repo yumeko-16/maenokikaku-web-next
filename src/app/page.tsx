@@ -13,8 +13,8 @@ import styles from './page.module.scss';
 const data = {
   contents: {
     hero: {
-      title: '寺院管理の課題を、<br />前野企画が解決します。',
-      subtitle: 'Solving temple management<br />with sincere support.',
+      heading: '寺院管理の課題を、<br />前野企画が解決します。',
+      subHeading: 'Solving temple management<br />with sincere support.',
     },
     problem: {
       heading: '寺院管理で、こんな課題に直面していませんか？',
@@ -41,8 +41,8 @@ export default function Home() {
   return (
     <>
       <Hero
-        title={data.contents.hero.title}
-        subtitle={data.contents.hero.subtitle}
+        heading={data.contents.hero.heading}
+        subHeading={data.contents.hero.subHeading}
         page="home"
         hasEnglish
       />

@@ -9,8 +9,8 @@ import Tab from '@/components/Tab';
 const data = {
   contents: {
     hero: {
-      title: '青藍システム496',
-      subtitle: '寺院エキスパートと高い互換性を持つ寺院管理ソフト',
+      heading: '青藍システム496',
+      subHeading: '寺院エキスパートと高い互換性を持つ寺院管理ソフト',
     },
     tab: {
       heading: '機能',
@@ -47,8 +47,8 @@ export default function Expert() {
   return (
     <>
       <Hero
-        title={data.contents.hero.title}
-        subtitle={data.contents.hero.subtitle}
+        heading={data.contents.hero.heading}
+        subHeading={data.contents.hero.subHeading}
         page="expert"
       />
 

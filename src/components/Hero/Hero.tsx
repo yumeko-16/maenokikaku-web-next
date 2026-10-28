@@ -3,15 +3,15 @@ import InlineHtmlText from '@/components/InlineHtmlText';
 import styles from './Hero.module.scss';
 
 type Props = {
-  title: string;
-  subtitle: string;
+  heading: string;
+  subHeading: string;
   page: string;
   hasEnglish?: boolean;
 };
 
 export default function Hero({
-  title,
-  subtitle,
+  heading,
+  subHeading,
   page,
   hasEnglish = false,
 }: Props) {
@@ -22,14 +22,14 @@ export default function Hero({
           <div className={styles.frameContainer}>
             <div className={styles.text} data-page={page}>
               <h1 className={styles.title}>
-                <InlineHtmlText text={title} />
+                <InlineHtmlText text={heading} />
               </h1>
 
               <p
                 className={styles.subtitle}
                 data-lang-en={hasEnglish || undefined}
               >
-                <InlineHtmlText text={subtitle} />
+                <InlineHtmlText text={subHeading} />
               </p>
             </div>
           </div>
