@@ -21,13 +21,13 @@ export default function Hero({ heading, subHeading, imageOn = false }: Props) {
       <Container>
         <div className={styles.flexContainer}>
           <div className={styles.text}>
-            <h1 className={styles.title}>
+            <h1 className={styles.heading}>
               <InlineHtmlText text={heading} />
             </h1>
 
-            <div className={styles.wrapper}>
+            <p className={styles.subHeading}>
               <InlineHtmlText text={subHeading} />
-            </div>
+            </p>
           </div>
 
           {imageOn && (
