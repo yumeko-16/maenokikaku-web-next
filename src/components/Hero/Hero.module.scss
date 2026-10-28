@@ -1,5 +1,14 @@
 @use '@/styles/mixin';
 
+.wrapper {
+  padding: 100px 0 50px;
+  background: linear-gradient(135deg, var(--primary), #5067c5);
+
+  @include mixin.tabletScreen {
+    padding: 160px 0 80px;
+  }
+}
+
 .flexContainer {
   @include mixin.sideBySide;
 
