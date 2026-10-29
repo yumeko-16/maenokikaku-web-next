@@ -21,12 +21,12 @@ export default function Hero({
         <div className={styles.frame} data-page={page}>
           <div className={styles.frameContainer}>
             <div className={styles.text} data-page={page}>
-              <h1 className={styles.title}>
+              <h1 className={styles.heading}>
                 <InlineHtmlText text={heading} />
               </h1>
 
               <p
-                className={styles.subtitle}
+                className={styles.subHeading}
                 data-lang-en={hasEnglish || undefined}
               >
                 <InlineHtmlText text={subHeading} />

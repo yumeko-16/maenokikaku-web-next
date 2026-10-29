@@ -96,7 +96,7 @@
   }
 }
 
-.title {
+.heading {
   font-family: var(--font-mincho);
   font-size: calc(var(--heading1) * 0.8);
   font-weight: 500;
@@ -105,7 +105,7 @@
   text-shadow: 0 2px 30px rgb(0 0 0 / 25%);
 }
 
-.subtitle {
+.subHeading {
   font-family: var(--font-gothic);
   font-size: calc(var(--body) * 0.82);
   font-variant: small-caps;
