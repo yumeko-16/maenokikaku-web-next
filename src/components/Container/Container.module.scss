@@ -1,11 +1,9 @@
-.wrapper {
+.default,
+.large {
+  width: 92%;
   margin: 0 auto;
+}
 
-  &[data-size='default'] {
-    width: min(92%, 1152px);
-  }
-
-  &[data-size='large'] {
-    width: 92%;
-  }
+.default {
+  max-width: 1152px;
 }

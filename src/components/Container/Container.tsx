@@ -8,8 +8,6 @@ type Props = {
 
 export default function Container({ large = false, children }: Props) {
   return (
-    <div className={styles.wrapper} data-size={large ? 'large' : 'default'}>
-      {children}
-    </div>
+    <div className={large ? styles.large : styles.default}>{children}</div>
   );
 }
