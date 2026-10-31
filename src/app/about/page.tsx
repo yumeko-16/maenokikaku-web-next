@@ -74,7 +74,7 @@ export default function About() {
         </Container>
       </Section>
 
-      <Section bgc="base">
+      <Section variant="base">
         <Container>
           <Heading>{data.contents.access.heading}</Heading>
           <Access />
