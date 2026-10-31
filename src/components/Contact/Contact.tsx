@@ -1,35 +1,22 @@
 import Link from 'next/link';
 import styles from './Contact.module.scss';
 
-const data = {
-  contents: {
-    phone: {
-      num: '090-2679-3570',
-      href: 'tel:+90.2679.3570',
-    },
-    button: {
-      href: '/contact/',
-      text: 'メールフォームでお問い合わせ',
-    },
-  },
-};
-
 export default function Contact() {
   return (
     <div className={styles.wrapper}>
       <div className={styles.item}>
         <div className={styles.heading}>お電話からのご相談はこちら</div>
         <div className={styles.phone}>
-          <Link className={styles.num} href={data.contents.phone.href}>
-            {data.contents.phone.num}
+          <Link className={styles.number} href="tel:09026793570">
+            090-2679-3570
           </Link>
         </div>
       </div>
 
       <div className={styles.item}>
         <div className={styles.heading}>フォームからのご相談はこちら</div>
-        <Link className={styles.link} href={data.contents.button.href}>
-          {data.contents.button.text}
+        <Link className={styles.link} href="/contact/">
+          メールフォームでお問い合わせ
         </Link>
       </div>
     </div>

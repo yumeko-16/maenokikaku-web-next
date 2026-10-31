@@ -15,7 +15,7 @@ export default function Footer() {
             {NAV_ITEMS.map((item) => (
               <li key={item.href}>
                 <Link className={styles.link} href={item.href}>
-                  {item.label}
+                  {item.text}
                 </Link>
               </li>
             ))}

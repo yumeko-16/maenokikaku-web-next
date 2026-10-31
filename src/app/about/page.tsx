@@ -8,22 +8,25 @@ import CEOMessage from '@/components/CEOMessage';
 import CompanyProfile from '@/components/CompanyProfile';
 import Access from '@/components/Access';
 
-const data = {
-  contents: {
-    hero: {
-      heading: '会社情報',
-      subHeading:
-        'ご寺院さまの運営を幅広く支えるため、<wbr />業務に寄り添ったサービスとサポートを提供しています。',
-    },
-    ceoMessage: {
-      heading: '代表メッセージ',
-    },
-    companyProfile: {
-      heading: '会社概要',
-    },
-    access: {
-      heading: 'アクセス',
-    },
+const PAGE_CONTENT = {
+  hero: {
+    heading: '会社情報',
+    subHeading: (
+      <>
+        ご寺院さまの運営を幅広く支えるため、
+        <wbr />
+        業務に寄り添ったサービスとサポートを提供しています。
+      </>
+    ),
+  },
+  ceoMessage: {
+    heading: '代表メッセージ',
+  },
+  companyProfile: {
+    heading: '会社概要',
+  },
+  access: {
+    heading: 'アクセス',
   },
 };
 
@@ -56,27 +59,27 @@ export default function About() {
   return (
     <>
       <Hero
-        heading={data.contents.hero.heading}
-        subHeading={data.contents.hero.subHeading}
+        heading={PAGE_CONTENT.hero.heading}
+        subHeading={PAGE_CONTENT.hero.subHeading}
       />
 
       <Section>
         <Container>
-          <Heading>{data.contents.ceoMessage.heading}</Heading>
+          <Heading>{PAGE_CONTENT.ceoMessage.heading}</Heading>
           <CEOMessage />
         </Container>
       </Section>
 
       <Section>
         <Container>
-          <Heading>{data.contents.companyProfile.heading}</Heading>
+          <Heading>{PAGE_CONTENT.companyProfile.heading}</Heading>
           <CompanyProfile />
         </Container>
       </Section>
 
       <Section variant="base">
         <Container>
-          <Heading>{data.contents.access.heading}</Heading>
+          <Heading>{PAGE_CONTENT.access.heading}</Heading>
           <Access />
         </Container>
       </Section>

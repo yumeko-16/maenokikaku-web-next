@@ -6,16 +6,19 @@ import Hero from '@/components/Hero';
 import Heading from '@/components/Heading';
 import MailForm from '@/components/MailForm';
 
-const data = {
-  contents: {
-    hero: {
-      heading: 'お問い合わせ',
-      subHeading:
-        'サービスに関するお問い合わせは、お電話またはメールフォームで承っております。<br />お悩みやご相談は、いつでもお気軽にお問い合わせください。',
-    },
-    mailForm: {
-      heading: 'メールフォーム',
-    },
+const PAGE_CONTENT = {
+  hero: {
+    heading: 'お問い合わせ',
+    subHeading: (
+      <>
+        サービスに関するお問い合わせは、お電話またはメールフォームで承っております。
+        <br />
+        お悩みやご相談は、いつでもお気軽にお問い合わせください。
+      </>
+    ),
+  },
+  mailForm: {
+    heading: 'メールフォーム',
   },
 };
 
@@ -48,13 +51,13 @@ export default function Contact() {
   return (
     <>
       <Hero
-        heading={data.contents.hero.heading}
-        subHeading={data.contents.hero.subHeading}
+        heading={PAGE_CONTENT.hero.heading}
+        subHeading={PAGE_CONTENT.hero.subHeading}
       />
 
       <Section variant="base">
         <Container>
-          <Heading>{data.contents.mailForm.heading}</Heading>
+          <Heading>{PAGE_CONTENT.mailForm.heading}</Heading>
           <MailForm />
         </Container>
       </Section>
