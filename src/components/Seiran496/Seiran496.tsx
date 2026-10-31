@@ -42,24 +42,22 @@ const data: { contents: Seiran496Content } = {
 };
 
 export default function Seiran496() {
-  const { image, points, button } = data.contents;
-
   return (
     <>
       <div className={styles.expert}>
         <div className={styles.gridContainer}>
           <figure className={styles.image}>
             <Image
-              src={image.url}
-              alt={image.alt}
-              width={image.width}
-              height={image.height}
-              loading={image.loading}
+              src={data.contents.image.url}
+              alt={data.contents.image.alt}
+              width={data.contents.image.width}
+              height={data.contents.image.height}
+              loading={data.contents.image.loading}
             />
           </figure>
 
           <ul className={styles.points}>
-            {points.map((point) => (
+            {data.contents.points.map((point) => (
               <li key={point} className={styles.point}>
                 {point}
               </li>
@@ -69,8 +67,8 @@ export default function Seiran496() {
       </div>
 
       <div className={styles.btn}>
-        <Link className={styles.link} href={button.href}>
-          {button.text}
+        <Link className={styles.link} href={data.contents.button.href}>
+          {data.contents.button.text}
         </Link>
       </div>
     </>
