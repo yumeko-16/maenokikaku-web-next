@@ -2,13 +2,13 @@ import { ReactNode } from 'react';
 import styles from './Section.module.scss';
 
 type Props = {
+  variant?: string;
   children: ReactNode;
-  bgc?: string;
 };
 
-export default function Section({ children, bgc }: Props) {
+export default function Section({ variant, children }: Props) {
   return (
-    <section className={styles.wrapper} data-bgc={bgc}>
+    <section className={styles.wrapper} data-variant={variant}>
       {children}
     </section>
   );

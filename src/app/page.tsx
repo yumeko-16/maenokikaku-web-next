@@ -47,7 +47,7 @@ export default function Home() {
         imageOn
       />
 
-      <Section bgc="base">
+      <Section variant="base">
         <Container>
           <Heading>{data.contents.problem.heading}</Heading>
           <Problem />
@@ -66,7 +66,7 @@ export default function Home() {
         </Container>
       </Section>
 
-      <Section bgc="base">
+      <Section variant="base">
         <Container>
           <Heading>{data.contents.service.heading}</Heading>
 
@@ -78,7 +78,7 @@ export default function Home() {
         </Container>
       </Section>
 
-      <Section bgc="base">
+      <Section variant="base">
         <Container>
           <Heading>{data.contents.flow.heading}</Heading>
           <Flow />

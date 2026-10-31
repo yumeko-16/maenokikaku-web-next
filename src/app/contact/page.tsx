@@ -52,7 +52,7 @@ export default function Contact() {
         subHeading={data.contents.hero.subHeading}
       />
 
-      <Section bgc="base">
+      <Section variant="base">
         <Container>
           <Heading>{data.contents.mailForm.heading}</Heading>
           <MailForm />
