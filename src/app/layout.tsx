@@ -1,9 +1,9 @@
 import type { ReactNode } from 'react';
 import type { Metadata } from 'next';
 import { siteMeta } from '@/lib/constants';
+import './globals.css';
 import Header from '@/components/Header/Header';
 import Footer from '@/components/Footer/Footer';
-import './globals.css';
 
 export const metadata: Metadata = {
   title: {
