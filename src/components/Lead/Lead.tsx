@@ -1,14 +1,16 @@
-import InlineHtmlText from '@/components/InlineHtmlText';
+import { ReactNode } from 'react';
 import styles from './Lead.module.scss';
 
 type Props = {
-  text: string;
+  text: ReactNode[];
 };
 
 export default function Lead({ text }: Props) {
   return (
     <div className={styles.wrapper}>
-      <InlineHtmlText text={text} />
+      {text.map((paragraph, index) => (
+        <p key={index}>{paragraph}</p>
+      ))}
     </div>
   );
 }

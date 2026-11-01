@@ -1,10 +1,12 @@
+'use client';
+
+import { ReactNode } from 'react';
 import Container from '@/components/Container';
-import InlineHtmlText from '@/components/InlineHtmlText';
 import styles from './Hero.module.scss';
 
 type Props = {
-  heading: string;
-  subHeading: string;
+  heading: ReactNode;
+  subHeading: ReactNode;
   page: string;
   hasEnglish?: boolean;
 };
@@ -21,15 +23,13 @@ export default function Hero({
         <div className={styles.frame} data-page={page}>
           <div className={styles.frameContainer}>
             <div className={styles.text} data-page={page}>
-              <h1 className={styles.heading}>
-                <InlineHtmlText text={heading} />
-              </h1>
+              <h1 className={styles.heading}>{heading}</h1>
 
               <p
                 className={styles.subHeading}
                 data-lang-en={hasEnglish || undefined}
               >
-                <InlineHtmlText text={subHeading} />
+                {subHeading}
               </p>
             </div>
           </div>

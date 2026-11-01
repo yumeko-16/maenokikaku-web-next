@@ -1,5 +1,5 @@
 @use '@/styles/mixin';
 
 .wrapper {
-  padding-block: clamp(96px, 11vw, 168px);
+  padding: clamp(96px, 11vw, 168px) 0;
 }

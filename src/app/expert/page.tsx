@@ -6,15 +6,13 @@ import Hero from '@/components/Hero';
 import Heading from '@/components/Heading';
 import Tab from '@/components/Tab';
 
-const data = {
-  contents: {
-    hero: {
-      heading: '青藍システム496',
-      subHeading: '寺院エキスパートと高い互換性を持つ寺院管理ソフト',
-    },
-    tab: {
-      heading: '機能',
-    },
+const PAGE_CONTENT = {
+  hero: {
+    heading: '青藍システム496',
+    subHeading: '寺院エキスパートと高い互換性を持つ寺院管理ソフト',
+  },
+  tab: {
+    heading: '機能',
   },
 };
 
@@ -47,14 +45,14 @@ export default function Expert() {
   return (
     <>
       <Hero
-        heading={data.contents.hero.heading}
-        subHeading={data.contents.hero.subHeading}
+        heading={PAGE_CONTENT.hero.heading}
+        subHeading={PAGE_CONTENT.hero.subHeading}
         page="expert"
       />
 
       <Section>
         <Container>
-          <Heading>{data.contents.tab.heading}</Heading>
+          <Heading>{PAGE_CONTENT.tab.heading}</Heading>
           <Tab />
         </Container>
       </Section>
