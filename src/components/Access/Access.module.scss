@@ -2,11 +2,8 @@
 
 .map {
   width: 100%;
+  height: 300px;
   border: none;
-
-  @include mixin.smartphoneScreen {
-    height: 300px;
-  }
 
   @include mixin.tabletScreen {
     height: 500px;

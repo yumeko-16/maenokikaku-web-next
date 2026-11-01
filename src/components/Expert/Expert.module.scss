@@ -7,10 +7,7 @@
 
 .gridContainer {
   display: grid;
-
-  @include mixin.smartphoneScreen {
-    gap: 30px;
-  }
+  gap: 30px;
 
   @include mixin.tabletScreen {
     grid-template-columns: auto 1fr;
@@ -22,26 +19,20 @@
 .image {
   display: grid;
   place-content: center;
-
-  @include mixin.tabletScreen {
-    width: 230px;
-  }
+  width: 230px;
 
   @include mixin.tabletScreen {
     width: auto;
   }
+}
 
-  img {
-    aspect-ratio: 434 / 446;
-  }
+.image img {
+  aspect-ratio: 434 / 446;
 }
 
 .points {
   display: grid;
-
-  @include mixin.smartphoneScreen {
-    gap: 20px;
-  }
+  gap: 20px;
 
   @include mixin.tabletScreen {
     gap: 30px;
@@ -54,25 +45,22 @@
   gap: 0.5em;
   place-items: center start;
   justify-content: start;
+}
 
-  &::before {
-    display: inline-block;
-    width: 30px;
-    aspect-ratio: 1;
-    content: '';
-    background-image: url('/images/icon_circle-check-solid-full.svg');
-    background-repeat: no-repeat;
-    background-size: contain;
-  }
+.point::before {
+  display: inline-block;
+  width: 30px;
+  aspect-ratio: 1;
+  content: '';
+  background-image: url('/images/icon_circle-check-solid-full.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .btn {
   display: grid;
   place-content: center;
-
-  @include mixin.smartphoneScreen {
-    margin-top: 20px;
-  }
+  margin-top: 20px;
 
   @include mixin.tabletScreen {
     margin-top: 40px;
