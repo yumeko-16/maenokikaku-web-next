@@ -1,7 +1,7 @@
 'use client';
 
 import type { ReactNode } from 'react';
-import Container from '@/components/Container';
+import Container from '@/components/Container/Container';
 import styles from './Hero.module.scss';
 
 type Props = {

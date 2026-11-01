@@ -1,5 +1,5 @@
 import type { ReactNode } from 'react';
-import PostBody from '@/components/PostBody';
+import PostBody from '@/components/PostBody/PostBody';
 
 type Props = {
   text: ReactNode[];

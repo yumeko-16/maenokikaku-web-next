@@ -1,7 +1,7 @@
 import Link from 'next/link';
-import Container from '@/components/Container';
-import Logo from '@/components/Logo';
-import Copyright from '@/components/Copyright';
+import Container from '@/components/Container/Container';
+import Logo from '@/components/Logo/Logo';
+import Copyright from '@/components/Copyright/Copyright';
 import { NAV_ITEMS } from '@/constants/navigation';
 import styles from './Footer.module.scss';
 
