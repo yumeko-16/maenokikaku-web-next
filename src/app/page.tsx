@@ -15,15 +15,15 @@ const PAGE_CONTENT = {
     heading: (
       <>
         寺院管理の課題を、
-        <wbr />
+        <br />
         前野企画が解決します。
       </>
     ),
     subHeading: (
       <>
-        当社は、ご寺院さまの運営を支援する寺院管理ソフトを提供しています。
+        Solving temple management
         <br />
-        檀家管理から法要・棚経管理まで、日常業務の効率化を幅広くサポートいたします。
+        with sincere support.
       </>
     ),
   },
