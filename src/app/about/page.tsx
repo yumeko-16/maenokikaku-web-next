@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 import { siteMeta } from '@/constants/siteMeta';
+import Hero from '@/components/Hero/Hero';
 import Section from '@/components/Section/Section';
 import Container from '@/components/Container/Container';
-import Hero from '@/components/Hero/Hero';
 import Heading from '@/components/Heading/Heading';
 import CEOMessage from '@/components/CEOMessage/CEOMessage';
 import CompanyProfile from '@/components/CompanyProfile/CompanyProfile';

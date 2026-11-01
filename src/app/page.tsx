@@ -1,6 +1,6 @@
+import Hero from '@/components/Hero/Hero';
 import Section from '@/components/Section/Section';
 import Container from '@/components/Container/Container';
-import Hero from '@/components/Hero/Hero';
 import Heading from '@/components/Heading/Heading';
 import Lead from '@/components/Lead/Lead';
 import Problem from '@/components/Problem/Problem';
