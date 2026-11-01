@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { siteMeta } from '@/lib/constants';
+import { siteMeta } from '@/constants/siteMeta';
 import Section from '@/components/Section/Section';
 import Container from '@/components/Container/Container';
 import Hero from '@/components/Hero/Hero';
