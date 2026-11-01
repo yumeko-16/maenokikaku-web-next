@@ -1,6 +1,6 @@
+import Hero from '@/components/Hero/Hero';
 import Section from '@/components/Section/Section';
 import Container from '@/components/Container/Container';
-import Hero from '@/components/Hero/Hero';
 import Heading from '@/components/Heading/Heading';
 import Lead from '@/components/Lead/Lead';
 import Problem from '@/components/Problem/Problem';
@@ -66,7 +66,7 @@ export default function Home() {
         heading={PAGE_CONTENT.hero.heading}
         subHeading={PAGE_CONTENT.hero.subHeading}
         page="home"
-        imageOn
+        hasEnglish
       />
 
       <Section>

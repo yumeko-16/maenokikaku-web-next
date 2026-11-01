@@ -1,8 +1,8 @@
 import Link from 'next/link';
+import { NAVIGATION } from '@/constants/navigation';
 import Container from '@/components/Container/Container';
 import Logo from '@/components/Logo/Logo';
 import Copyright from '@/components/Copyright/Copyright';
-import { NAVIGATION } from '@/constants/navigation';
 import styles from './Footer.module.scss';
 
 export default function Footer() {
