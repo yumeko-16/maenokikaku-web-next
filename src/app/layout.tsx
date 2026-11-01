@@ -1,7 +1,7 @@
 import type { ReactNode } from 'react';
 import type { Metadata } from 'next';
 import '@/app/globals.css';
-import { cormorantGaramond, notoSansJp, zenOldMincho } from '@/lib/fonts';
+import { cormorantGaramond, notoSansJp, zenOldMincho } from '@/constants/fonts';
 import { siteMeta } from '@/constants/siteMeta';
 import Header from '@/components/Header/Header';
 import Footer from '@/components/Footer/Footer';
