@@ -5,6 +5,10 @@ import { siteMeta } from '@/constants/siteMeta';
 import Header from '@/components/Header/Header';
 import Footer from '@/components/Footer/Footer';
 
+type Props = {
+  children: ReactNode;
+};
+
 export const metadata: Metadata = {
   title: {
     default: siteMeta.siteTitle,
@@ -36,7 +40,7 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({ children }: { children: ReactNode }) {
+export default function RootLayout({ children }: Props) {
   return (
     <html lang="ja">
       <body>
