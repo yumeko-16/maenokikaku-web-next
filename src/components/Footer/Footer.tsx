@@ -1,6 +1,6 @@
 import Link from 'next/link';
-import Container from '@/components/Container';
-import Logo from '@/components/Logo';
+import Container from '@/components/Container/Container';
+import Logo from '@/components/Logo/Logo';
 import { NAV_ITEMS } from '@/constants/navigation';
 import styles from './Footer.module.scss';
 

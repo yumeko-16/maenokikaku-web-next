@@ -3,7 +3,7 @@
 import type { ReactNode } from 'react';
 import { useState } from 'react';
 import Image from 'next/image';
-import Container from '@/components/Container';
+import Container from '@/components/Container/Container';
 import styles from './Hero.module.scss';
 
 type Props = {
