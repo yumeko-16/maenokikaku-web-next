@@ -1,4 +1,4 @@
-export const NAV_ITEMS = [
+export const NAVIGATION = [
   {
     href: '/',
     text: 'ホーム',

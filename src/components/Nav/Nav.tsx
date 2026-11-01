@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { NAV_ITEMS } from '@/constants/navigation';
+import { NAVIGATION } from '@/constants/navigation';
 import styles from './Nav.module.scss';
 
 export default function Nav() {
@@ -36,7 +36,7 @@ export default function Nav() {
       </button>
 
       <ul className={styles.list}>
-        {NAV_ITEMS.map((item) => (
+        {NAVIGATION.map((item) => (
           <li key={item.href}>
             <Link className={styles.link} href={item.href} onClick={closeNav}>
               {item.text}
