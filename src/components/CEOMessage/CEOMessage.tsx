@@ -1,8 +1,8 @@
-import styles from './CEOMessage.module.scss';
+import PostBody from '@/components/PostBody';
 
 export default function CEOMessage() {
   return (
-    <div className={styles.message}>
+    <PostBody>
       <p>
         当社は、寺院向けシステムの販売、導入指導、サポートを行っております。
         <br />
@@ -19,6 +19,6 @@ export default function CEOMessage() {
       <p>
         今後も、ユーザーさまの信頼に応えられるサービス提供に努めてまいります。
       </p>
-    </div>
+    </PostBody>
   );
 }

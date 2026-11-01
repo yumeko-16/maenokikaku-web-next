@@ -1,6 +1,6 @@
 'use client';
 
-import { ReactNode } from 'react';
+import type { ReactNode } from 'react';
 import { useState } from 'react';
 import Image from 'next/image';
 import Container from '@/components/Container';

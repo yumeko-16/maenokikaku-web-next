@@ -10,11 +10,11 @@
 
 .term,
 .description {
+  padding: 10px 15px;
   border-right: 1px solid var(--black);
   border-bottom: 1px solid var(--black);
 
   @include mixin.smartphoneScreen {
-    padding: 10px 15px;
     border-left: 1px solid var(--black);
   }
 
@@ -30,16 +30,14 @@
   @include mixin.tabletScreen {
     border-left: 1px solid var(--black);
   }
-
-  .unit:first-child & {
-    border-top: 1px solid var(--black);
-  }
 }
 
-.description {
-  .unit:first-child & {
-    @include mixin.tabletScreen {
-      border-top: 1px solid var(--black);
-    }
+.unit:first-child .term {
+  border-top: 1px solid var(--black);
+}
+
+.unit:first-child .description {
+  @include mixin.tabletScreen {
+    border-top: 1px solid var(--black);
   }
 }
