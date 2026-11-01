@@ -1,5 +1,5 @@
-import { ReactNode } from 'react';
-import styles from './Lead.module.scss';
+import type { ReactNode } from 'react';
+import PostBody from '@/components/PostBody';
 
 type Props = {
   text: ReactNode[];
@@ -7,10 +7,10 @@ type Props = {
 
 export default function Lead({ text }: Props) {
   return (
-    <div className={styles.wrapper}>
+    <PostBody>
       {text.map((paragraph, index) => (
         <p key={index}>{paragraph}</p>
       ))}
-    </div>
+    </PostBody>
   );
 }

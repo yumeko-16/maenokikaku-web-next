@@ -2,10 +2,7 @@
 
 .steps {
   display: grid;
-
-  @include mixin.smartphoneScreen {
-    gap: 30px;
-  }
+  gap: 30px;
 
   @include mixin.tabletScreen {
     gap: 40px;
@@ -15,49 +12,40 @@
 .step {
   position: relative;
   display: grid;
+  gap: 10px;
   place-items: start;
+  padding: 20px;
   background-color: var(--white);
   border-radius: 8px;
   box-shadow: 0 7px 16px 0 rgb(0 0 0 / 7%);
-
-  @include mixin.smartphoneScreen {
-    gap: 10px;
-    padding: 20px;
-  }
 
   @include mixin.tabletScreen {
     gap: 15px;
     padding: 20px 30px;
   }
+}
 
-  &:not(:first-child)::before {
-    position: absolute;
-    top: 0;
-    z-index: 10;
-    display: block;
-    content: '';
-    border-left: 4px dotted #e5e5e5;
+.step:not(:first-child)::before {
+  position: absolute;
+  top: 0;
+  left: calc((86px / 2) + 20px);
+  z-index: 10;
+  display: block;
+  height: 50px;
+  content: '';
+  border-left: 4px dotted #e5e5e5;
+  transform: translate(-60%, -50%);
 
-    @include mixin.smartphoneScreen {
-      left: calc((86px / 2) + 20px);
-      height: 50px;
-      transform: translate(-60%, -50%);
-    }
-
-    @include mixin.tabletScreen {
-      left: calc((86px / 2) + 30px);
-      height: 60px;
-      transform: translate(-50%, -66%);
-    }
+  @include mixin.tabletScreen {
+    left: calc((86px / 2) + 30px);
+    height: 60px;
+    transform: translate(-50%, -66%);
   }
 }
 
 .definitionlist {
   display: grid;
-
-  @include mixin.smartphoneScreen {
-    gap: 5px;
-  }
+  gap: 5px;
 
   @include mixin.tabletScreen {
     gap: 10px;
