@@ -1,10 +1,10 @@
 import type { Metadata } from 'next';
 import { siteMeta } from '@/lib/constants';
-import Section from '@/components/Section';
-import Container from '@/components/Container';
-import Hero from '@/components/Hero';
-import Heading from '@/components/Heading';
-import Tab from '@/components/Tab';
+import Section from '@/components/Section/Section';
+import Container from '@/components/Container/Container';
+import Hero from '@/components/Hero/Hero';
+import Heading from '@/components/Heading/Heading';
+import Tab from '@/components/Tab/Tab';
 
 const PAGE_CONTENT = {
   hero: {

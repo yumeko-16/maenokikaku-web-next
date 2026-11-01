@@ -1,12 +1,12 @@
 import type { Metadata } from 'next';
 import { siteMeta } from '@/lib/constants';
-import Section from '@/components/Section';
-import Container from '@/components/Container';
-import Hero from '@/components/Hero';
-import Heading from '@/components/Heading';
-import CEOMessage from '@/components/CEOMessage';
-import CompanyProfile from '@/components/CompanyProfile';
-import Access from '@/components/Access';
+import Section from '@/components/Section/Section';
+import Container from '@/components/Container/Container';
+import Hero from '@/components/Hero/Hero';
+import Heading from '@/components/Heading/Heading';
+import CEOMessage from '@/components/CEOMessage/CEOMessage';
+import CompanyProfile from '@/components/CompanyProfile/CompanyProfile';
+import Access from '@/components/Access/Access';
 
 const PAGE_CONTENT = {
   hero: {

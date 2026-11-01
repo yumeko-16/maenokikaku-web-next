@@ -1,4 +1,4 @@
-import PostBody from '@/components/PostBody';
+import PostBody from '@/components/PostBody/PostBody';
 
 export default function CEOMessage() {
   return (
