@@ -1,7 +1,8 @@
-import './globals.css';
+import type { ReactNode } from 'react';
 import type { Metadata } from 'next';
 import { cormorantGaramond, notoSansJp, zenOldMincho } from '@/app/fonts';
 import { siteMeta } from '@/lib/constants';
+import './globals.css';
 import Header from '@/components/Header/Header';
 import Footer from '@/components/Footer/Footer';
 
@@ -36,11 +37,7 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html
       lang="ja"
