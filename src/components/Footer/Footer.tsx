@@ -7,11 +7,19 @@ import styles from './Footer.module.scss';
 
 export default function Footer() {
   return (
-    <footer className={styles.wrapper}>
+    <footer className={styles.footer}>
       <Container>
         <div className={styles.content}>
           <div className={styles.flexContainer}>
-            <Logo invertTextColor />
+            <div>
+              <Logo invertTextColor />
+
+              <address className={styles.address}>
+                〒350-0405 埼玉県入間郡越生町津久根672-4
+                <br />
+                TEL 090-2679-3570 ／ FAX 049-292-5186
+              </address>
+            </div>
 
             <ul className={styles.nav}>
               {NAVIGATION.map((item) => (
@@ -25,7 +33,9 @@ export default function Footer() {
           </div>
         </div>
 
-        <Copyright />
+        <div className={styles.copyright}>
+          <Copyright />
+        </div>
       </Container>
     </footer>
   );

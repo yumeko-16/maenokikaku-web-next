@@ -1,9 +1,5 @@
 import styles from './Copyright.module.scss';
 
 export default function Copyright() {
-  return (
-    <p className={styles.wrapper}>
-      <small>&copy; 2026 Maeno Kikaku</small>
-    </p>
-  );
+  return <small className={styles.copyright}>&copy; 2026 Maeno Kikaku</small>;
 }
