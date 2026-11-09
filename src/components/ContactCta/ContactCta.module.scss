@@ -1,0 +1,88 @@
+@use '@/styles/mixin';
+
+.frame {
+  display: grid;
+  gap: 40px clamp(32px, 5vw, 80px);
+  align-items: center;
+  padding: clamp(36px, 5vw, 72px);
+  background: var(--warm-white);
+  border: 1px solid var(--black);
+
+  @include mixin.tabletScreen {
+    grid-template-columns: 1fr 1.1fr;
+  }
+}
+
+.heading {
+  font-family: var(--font-mincho);
+  font-size: calc(var(--body) * 2.25);
+}
+
+.lead {
+  margin-top: var(--space-xs);
+  font-family: var(--font-gothic);
+  font-size: calc(var(--body) * 0.875);
+  line-height: calc(28 / 14);
+  color: var(--gray);
+}
+
+.actions {
+  border-top: 1px solid var(--gray-line);
+}
+
+.link {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 26px 4px;
+  border-bottom: 1px solid var(--gray-line);
+  transition:
+    padding 0.5s var(--ease-out),
+    background 0.3s;
+}
+
+.link:hover {
+  padding-inline: 16px 12px;
+  background-color: var(--white);
+}
+
+.link::after {
+  display: block;
+  width: 18px;
+  aspect-ratio: 16 / 8;
+  content: '';
+  background-color: var(--navy-deep);
+  -webkit-mask: var(--arrow-right) center / contain no-repeat;
+  mask: var(--arrow-right) center / contain no-repeat;
+  transition: transform 0.4s var(--ease-out);
+}
+
+.link:hover .link::after {
+  transform: translateX(4px);
+}
+
+.gridContainer {
+  display: inline-grid;
+}
+
+.label {
+  font-family: var(--font-gothic);
+  font-size: calc(var(--body) * 0.675);
+  color: var(--gray);
+}
+
+.text {
+  margin-top: 15px;
+  font-family: var(--font-gothic);
+  font-weight: 500;
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+}
+
+.tel {
+  font-family: var(--font-en);
+  font-size: calc(var(--body) * 2.25);
+  font-weight: 500;
+  letter-spacing: 0.04em;
+}

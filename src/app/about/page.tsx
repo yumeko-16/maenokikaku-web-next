@@ -7,6 +7,7 @@ import Heading from '@/components/Heading/Heading';
 import CEOMessage from '@/components/CEOMessage/CEOMessage';
 import CompanyProfile from '@/components/CompanyProfile/CompanyProfile';
 import Access from '@/components/Access/Access';
+import ContactCta from '@/components/ContactCta/ContactCta';
 
 const PAGE_CONTENT = {
   hero: {
@@ -82,6 +83,12 @@ export default function About() {
         <Container>
           <Heading>{PAGE_CONTENT.access.heading}</Heading>
           <Access />
+        </Container>
+      </Section>
+
+      <Section>
+        <Container>
+          <ContactCta />
         </Container>
       </Section>
     </>

@@ -7,7 +7,7 @@ import Problem from '@/components/Problem/Problem';
 import Seiran496 from '@/components/Seiran496/Seiran496';
 import Service from '@/components/Service/Service';
 import Flow from '@/components/Flow/Flow';
-import Contact from '@/components/Contact/Contact';
+import ContactCta from '@/components/ContactCta/ContactCta';
 import styles from './page.module.scss';
 
 const PAGE_CONTENT = {
@@ -116,7 +116,7 @@ export default function Home() {
             <Lead text={PAGE_CONTENT.contact.lead} />
           </div>
 
-          <Contact />
+          <ContactCta />
         </Container>
       </Section>
     </>

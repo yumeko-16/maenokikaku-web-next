@@ -2,10 +2,11 @@
   /* Color */
   --white: #fff;
   --white-85: rgb(255 255 255 / 85%);
+  --warm-white: #fbfaf6;
   --black: #1b1d2a;
   --gray: #6c6f7b;
+  --gray-line: #dcdad2;
   --navy-deep: #15182a;
-  --base: #edf2f7;
   --primary: #0079bf;
   --gradation: linear-gradient(to right, #6b90db 0%, #66d5e9 100%);
 
@@ -34,6 +35,12 @@
   --space-xl: calc(var(--space-xs) * 4); /* 80-120px */
   --space-jump: clamp(1.25rem, 0.35rem + 3.8vw, 3.75rem) /* 20-60px */;
   --space-header: 68px;
+
+  /* Icon */
+  --arrow-right: url('/images/icon-arrow-right.svg');
+
+  /* Animation */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 @media (min-width: 768px) {

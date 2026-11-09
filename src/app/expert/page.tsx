@@ -5,6 +5,7 @@ import Section from '@/components/Section/Section';
 import Container from '@/components/Container/Container';
 import Heading from '@/components/Heading/Heading';
 import Tab from '@/components/Tab/Tab';
+import ContactCta from '@/components/ContactCta/ContactCta';
 
 const PAGE_CONTENT = {
   hero: {
@@ -54,6 +55,12 @@ export default function Expert() {
         <Container>
           <Heading>{PAGE_CONTENT.tab.heading}</Heading>
           <Tab />
+        </Container>
+      </Section>
+
+      <Section>
+        <Container>
+          <ContactCta />
         </Container>
       </Section>
     </>
