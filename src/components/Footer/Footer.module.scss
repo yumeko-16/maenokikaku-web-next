@@ -1,6 +1,6 @@
 @use '@/styles/mixin';
 
-.wrapper {
+.footer {
   background-color: var(--navy-deep);
 }
 
@@ -13,6 +13,15 @@
   @include mixin.sideBySide;
 
   gap: 2em;
+  align-items: baseline;
+}
+
+.address {
+  margin-top: 26px;
+  font-size: calc(var(--body) * 0.75);
+  font-style: normal;
+  line-height: 2.1;
+  color: var(--white-75);
 }
 
 .nav {
@@ -26,4 +35,10 @@
     flex-direction: row;
     align-items: center;
   }
+}
+
+.copyright {
+  padding: var(--space-xs) 0;
+  text-align: center;
+  border-top: 1px solid var(--white-16);
 }
