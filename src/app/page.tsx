@@ -28,7 +28,15 @@ const PAGE_CONTENT = {
     ),
   },
   problem: {
-    heading: '寺院管理で、こんな課題に直面していませんか？',
+    heading: (
+      <>
+        寺院管理で、
+        <br />
+        こんな課題に
+        <br />
+        直面していませんか？
+      </>
+    ),
   },
   seiran496: {
     heading: '青藍システム496',
