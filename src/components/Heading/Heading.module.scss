@@ -1,14 +1,10 @@
 @use '@/styles/mixin';
 
-.wrapper {
-  display: grid;
-  place-content: center;
-  margin-bottom: 30px;
-  font-weight: 700;
+.heading {
+  font-family: var(--font-mincho);
+  font-size: var(--heading1);
+  font-weight: 500;
   line-height: 1.4;
-  color: var(--primary);
-
-  @include mixin.tabletScreen {
-    margin-bottom: 40px;
-  }
+  word-break: keep-all;
+  overflow-wrap: break-word;
 }

@@ -6,5 +6,5 @@ type Props = {
 };
 
 export default function Heading({ children }: Props) {
-  return <h2 className={styles.wrapper}>{children}</h2>;
+  return <h2 className={styles.heading}>{children}</h2>;
 }
