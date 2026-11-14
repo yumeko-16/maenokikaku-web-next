@@ -111,7 +111,7 @@
   font-size: calc(var(--body) * 0.82);
   font-variant: small-caps;
   line-height: 2;
-  color: var(--white-85);
+  color: rgb(from var(--white) r g b / 85%);
 
   &[data-lang-en] {
     font-family: var(--font-en);

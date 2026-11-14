@@ -1,10 +1,6 @@
 :root {
   /* Color */
   --white: #fff;
-  --white-16: rgb(255 255 255 / 16%);
-  --white-45: rgb(255 255 255 / 45%);
-  --white-75: rgb(255 255 255 / 75%);
-  --white-85: rgb(255 255 255 / 85%);
   --warm-white: #fbfaf6;
   --black: #1b1d2a;
   --gray: #6c6f7b;

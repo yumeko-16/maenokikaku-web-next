@@ -21,7 +21,7 @@
   font-size: calc(var(--body) * 0.75);
   font-style: normal;
   line-height: 2.1;
-  color: var(--white-75);
+  color: rgb(from var(--white) r g b / 75%);
 }
 
 .nav {
@@ -40,5 +40,5 @@
 .copyright {
   padding: var(--space-xs) 0;
   text-align: center;
-  border-top: 1px solid var(--white-16);
+  border-top: 1px solid rgb(from var(--white) r g b / 16%);
 }
