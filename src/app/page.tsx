@@ -55,16 +55,6 @@ const PAGE_CONTENT = {
   flow: {
     heading: 'お取引のステップ',
   },
-  contact: {
-    heading: 'お問い合わせ',
-    lead: [
-      <>
-        サービスに関するお問い合わせは、お電話またはメールフォームで承っております。
-        <br />
-        お悩みやご相談は、いつでもお気軽にお問い合わせください。
-      </>,
-    ],
-  },
 };
 
 export default function Home() {
@@ -118,12 +108,6 @@ export default function Home() {
 
       <Section>
         <Container>
-          <Heading>{PAGE_CONTENT.contact.heading}</Heading>
-
-          <div className={styles.lead}>
-            <Lead text={PAGE_CONTENT.contact.lead} />
-          </div>
-
           <ContactCta />
         </Container>
       </Section>
