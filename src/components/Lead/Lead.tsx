@@ -1,16 +1,10 @@
 import type { ReactNode } from 'react';
-import PostBody from '@/components/PostBody/PostBody';
+import styles from './Lead.module.scss';
 
 type Props = {
-  text: ReactNode[];
+  children: ReactNode;
 };
 
-export default function Lead({ text }: Props) {
-  return (
-    <PostBody>
-      {text.map((paragraph, index) => (
-        <p key={index}>{paragraph}</p>
-      ))}
-    </PostBody>
-  );
+export default function Lead({ children }: Props) {
+  return <div className={styles.wrapper}>{children}</div>;
 }
