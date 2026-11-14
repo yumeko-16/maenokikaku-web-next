@@ -40,17 +40,9 @@ const PAGE_CONTENT = {
   },
   seiran496: {
     heading: '青藍システム496',
-    lead: ['お悩みは、すべて「青藍システム496」で解決できます。'],
   },
   service: {
     heading: '当社サービスのご案内',
-    lead: [
-      <>
-        当社は青藍システム496に加え、
-        <wbr />
-        ご寺院さまの業務をサポートする幅広いサービスをご用意しています。
-      </>,
-    ],
   },
   flow: {
     heading: 'お取引のステップ',
@@ -80,7 +72,9 @@ export default function Home() {
           <Heading>{PAGE_CONTENT.seiran496.heading}</Heading>
 
           <div className={styles.lead}>
-            <Lead text={PAGE_CONTENT.seiran496.lead} />
+            <Lead>
+              <p>お悩みは、すべて「青藍システム496」で解決できます。</p>
+            </Lead>
           </div>
 
           <Seiran496 />
@@ -92,7 +86,13 @@ export default function Home() {
           <Heading>{PAGE_CONTENT.service.heading}</Heading>
 
           <div className={styles.lead}>
-            <Lead text={PAGE_CONTENT.service.lead} />
+            <Lead>
+              <p>
+                当社は青藍システム496に加え、
+                <wbr />
+                ご寺院さまの業務をサポートする幅広いサービスをご用意しています。
+              </p>
+            </Lead>
           </div>
 
           <Service />

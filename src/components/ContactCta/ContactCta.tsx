@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Lead from '@/components/Lead/Lead';
 import styles from './ContactCta.module.scss';
 
 export default function ContactCta() {
@@ -6,15 +7,20 @@ export default function ContactCta() {
     <div className={styles.frame}>
       <div>
         <h2 className={styles.heading}>お問い合わせ</h2>
-        <p className={styles.lead}>
-          サービスに関するお問い合わせは、
-          <wbr />
-          お電話またはメールフォームで承っております。
-          <br />
-          お悩みやご相談は、
-          <wbr />
-          いつでもお気軽にお問い合わせください。
-        </p>
+
+        <div className={styles.lead}>
+          <Lead>
+            <p>
+              サービスに関するお問い合わせは、
+              <wbr />
+              お電話またはメールフォームで承っております。
+              <br />
+              お悩みやご相談は、
+              <wbr />
+              いつでもお気軽にお問い合わせください。
+            </p>
+          </Lead>
+        </div>
       </div>
 
       <div className={styles.actions}>
