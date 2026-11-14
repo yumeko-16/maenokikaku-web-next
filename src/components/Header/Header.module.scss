@@ -1,11 +1,20 @@
 @use '@/styles/mixin';
 
-.wrapper {
-  position: absolute;
+.default,
+.scrolled {
+  position: sticky;
+  top: 0;
+  z-index: var(--z-header);
   display: grid;
   align-items: center;
   width: 100%;
   height: var(--space-header);
+}
+
+.scrolled {
+  background-color: rgb(from var(--warm-white) r g b / 90%);
+  box-shadow: 0 1px 0 var(--gray-line);
+  backdrop-filter: blur(12px);
 }
 
 .flexContainer {
