@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Spacer from '@/components/Spacer/Spacer';
 import Lead from '@/components/Lead/Lead';
 import styles from './ContactCta.module.scss';
 
@@ -8,19 +9,19 @@ export default function ContactCta() {
       <div>
         <h2 className={styles.heading}>お問い合わせ</h2>
 
-        <div className={styles.lead}>
-          <Lead>
-            <p>
-              サービスに関するお問い合わせは、
-              <wbr />
-              お電話またはメールフォームで承っております。
-              <br />
-              お悩みやご相談は、
-              <wbr />
-              いつでもお気軽にお問い合わせください。
-            </p>
-          </Lead>
-        </div>
+        <Spacer size="xs" />
+
+        <Lead>
+          <p>
+            サービスに関するお問い合わせは、
+            <wbr />
+            お電話またはメールフォームで承っております。
+            <br />
+            お悩みやご相談は、
+            <wbr />
+            いつでもお気軽にお問い合わせください。
+          </p>
+        </Lead>
       </div>
 
       <div className={styles.actions}>

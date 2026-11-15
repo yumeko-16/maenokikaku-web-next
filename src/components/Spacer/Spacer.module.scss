@@ -1,0 +1,7 @@
+.space {
+  @each $size in xs, sm, md, lg, xl, jump {
+    &[data-size='#{$size}'] {
+      margin-top: var(--space-#{$size});
+    }
+  }
+}
