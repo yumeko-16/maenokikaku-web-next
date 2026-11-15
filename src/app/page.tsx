@@ -5,6 +5,7 @@ import Heading from '@/components/Heading/Heading';
 import Lead from '@/components/Lead/Lead';
 import Problem from '@/components/Problem/Problem';
 import Seiran496 from '@/components/Seiran496/Seiran496';
+import Marquee from '@/components/Marquee/Marquee';
 import Service from '@/components/Service/Service';
 import Flow from '@/components/Flow/Flow';
 import ContactCta from '@/components/ContactCta/ContactCta';
@@ -98,6 +99,8 @@ export default function Home() {
           <Service />
         </Container>
       </Section>
+
+      <Marquee />
 
       <Section>
         <Container>
