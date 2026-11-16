@@ -1,4 +1,4 @@
-import styles from './Seiran496Caption.module.scss';
+import styles from './Points.module.scss';
 
 const POINTS = [
   '寺院管理ソフトの決定版',
@@ -8,7 +8,7 @@ const POINTS = [
   '寺院内LANで信徒検索',
 ];
 
-export default function Seiran496Caption() {
+export default function Points() {
   return (
     <ul className={styles.points}>
       {POINTS.map((point) => (

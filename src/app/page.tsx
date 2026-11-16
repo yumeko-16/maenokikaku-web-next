@@ -13,7 +13,7 @@ import Spacer from '@/components/Spacer/Spacer';
 import Lead from '@/components/Lead/Lead';
 import Introduction from '@/components/Introduction/Introduction';
 import Problem from '@/components/Problem/Problem';
-import Seiran496Caption from '@/components/Seiran496Caption/Seiran496Caption';
+import Seiran496Points from '@/components/Seiran496Points/Seiran496Points';
 import Marquee from '@/components/Marquee/Marquee';
 import Service from '@/components/Service/Service';
 import Flow from '@/components/Flow/Flow';
@@ -135,7 +135,7 @@ export default function Home() {
               </Lead>
 
               <Spacer size="sm" />
-              <Seiran496Caption />
+              <Seiran496Points />
               <Spacer size="sm" />
 
               <Link className={styles.link} href="/expert/">
