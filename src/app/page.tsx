@@ -9,8 +9,9 @@ import {
   SplitColumnsSecond,
 } from '@/components/SplitColumns/SplitColumns';
 import Heading from '@/components/Heading/Heading';
-import Spacer from '@/components/Spacer/Spacer';
 import Lead from '@/components/Lead/Lead';
+import Spacer from '@/components/Spacer/Spacer';
+import ArrowLink from '@/components/ArrowLink/ArrowLink';
 import Introduction from '@/components/Introduction/Introduction';
 import Problem from '@/components/Problem/Problem';
 import Seiran496Points from '@/components/Seiran496Points/Seiran496Points';
@@ -87,10 +88,10 @@ export default function Home() {
 
             <SplitColumnsSecond>
               <Introduction />
-
+              <Spacer size="sm" />
               <div className={styles.links}>
-                <Link href="/expert/">青藍システム496を見る</Link>
-                <Link href="/about/">会社情報</Link>
+                <ArrowLink href="/expert/" text="青藍システム496を見る" />
+                <ArrowLink href="/about/" text="会社情報" />
               </div>
             </SplitColumnsSecond>
           </SplitColumns>

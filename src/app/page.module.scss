@@ -1,3 +1,9 @@
+@use '@/styles/mixin';
+
 .links {
+  @include mixin.sideBySide;
+
+  gap: var(--space-sm);
+  justify-content: start;
   font-family: var(--font-mincho);
 }
