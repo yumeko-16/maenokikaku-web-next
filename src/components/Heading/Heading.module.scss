@@ -7,4 +7,8 @@
   line-height: 1.4;
   word-break: keep-all;
   overflow-wrap: break-word;
+
+  &[data-variant='white'] {
+    color: var(--white);
+  }
 }
