@@ -2,11 +2,13 @@
   /* Color */
   --white: #fff;
   --warm-white: #fbfaf6;
+  --base-secondary: #f3f1ea;
   --black: #1b1d2a;
   --gray: #6c6f7b;
   --gray-light: #a4a6ae;
   --gray-line: #dcdad2;
   --navy-deep: #15182a;
+  --main: #15182a;
   --primary: #0079bf;
   --gradation: linear-gradient(to right, #6b90db 0%, #66d5e9 100%);
 
