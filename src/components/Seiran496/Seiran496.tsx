@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import Image from 'next/image';
 import styles from './Seiran496.module.scss';
 
 const SEIRAN496_POINTS = [
@@ -15,16 +14,6 @@ export default function Seiran496() {
     <>
       <div className={styles.expert}>
         <div className={styles.gridContainer}>
-          <figure className={styles.image}>
-            <Image
-              src="/images/seiran496/main.webp"
-              alt="青藍システム496のメイン画面"
-              width={434}
-              height={446}
-              loading="lazy"
-            />
-          </figure>
-
           <ul className={styles.points}>
             {SEIRAN496_POINTS.map((point) => (
               <li key={point} className={styles.point}>

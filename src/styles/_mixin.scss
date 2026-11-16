@@ -59,10 +59,10 @@
 }
 
 @mixin sideBySideCenter {
+  @include sideBySide;
+
   align-items: center;
   text-align: center;
-
-  @include sideBySide;
 
   @include tabletScreen {
     text-align: left;

@@ -3,6 +3,11 @@ import { siteMeta } from '@/constants/siteMeta';
 import Hero from '@/components/Hero/Hero';
 import Section from '@/components/Section/Section';
 import Container from '@/components/Container/Container';
+import {
+  SplitColumns,
+  SplitColumnsFirst,
+  SplitColumnsSecond,
+} from '@/components/SplitColumns/SplitColumns';
 import Heading from '@/components/Heading/Heading';
 import Spacer from '@/components/Spacer/Spacer';
 import CEOMessage from '@/components/CEOMessage/CEOMessage';
@@ -68,9 +73,15 @@ export default function About() {
 
       <Section>
         <Container>
-          <Heading>{PAGE_CONTENT.ceoMessage.heading}</Heading>
-          <Spacer size="sm" />
-          <CEOMessage />
+          <SplitColumns>
+            <SplitColumnsFirst>
+              <Heading>{PAGE_CONTENT.ceoMessage.heading}</Heading>
+            </SplitColumnsFirst>
+
+            <SplitColumnsSecond>
+              <CEOMessage />
+            </SplitColumnsSecond>
+          </SplitColumns>
         </Container>
       </Section>
 

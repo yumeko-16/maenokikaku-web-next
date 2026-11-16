@@ -1,0 +1,19 @@
+@use '@/styles/mixin';
+
+.flexContainer {
+  @include mixin.sideBySide;
+
+  gap: var(--space-md);
+}
+
+.first {
+  @include mixin.tabletScreen {
+    flex: var(--first-flex);
+  }
+}
+
+.second {
+  @include mixin.tabletScreen {
+    flex: var(--second-flex);
+  }
+}

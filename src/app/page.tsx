@@ -1,6 +1,12 @@
+import Image from 'next/image';
 import Hero from '@/components/Hero/Hero';
 import Section from '@/components/Section/Section';
 import Container from '@/components/Container/Container';
+import {
+  SplitColumns,
+  SplitColumnsFirst,
+  SplitColumnsSecond,
+} from '@/components/SplitColumns/SplitColumns';
 import Heading from '@/components/Heading/Heading';
 import Spacer from '@/components/Spacer/Spacer';
 import Lead from '@/components/Lead/Lead';
@@ -62,35 +68,66 @@ export default function Home() {
 
       <Section>
         <Container>
-          <Heading>{PAGE_CONTENT.problem.heading}</Heading>
-          <Spacer size="sm" />
-          <Problem />
+          <SplitColumns>
+            <SplitColumnsFirst>
+              <Heading>{PAGE_CONTENT.problem.heading}</Heading>
+            </SplitColumnsFirst>
+
+            <SplitColumnsSecond>
+              <Problem />
+            </SplitColumnsSecond>
+          </SplitColumns>
         </Container>
       </Section>
 
       <Section>
         <Container>
-          <Heading>{PAGE_CONTENT.seiran496.heading}</Heading>
-          <Spacer size="sm" />
-          <Lead>
-            <p>お悩みは、すべて「青藍システム496」で解決できます。</p>
-          </Lead>
-          <Spacer size="sm" />
-          <Seiran496 />
+          <SplitColumns>
+            <SplitColumnsFirst>
+              <figure>
+                <Image
+                  src="/images/seiran496/main.webp"
+                  alt="青藍システム496のメイン画面"
+                  width={434}
+                  height={446}
+                  loading="lazy"
+                />
+              </figure>
+            </SplitColumnsFirst>
+
+            <SplitColumnsSecond>
+              <Heading>{PAGE_CONTENT.seiran496.heading}</Heading>
+              <Spacer size="sm" />
+
+              <Lead>
+                <p>お悩みは、すべて「青藍システム496」で解決できます。</p>
+              </Lead>
+
+              <Spacer size="sm" />
+              <Seiran496 />
+            </SplitColumnsSecond>
+          </SplitColumns>
         </Container>
       </Section>
 
       <Section>
         <Container>
-          <Heading>{PAGE_CONTENT.service.heading}</Heading>
-          <Spacer size="sm" />
-          <Lead>
-            <p>
-              当社は青藍システム496に加え、
-              <wbr />
-              ご寺院さまの業務をサポートする幅広いサービスをご用意しています。
-            </p>
-          </Lead>
+          <SplitColumns>
+            <SplitColumnsFirst>
+              <Heading>{PAGE_CONTENT.service.heading}</Heading>
+            </SplitColumnsFirst>
+
+            <SplitColumnsSecond>
+              <Lead>
+                <p>
+                  当社は青藍システム496に加え、
+                  <wbr />
+                  ご寺院さまの業務をサポートする幅広いサービスをご用意しています。
+                </p>
+              </Lead>
+            </SplitColumnsSecond>
+          </SplitColumns>
+
           <Spacer size="sm" />
           <Service />
         </Container>
@@ -101,6 +138,12 @@ export default function Home() {
       <Section>
         <Container>
           <Heading>{PAGE_CONTENT.flow.heading}</Heading>
+          <Spacer size="sm" />
+
+          <Lead>
+            <p>お問い合わせからご契約まで、丁寧にご案内いたします。</p>
+          </Lead>
+
           <Spacer size="sm" />
           <Flow />
         </Container>
