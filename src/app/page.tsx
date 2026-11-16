@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import Image from 'next/image';
 import Hero from '@/components/Hero/Hero';
 import Section from '@/components/Section/Section';
@@ -10,12 +11,14 @@ import {
 import Heading from '@/components/Heading/Heading';
 import Spacer from '@/components/Spacer/Spacer';
 import Lead from '@/components/Lead/Lead';
+import Introduction from '@/components/Introduction/Introduction';
 import Problem from '@/components/Problem/Problem';
 import Seiran496 from '@/components/Seiran496/Seiran496';
 import Marquee from '@/components/Marquee/Marquee';
 import Service from '@/components/Service/Service';
 import Flow from '@/components/Flow/Flow';
 import ContactCta from '@/components/ContactCta/ContactCta';
+import styles from './page.module.scss';
 
 const PAGE_CONTENT = {
   hero: {
@@ -31,6 +34,15 @@ const PAGE_CONTENT = {
         Solving temple management
         <br />
         with sincere support.
+      </>
+    ),
+  },
+  introduction: {
+    heading: (
+      <>
+        ご寺院さまの運営を、
+        <wbr />
+        仕組みで支える。
       </>
     ),
   },
@@ -65,6 +77,25 @@ export default function Home() {
         page="home"
         hasEnglish
       />
+
+      <Section>
+        <Container>
+          <SplitColumns>
+            <SplitColumnsFirst>
+              <Heading>{PAGE_CONTENT.introduction.heading}</Heading>
+            </SplitColumnsFirst>
+
+            <SplitColumnsSecond>
+              <Introduction />
+
+              <div className={styles.links}>
+                <Link href="/expert/">青藍システム496を見る</Link>
+                <Link href="/about/">会社情報</Link>
+              </div>
+            </SplitColumnsSecond>
+          </SplitColumns>
+        </Container>
+      </Section>
 
       <Section variant="main">
         <Container>
