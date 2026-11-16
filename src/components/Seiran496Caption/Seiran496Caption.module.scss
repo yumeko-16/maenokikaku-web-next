@@ -1,0 +1,24 @@
+@use '@/styles/mixin';
+
+.points {
+  display: grid;
+  gap: 20px;
+
+  @include mixin.tabletScreen {
+    gap: 30px;
+  }
+}
+
+.point {
+  display: flex;
+  align-items: center;
+}
+
+.point::before {
+  width: 30px;
+  aspect-ratio: 1;
+  margin-right: 0.5em;
+  content: '';
+  background: url('/images/icon_circle-check-solid-full.svg') 0 0 / contain
+    no-repeat;
+}
