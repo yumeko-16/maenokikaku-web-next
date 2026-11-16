@@ -66,7 +66,7 @@ export default function Home() {
         hasEnglish
       />
 
-      <Section variant="secondary">
+      <Section variant="base-secondary">
         <Container>
           <SplitColumns>
             <SplitColumnsFirst>
