@@ -4,6 +4,7 @@ import Hero from '@/components/Hero/Hero';
 import Section from '@/components/Section/Section';
 import Container from '@/components/Container/Container';
 import Heading from '@/components/Heading/Heading';
+import Spacer from '@/components/Spacer/Spacer';
 import CEOMessage from '@/components/CEOMessage/CEOMessage';
 import CompanyProfile from '@/components/CompanyProfile/CompanyProfile';
 import Access from '@/components/Access/Access';
@@ -68,6 +69,7 @@ export default function About() {
       <Section>
         <Container>
           <Heading>{PAGE_CONTENT.ceoMessage.heading}</Heading>
+          <Spacer size="sm" />
           <CEOMessage />
         </Container>
       </Section>
@@ -75,6 +77,7 @@ export default function About() {
       <Section>
         <Container>
           <Heading>{PAGE_CONTENT.companyProfile.heading}</Heading>
+          <Spacer size="sm" />
           <CompanyProfile />
         </Container>
       </Section>
@@ -82,6 +85,7 @@ export default function About() {
       <Section>
         <Container>
           <Heading>{PAGE_CONTENT.access.heading}</Heading>
+          <Spacer size="sm" />
           <Access />
         </Container>
       </Section>

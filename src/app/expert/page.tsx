@@ -4,6 +4,7 @@ import Hero from '@/components/Hero/Hero';
 import Section from '@/components/Section/Section';
 import Container from '@/components/Container/Container';
 import Heading from '@/components/Heading/Heading';
+import Spacer from '@/components/Spacer/Spacer';
 import Tab from '@/components/Tab/Tab';
 import ContactCta from '@/components/ContactCta/ContactCta';
 
@@ -54,6 +55,7 @@ export default function Expert() {
       <Section>
         <Container>
           <Heading>{PAGE_CONTENT.tab.heading}</Heading>
+          <Spacer size="sm" />
           <Tab />
         </Container>
       </Section>

@@ -4,6 +4,7 @@ import Hero from '@/components/Hero/Hero';
 import Section from '@/components/Section/Section';
 import Container from '@/components/Container/Container';
 import Heading from '@/components/Heading/Heading';
+import Spacer from '@/components/Spacer/Spacer';
 import MailForm from '@/components/MailForm/MailForm';
 
 const PAGE_CONTENT = {
@@ -59,6 +60,7 @@ export default function Contact() {
       <Section>
         <Container>
           <Heading>{PAGE_CONTENT.mailForm.heading}</Heading>
+          <Spacer size="sm" />
           <MailForm />
         </Container>
       </Section>

@@ -2,6 +2,7 @@ import Hero from '@/components/Hero/Hero';
 import Section from '@/components/Section/Section';
 import Container from '@/components/Container/Container';
 import Heading from '@/components/Heading/Heading';
+import Spacer from '@/components/Spacer/Spacer';
 import Lead from '@/components/Lead/Lead';
 import Problem from '@/components/Problem/Problem';
 import Seiran496 from '@/components/Seiran496/Seiran496';
@@ -9,7 +10,6 @@ import Marquee from '@/components/Marquee/Marquee';
 import Service from '@/components/Service/Service';
 import Flow from '@/components/Flow/Flow';
 import ContactCta from '@/components/ContactCta/ContactCta';
-import styles from './page.module.scss';
 
 const PAGE_CONTENT = {
   hero: {
@@ -63,7 +63,7 @@ export default function Home() {
       <Section>
         <Container>
           <Heading>{PAGE_CONTENT.problem.heading}</Heading>
-
+          <Spacer size="sm" />
           <Problem />
         </Container>
       </Section>
@@ -71,13 +71,11 @@ export default function Home() {
       <Section>
         <Container>
           <Heading>{PAGE_CONTENT.seiran496.heading}</Heading>
-
-          <div className={styles.lead}>
-            <Lead>
-              <p>お悩みは、すべて「青藍システム496」で解決できます。</p>
-            </Lead>
-          </div>
-
+          <Spacer size="sm" />
+          <Lead>
+            <p>お悩みは、すべて「青藍システム496」で解決できます。</p>
+          </Lead>
+          <Spacer size="sm" />
           <Seiran496 />
         </Container>
       </Section>
@@ -85,17 +83,15 @@ export default function Home() {
       <Section>
         <Container>
           <Heading>{PAGE_CONTENT.service.heading}</Heading>
-
-          <div className={styles.lead}>
-            <Lead>
-              <p>
-                当社は青藍システム496に加え、
-                <wbr />
-                ご寺院さまの業務をサポートする幅広いサービスをご用意しています。
-              </p>
-            </Lead>
-          </div>
-
+          <Spacer size="sm" />
+          <Lead>
+            <p>
+              当社は青藍システム496に加え、
+              <wbr />
+              ご寺院さまの業務をサポートする幅広いサービスをご用意しています。
+            </p>
+          </Lead>
+          <Spacer size="sm" />
           <Service />
         </Container>
       </Section>
@@ -105,6 +101,7 @@ export default function Home() {
       <Section>
         <Container>
           <Heading>{PAGE_CONTENT.flow.heading}</Heading>
+          <Spacer size="sm" />
           <Flow />
         </Container>
       </Section>
