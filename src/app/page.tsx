@@ -13,7 +13,7 @@ import Spacer from '@/components/Spacer/Spacer';
 import Lead from '@/components/Lead/Lead';
 import Introduction from '@/components/Introduction/Introduction';
 import Problem from '@/components/Problem/Problem';
-import Seiran496 from '@/components/Seiran496/Seiran496';
+import Seiran496Caption from '@/components/Seiran496Caption/Seiran496Caption';
 import Marquee from '@/components/Marquee/Marquee';
 import Service from '@/components/Service/Service';
 import Flow from '@/components/Flow/Flow';
@@ -135,11 +135,18 @@ export default function Home() {
               </Lead>
 
               <Spacer size="sm" />
-              <Seiran496 />
+              <Seiran496Caption />
+              <Spacer size="sm" />
+
+              <Link className={styles.link} href="/expert/">
+                もっと詳しく
+              </Link>
             </SplitColumnsSecond>
           </SplitColumns>
         </Container>
       </Section>
+
+      <Marquee />
 
       <Section>
         <Container>
@@ -163,8 +170,6 @@ export default function Home() {
           <Service />
         </Container>
       </Section>
-
-      <Marquee />
 
       <Section variant="accent">
         <Container>
