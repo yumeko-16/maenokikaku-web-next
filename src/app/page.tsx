@@ -137,7 +137,7 @@ export default function Home() {
 
       <Section variant="accent">
         <Container>
-          <Heading>{PAGE_CONTENT.flow.heading}</Heading>
+          <Heading variant="white">{PAGE_CONTENT.flow.heading}</Heading>
           <Spacer size="sm" />
 
           <Lead>
