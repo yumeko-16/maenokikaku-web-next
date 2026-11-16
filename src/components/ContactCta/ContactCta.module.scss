@@ -5,7 +5,7 @@
   gap: 40px clamp(32px, 5vw, 80px);
   align-items: center;
   padding: clamp(36px, 5vw, 72px);
-  background: var(--warm-white);
+  background: var(--base);
   border: 1px solid var(--black);
 
   @include mixin.tabletScreen {
@@ -20,7 +20,7 @@
 }
 
 .actions {
-  border-top: 1px solid var(--gray-line);
+  border-top: 1px solid var(--sub-light);
 }
 
 .link {
@@ -29,7 +29,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 26px 4px;
-  border-bottom: 1px solid var(--gray-line);
+  border-bottom: 1px solid var(--sub-light);
   transition:
     padding 0.5s var(--ease-out),
     background 0.3s;
@@ -45,7 +45,7 @@
   width: 18px;
   aspect-ratio: 16 / 8;
   content: '';
-  background-color: var(--navy-deep);
+  background-color: var(--main);
   -webkit-mask: var(--arrow-right) center / contain no-repeat;
   mask: var(--arrow-right) center / contain no-repeat;
   transition: transform 0.4s var(--ease-out);
@@ -62,7 +62,7 @@
 .label {
   font-family: var(--font-gothic);
   font-size: calc(var(--body) * 0.675);
-  color: var(--gray);
+  color: var(--sub);
 }
 
 .text {

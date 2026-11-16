@@ -3,7 +3,7 @@
 .wrapper {
   padding-block: clamp(24px, 3vw, 40px);
   overflow: hidden;
-  border-block: 1px solid var(--gray-line);
+  border-block: 1px solid var(--sub-light);
 }
 
 .track {
@@ -19,7 +19,7 @@
   line-height: 1.1;
   color: transparent;
   white-space: nowrap;
-  -webkit-text-stroke: 1px var(--gray-light);
+  -webkit-text-stroke: 1px #a4a6ae;
 
   @include mixin.tabletScreen {
     font-size: calc(var(--body) * 5);

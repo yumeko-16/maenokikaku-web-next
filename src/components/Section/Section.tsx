@@ -2,7 +2,7 @@ import type { ReactNode } from 'react';
 import styles from './Section.module.scss';
 
 type Props = {
-  variant?: 'base-secondary' | 'main';
+  variant?: 'main' | 'accent';
   children: ReactNode;
 };
 
