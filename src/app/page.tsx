@@ -66,7 +66,7 @@ export default function Home() {
         hasEnglish
       />
 
-      <Section>
+      <Section variant="secondary">
         <Container>
           <SplitColumns>
             <SplitColumnsFirst>
@@ -135,7 +135,7 @@ export default function Home() {
 
       <Marquee />
 
-      <Section>
+      <Section variant="main">
         <Container>
           <Heading>{PAGE_CONTENT.flow.heading}</Heading>
           <Spacer size="sm" />

@@ -2,4 +2,12 @@
 
 .wrapper {
   padding: clamp(96px, 11vw, 168px) 0;
+
+  &[data-variant='base-secondary'] {
+    background-color: var(--base-secondary);
+  }
+
+  &[data-variant='main'] {
+    background-color: var(--main);
+  }
 }
