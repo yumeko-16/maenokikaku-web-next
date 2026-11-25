@@ -12,13 +12,15 @@ export default function Introduction() {
 
       <p className={styles.default}>
         檀家管理から法要・棚経管理まで、
+        <br />
+        日常業務の効率化を幅広く
         <wbr />
-        日常業務の効率化を幅広くサポートいたします。
+        サポートいたします。
       </p>
 
       <p className={styles.large}>
         寺院管理の課題を
-        <wbr />
+        <br />
         <em>前野企画</em>
         が解決します。
       </p>
