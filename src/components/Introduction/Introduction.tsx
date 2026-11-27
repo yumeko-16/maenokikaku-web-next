@@ -18,12 +18,12 @@ export default function Introduction() {
         サポートいたします。
       </p>
 
-      <p className={styles.large}>
+      <h3 className={styles.large}>
         寺院管理の課題を
         <br />
         <em>前野企画</em>
         が解決します。
-      </p>
+      </h3>
     </PostBody>
   );
 }
